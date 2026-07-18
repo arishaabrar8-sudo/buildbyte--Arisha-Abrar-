@@ -1,4 +1,4 @@
-TEAM NAME: Build with Tis A.A
+TEAM NAME: Arisha-Abrar
 TEAM MEMBERS:Arisha Abrar(Solo project)
 BRIEF DESCRIPTION:
 EmpowerTech is a comprehensive, responsive landing page application designed as an all in one educational and career ecosystem for students and tech enthusiasts.
