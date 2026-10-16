@@ -366,22 +366,468 @@ vector<string> findLearningPath(
     return path;
 }
 
+// ##########################################################
+// >>> NEW CODE START (Member 2 - Learning Hub: Linked List + BST)
+// ##########################################################
+
+// ==========================================
+// 8B. LINKED LIST - DYNAMIC COURSE / RESOURCE MANAGEMENT   [NEW]
+// ==========================================
+// Every course lives in a singly linked list, so courses can be
+// added, deleted, updated and marked as completed at runtime
+// without any fixed-size array.
+
+struct CourseNode {
+    Resource data;
+    bool completed;
+    CourseNode* next;
+
+    CourseNode(const Resource& r)
+        : data(r), completed(false), next(nullptr) {}
+};
+
+class CourseList {
+
+private:
+    CourseNode* head;
+    int count;
+
+public:
+    CourseList() : head(nullptr), count(0) {}
+
+    ~CourseList() {
+        while (head != nullptr) {
+            CourseNode* temp = head;
+            head = head->next;
+            delete temp;
+        }
+    }
+
+    CourseNode* getHead() const {
+        return head;
+    }
+
+    int size() const {
+        return count;
+    }
+
+    // Find a node by name (case-insensitive)
+    CourseNode* find(const string& name) const {
+
+        string key = toLowerCase(trim(name));
+
+        CourseNode* current = head;
+
+        while (current != nullptr) {
+
+            if (toLowerCase(current->data.name) == key) {
+                return current;
+            }
+
+            current = current->next;
+        }
+
+        return nullptr;
+    }
+
+    // Add a course at the end of the list
+    CourseNode* add(const Resource& r) {
+
+        CourseNode* node = new CourseNode(r);
+
+        if (head == nullptr) {
+            head = node;
+        }
+        else {
+            CourseNode* current = head;
+
+            while (current->next != nullptr) {
+                current = current->next;
+            }
+
+            current->next = node;
+        }
+
+        count++;
+
+        return node;
+    }
+
+    // Delete a course by name
+    bool remove(const string& name) {
+
+        string key = toLowerCase(trim(name));
+
+        CourseNode* current = head;
+        CourseNode* previous = nullptr;
+
+        while (current != nullptr) {
+
+            if (toLowerCase(current->data.name) == key) {
+
+                if (previous == nullptr) {
+                    head = current->next;
+                }
+                else {
+                    previous->next = current->next;
+                }
+
+                delete current;
+
+                count--;
+
+                return true;
+            }
+
+            previous = current;
+            current = current->next;
+        }
+
+        return false;
+    }
+};
+
+// ==========================================
+// 8C. BINARY SEARCH TREE - COURSE SEARCHING   [NEW]
+// ==========================================
+// The BST is ordered by lowercase course name. Each tree node points to
+// the matching linked-list node, so search is O(log n) on average.
+
+struct BSTNode {
+    string key;
+    CourseNode* course;
+    BSTNode* left;
+    BSTNode* right;
+
+    BSTNode(const string& k, CourseNode* c)
+        : key(k), course(c), left(nullptr), right(nullptr) {}
+};
+
+BSTNode* bstInsert(BSTNode* root, const string& key, CourseNode* course) {
+
+    if (root == nullptr) {
+        return new BSTNode(key, course);
+    }
+
+    if (key < root->key) {
+        root->left = bstInsert(root->left, key, course);
+    }
+    else if (key > root->key) {
+        root->right = bstInsert(root->right, key, course);
+    }
+
+    return root;
+}
+
+CourseNode* bstSearch(BSTNode* root, const string& key) {
+
+    while (root != nullptr) {
+
+        if (key == root->key) {
+            return root->course;
+        }
+
+        if (key < root->key) {
+            root = root->left;
+        }
+        else {
+            root = root->right;
+        }
+    }
+
+    return nullptr;
+}
+
+BSTNode* bstMinNode(BSTNode* root) {
+
+    while (root->left != nullptr) {
+        root = root->left;
+    }
+
+    return root;
+}
+
+BSTNode* bstRemove(BSTNode* root, const string& key) {
+
+    if (root == nullptr) {
+        return nullptr;
+    }
+
+    if (key < root->key) {
+        root->left = bstRemove(root->left, key);
+    }
+    else if (key > root->key) {
+        root->right = bstRemove(root->right, key);
+    }
+    else {
+
+        // One child or no child
+        if (root->left == nullptr) {
+            BSTNode* temp = root->right;
+            delete root;
+            return temp;
+        }
+
+        if (root->right == nullptr) {
+            BSTNode* temp = root->left;
+            delete root;
+            return temp;
+        }
+
+        // Two children: copy in-order successor, then delete it
+        BSTNode* successor = bstMinNode(root->right);
+
+        root->key = successor->key;
+        root->course = successor->course;
+
+        root->right = bstRemove(root->right, successor->key);
+    }
+
+    return root;
+}
+
+// In-order traversal gives courses sorted alphabetically
+void bstInOrder(BSTNode* root, vector<CourseNode*>& out) {
+
+    if (root == nullptr) {
+        return;
+    }
+
+    bstInOrder(root->left, out);
+
+    out.push_back(root->course);
+
+    bstInOrder(root->right, out);
+}
+
+// ==========================================
+// 8D. LEARNING HUB STATE (LINKED LIST + BST)   [NEW]
+// ==========================================
+
+CourseList courseList;
+
+BSTNode* courseTree = nullptr;
+
+// Fill the linked list and BST with the starting courses
+bool initLearningHub() {
+
+    for (int i = 0; i < (int)resources.size(); i++) {
+
+        CourseNode* node = courseList.add(resources[i]);
+
+        courseTree = bstInsert(
+            courseTree,
+            toLowerCase(trim(resources[i].name)),
+            node
+        );
+    }
+
+    return true;
+}
+
+// Runs once at program start, so main() does not need to change
+static bool learningHubReady = initLearningHub();
+
+// Add a new course (linked list + BST)
+string addCourse(string name, string category, int score) {
+
+    name = trim(name);
+    category = trim(category);
+
+    if (name.empty()) {
+        return "{\"success\":false,\"message\":\"Course name is required\"}";
+    }
+
+    if (category.empty()) {
+        return "{\"success\":false,\"message\":\"Category is required\"}";
+    }
+
+    if (courseList.find(name) != nullptr) {
+        return "{\"success\":false,\"message\":\"Course already exists\"}";
+    }
+
+    Resource r = {name, category, score};
+
+    CourseNode* node = courseList.add(r);
+
+    courseTree = bstInsert(courseTree, toLowerCase(name), node);
+
+    return "{\"success\":true,\"message\":\"Course added\"}";
+}
+
+// Delete a course (linked list + BST)
+string deleteCourse(string name) {
+
+    string key = toLowerCase(trim(name));
+
+    if (bstSearch(courseTree, key) == nullptr) {
+        return "{\"success\":false,\"message\":\"Course not found\"}";
+    }
+
+    courseTree = bstRemove(courseTree, key);
+
+    courseList.remove(name);
+
+    return "{\"success\":true,\"message\":\"Course deleted\"}";
+}
+
+// Update a course; empty newName / newCategory and score < 0 mean "keep as is"
+string updateCourse(string name,
+                    string newName,
+                    string newCategory,
+                    int newScore) {
+
+    string oldKey = toLowerCase(trim(name));
+
+    CourseNode* node = bstSearch(courseTree, oldKey);
+
+    if (node == nullptr) {
+        return "{\"success\":false,\"message\":\"Course not found\"}";
+    }
+
+    newName = trim(newName);
+    newCategory = trim(newCategory);
+
+    if (!newName.empty()) {
+
+        string newKey = toLowerCase(newName);
+
+        if (newKey != oldKey && bstSearch(courseTree, newKey) != nullptr) {
+            return "{\"success\":false,\"message\":\"Another course already has that name\"}";
+        }
+
+        // Name is the BST key, so re-insert under the new key
+        if (newKey != oldKey) {
+            courseTree = bstRemove(courseTree, oldKey);
+            node->data.name = newName;
+            courseTree = bstInsert(courseTree, newKey, node);
+        }
+        else {
+            node->data.name = newName;
+        }
+    }
+
+    if (!newCategory.empty()) {
+        node->data.category = newCategory;
+    }
+
+    if (newScore >= 0) {
+        node->data.score = newScore;
+    }
+
+    return "{\"success\":true,\"message\":\"Course updated\"}";
+}
+
+// Mark a course as completed
+string completeCourse(string name) {
+
+    CourseNode* node = bstSearch(courseTree, toLowerCase(trim(name)));
+
+    if (node == nullptr) {
+        return "{\"success\":false,\"message\":\"Course not found\"}";
+    }
+
+    node->completed = true;
+
+    return "{\"success\":true,\"message\":\"Course marked as completed\"}";
+}
+
+// JSON for a single course node
+string courseToJson(CourseNode* node) {
+
+    return
+        "{\"name\":\"" + jsonEscape(node->data.name) +
+        "\",\"category\":\"" + jsonEscape(node->data.category) +
+        "\",\"score\":" + to_string(node->data.score) +
+        ",\"completed\":" + (node->completed ? "true" : "false") +
+        "}";
+}
+
+// ---- Learning resource roadmap (linked list) ----
+// HTML -> CSS -> JavaScript -> React -> Node.js
+
+struct RoadmapNode {
+    string title;
+    RoadmapNode* next;
+};
+
+string learningResourcesResponse() {
+
+    vector<string> titles = {
+        "HTML", "CSS", "JavaScript", "React", "Node.js"
+    };
+
+    // Build the chain
+    RoadmapNode* head = nullptr;
+    RoadmapNode* tail = nullptr;
+
+    for (const string& t : titles) {
+
+        RoadmapNode* node = new RoadmapNode{t, nullptr};
+
+        if (head == nullptr) {
+            head = node;
+        }
+        else {
+            tail->next = node;
+        }
+
+        tail = node;
+    }
+
+    // Walk the chain
+    string response = "{\"resources\":[";
+
+    int step = 1;
+
+    for (RoadmapNode* cur = head; cur != nullptr; cur = cur->next) {
+
+        if (step > 1) {
+            response += ",";
+        }
+
+        response +=
+            "{\"step\":" + to_string(step) +
+            ",\"title\":\"" + jsonEscape(cur->title) + "\"}";
+
+        step++;
+    }
+
+    response += "]}";
+
+    // Free the chain
+    while (head != nullptr) {
+        RoadmapNode* temp = head;
+        head = head->next;
+        delete temp;
+    }
+
+    return response;
+}
+
+// ##########################################################
+// >>> NEW CODE END (sections 8B - 8D)
+// ##########################################################
+
 // ==========================================
 // 9. JSON RESPONSE GENERATORS
 // ==========================================
 
+// >>> CHANGED: course search now uses the Binary Search Tree
+// >>> (previously used binarySearchResource). JSON output is identical.
 string searchResponse(string query) {
 
-    int index = binarySearchResource(query);
+    CourseNode* node =
+        bstSearch(courseTree, toLowerCase(trim(query)));
 
-    if (index == -1) {
+    if (node == nullptr) {
 
         return
             "{\"found\":false,"
             "\"message\":\"Course not found\"}";
     }
 
-    Resource r = resources[index];
+    Resource r = node->data;
 
     return
         "{\"found\":true,"
@@ -474,6 +920,118 @@ string learningPathResponse() {
 
     return response;
 }
+
+// >>> NEW CODE START: Learning Hub responses (linked list + BST)
+
+// All courses in linked-list (insertion) order
+string coursesResponse() {
+
+    string response = "{\"courses\":[";
+
+    bool first = true;
+
+    for (CourseNode* cur = courseList.getHead();
+         cur != nullptr;
+         cur = cur->next) {
+
+        if (!first) {
+            response += ",";
+        }
+
+        first = false;
+
+        response += courseToJson(cur);
+    }
+
+    response += "]}";
+
+    return response;
+}
+
+// All courses alphabetically using BST in-order traversal
+string coursesSortedResponse() {
+
+    vector<CourseNode*> ordered;
+
+    bstInOrder(courseTree, ordered);
+
+    string response = "{\"courses\":[";
+
+    for (int i = 0; i < (int)ordered.size(); i++) {
+
+        if (i > 0) {
+            response += ",";
+        }
+
+        response += courseToJson(ordered[i]);
+    }
+
+    response += "]}";
+
+    return response;
+}
+
+// Details for one course, found through the BST
+string courseDetailsResponse(string name) {
+
+    CourseNode* node =
+        bstSearch(courseTree, toLowerCase(trim(name)));
+
+    if (node == nullptr) {
+        return
+            "{\"found\":false,"
+            "\"message\":\"Course not found\"}";
+    }
+
+    return "{\"found\":true,\"course\":" + courseToJson(node) + "}";
+}
+
+// Courses grouped by category
+string categoriesResponse() {
+
+    map<string, vector<string>> grouped;
+
+    for (CourseNode* cur = courseList.getHead();
+         cur != nullptr;
+         cur = cur->next) {
+
+        grouped[cur->data.category].push_back(cur->data.name);
+    }
+
+    string response = "{\"categories\":[";
+
+    bool firstCategory = true;
+
+    for (const auto& entry : grouped) {
+
+        if (!firstCategory) {
+            response += ",";
+        }
+
+        firstCategory = false;
+
+        response +=
+            "{\"category\":\"" + jsonEscape(entry.first) +
+            "\",\"courses\":[";
+
+        for (int i = 0; i < (int)entry.second.size(); i++) {
+
+            if (i > 0) {
+                response += ",";
+            }
+
+            response += "\"" + jsonEscape(entry.second[i]) + "\"";
+        }
+
+        response += "]}";
+    }
+
+    response += "]}";
+
+    return response;
+}
+
+// >>> NEW CODE END: Learning Hub responses
 
 // ==========================================
 // 10. HTTP REQUEST HANDLING
@@ -596,12 +1154,17 @@ string handleRequest(string request) {
 
         string query = "";
 
+        // >>> NEW: stores all query parameters (used by the Learning Hub routes)
+        map<string, string> params;
+
         // Extract the query parameter
-        istringstream params(queryString);
+        // >>> CHANGED: stream renamed from "params" to "paramStream"
+        // >>> so the new "params" map above does not clash with it
+        istringstream paramStream(queryString);
 
         string part;
 
-        while (getline(params, part, '&')) {
+        while (getline(paramStream, part, '&')) {
 
             size_t equals = part.find('=');
 
@@ -612,6 +1175,9 @@ string handleRequest(string request) {
             string key = part.substr(0, equals);
 
             string value = part.substr(equals + 1);
+
+            // >>> NEW: save every parameter
+            params[key] = urlDecode(value);
 
             if (key == "query") {
                 query = urlDecode(value);
@@ -650,6 +1216,92 @@ string handleRequest(string request) {
                 "\"backend\":\"C++\","
                 "\"framework\":\"None\"}";
         }
+
+        // >>> NEW CODE START: Learning Hub routes (Linked List + BST)
+
+        // List all courses (linked list)
+        else if (path == "/api/courses") {
+
+            body = coursesResponse();
+        }
+
+        // List all courses alphabetically (BST in-order)
+        else if (path == "/api/courses/sorted") {
+
+            body = coursesSortedResponse();
+        }
+
+        // Course details (BST search)
+        else if (path == "/api/courses/details") {
+
+            body = courseDetailsResponse(params["name"]);
+        }
+
+        // Add course: /api/courses/add?name=X&category=Y&score=80
+        else if (path == "/api/courses/add") {
+
+            int score = 50;
+
+            if (params.count("score")) {
+                try {
+                    score = stoi(params["score"]);
+                }
+                catch (...) {
+                    score = 50;
+                }
+            }
+
+            body = addCourse(params["name"], params["category"], score);
+        }
+
+        // Delete course: /api/courses/delete?name=X
+        else if (path == "/api/courses/delete") {
+
+            body = deleteCourse(params["name"]);
+        }
+
+        // Update course:
+        // /api/courses/update?name=X&newName=Y&category=Z&score=90
+        else if (path == "/api/courses/update") {
+
+            int score = -1;
+
+            if (params.count("score")) {
+                try {
+                    score = stoi(params["score"]);
+                }
+                catch (...) {
+                    score = -1;
+                }
+            }
+
+            body = updateCourse(
+                params["name"],
+                params["newName"],
+                params["category"],
+                score
+            );
+        }
+
+        // Mark completed: /api/courses/complete?name=X
+        else if (path == "/api/courses/complete") {
+
+            body = completeCourse(params["name"]);
+        }
+
+        // Course categories
+        else if (path == "/api/categories") {
+
+            body = categoriesResponse();
+        }
+
+        // Learning resources chain (linked list)
+        else if (path == "/api/learning-resources") {
+
+            body = learningResourcesResponse();
+        }
+
+        // >>> NEW CODE END: Learning Hub routes
 
         else {
 
@@ -746,6 +1398,20 @@ int main() {
     cout << "/api/opportunities/sort\n";
     cout << "/api/learning-path\n";
     cout << "/api/recommendations\n";
+
+    // >>> NEW: startup messages for the Learning Hub endpoints
+    cout << "\nLearning Hub (Linked List + BST):\n";
+
+    cout << "/api/courses\n";
+    cout << "/api/courses/sorted\n";
+    cout << "/api/courses/details?name=Programming\n";
+    cout << "/api/courses/add?name=Python&category=Programming&score=90\n";
+    cout << "/api/courses/update?name=Python&score=95\n";
+    cout << "/api/courses/complete?name=Python\n";
+    cout << "/api/courses/delete?name=Python\n";
+    cout << "/api/categories\n";
+    cout << "/api/learning-resources\n";
+    // >>> END NEW
 
     cout << "\nServer is running. Press Ctrl+C to stop.\n\n";
 
