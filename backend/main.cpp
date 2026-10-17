@@ -278,52 +278,46 @@ vector<Resource> getRecommendations() {
 }
 
 // ==========================================
-// 8. GRAPH + BFS LEARNING PATH
+// 8. GRAPH + BFS AND DFS LEARNING PATH
 // ==========================================
 
+// Each course is a vertex/node. Each directed edge shows a learning
+// relationship: the next course can be studied after the current course.
 map<string, vector<string>> graph = {
+    {"Programming", {"C++", "HTML", "Mathematics", "Networking"}},
+    {"C++", {"Python"}},
+    {"Python", {"Data Structures and Algorithms"}},
+    {"Data Structures and Algorithms", {}},
 
-    {"Programming",
-     {"Web Development", "Data Science"}},
+    {"HTML", {"CSS"}},
+    {"CSS", {"JavaScript"}},
+    {"JavaScript", {"React"}},
+    {"React", {"Node.js"}},
+    {"Node.js", {}},
 
-    {"Web Development",
-     {"Cloud Computing"}},
+    {"Mathematics", {"Data Science"}},
+    {"Data Science", {"Statistics", "Machine Learning"}},
+    {"Statistics", {"Machine Learning"}},
+    {"Machine Learning", {"AI Fundamentals"}},
+    {"AI Fundamentals", {}},
 
-    {"Data Science",
-     {"Machine Learning"}},
-
-    {"Machine Learning",
-     {"AI Fundamentals"}},
-
-    {"Cloud Computing",
-     {"Cybersecurity"}},
-
+    {"Networking", {"Cybersecurity", "Cloud Computing"}},
     {"Cybersecurity", {}},
-
-    {"AI Fundamentals", {}}
+    {"Cloud Computing", {"Cybersecurity"}}
 };
 
-vector<string> findLearningPath(
-    string start,
-    string destination
-) {
-
+// BFS uses a queue and finds a shortest route in an unweighted graph.
+vector<string> findLearningPath(string start, string destination) {
     map<string, bool> visited;
-
     map<string, string> parent;
-
     queue<string> q;
 
     q.push(start);
-
     visited[start] = true;
-
     bool found = false;
 
     while (!q.empty()) {
-
         string current = q.front();
-
         q.pop();
 
         if (current == destination) {
@@ -332,38 +326,85 @@ vector<string> findLearningPath(
         }
 
         for (string next : graph[current]) {
-
             if (!visited[next]) {
-
                 visited[next] = true;
-
                 parent[next] = current;
-
                 q.push(next);
             }
         }
     }
 
     vector<string> path;
-
-    if (!found) {
-        return path;
-    }
+    if (!found) return path;
 
     string current = destination;
-
     while (current != start) {
-
         path.push_back(current);
-
         current = parent[current];
     }
 
     path.push_back(start);
-
     reverse(path.begin(), path.end());
-
     return path;
+}
+
+// DFS explores each reachable course deeply before backtracking.
+void dfsExplore(string current, map<string, bool>& visited,
+                vector<string>& result) {
+    visited[current] = true;
+    result.push_back(current);
+
+    for (string next : graph[current]) {
+        if (!visited[next]) {
+            dfsExplore(next, visited, result);
+        }
+    }
+}
+
+vector<string> findDFSPath(string start) {
+    map<string, bool> visited;
+    vector<string> result;
+    dfsExplore(start, visited, result);
+    return result;
+}
+
+// Select a starting node and destination based on the student's field.
+// BFS uses both values to build a field-specific route. DFS starts at the
+// selected field's starting node and lists reachable courses in traversal order.
+bool getLearningRoute(string field, string& start, string& destination) {
+    field = toLowerCase(trim(field));
+
+    if (field == "web development" || field == "web") {
+        start = "HTML";
+        destination = "Node.js";
+    }
+    else if (field == "ai/ml" || field == "ai" ||
+             field == "artificial intelligence" || field == "machine learning") {
+        start = "Mathematics";
+        destination = "AI Fundamentals";
+    }
+    else if (field == "data science" || field == "data") {
+        start = "Data Science";
+        destination = "Statistics";
+    }
+    else if (field == "cybersecurity" || field == "cyber security" ||
+             field == "cyber security") {
+        start = "Networking";
+        destination = "Cybersecurity";
+    }
+    else if (field == "cloud" || field == "cloud computing") {
+        start = "Networking";
+        destination = "Cloud Computing";
+    }
+    else if (field == "programming" || field == "programming fundamentals") {
+        start = "Programming";
+        destination = "Data Structures and Algorithms";
+    }
+    else {
+        return false;
+    }
+
+    return true;
 }
 
 // ==========================================
@@ -452,26 +493,42 @@ string recommendationsResponse() {
     return response;
 }
 
-string learningPathResponse() {
+string learningPathResponse(string field, string mode) {
+    string start;
+    string destination;
+    mode = toLowerCase(trim(mode));
 
-    vector<string> path = findLearningPath(
-        "Programming",
-        "AI Fundamentals"
-    );
+    if (!getLearningRoute(field, start, destination)) {
+        return "{\"error\":\"Unknown learning field. Choose Web Development, AI/ML, Data Science, Cybersecurity, Cloud Computing, or Programming.\"}";
+    }
 
-    string response = "{\"path\":[";
+    vector<string> path;
+    string algorithm;
+
+    if (mode == "dfs") {
+        path = findDFSPath(start);
+        algorithm = "DFS";
+    }
+    else if (mode == "bfs" || mode.empty()) {
+        path = findLearningPath(start, destination);
+        algorithm = "BFS";
+    }
+    else {
+        return "{\"error\":\"Unknown algorithm. Use bfs or dfs.\"}";
+    }
+
+    string response = "{\"field\":\"" + jsonEscape(field) +
+                      "\",\"algorithm\":\"" + algorithm +
+                      "\",\"start\":\"" + jsonEscape(start) +
+                      "\",\"destination\":\"" + jsonEscape(destination) +
+                      "\",\"path\":[";
 
     for (int i = 0; i < (int)path.size(); i++) {
-
-        if (i > 0) {
-            response += ",";
-        }
-
+        if (i > 0) response += ",";
         response += "\"" + jsonEscape(path[i]) + "\"";
     }
 
     response += "]}";
-
     return response;
 }
 
@@ -595,27 +652,23 @@ string handleRequest(string request) {
         }
 
         string query = "";
+        string field = "AI/ML";
+        string mode = "bfs";
 
-        // Extract the query parameter
+        // Extract query parameters such as query, field, and mode.
         istringstream params(queryString);
-
         string part;
 
         while (getline(params, part, '&')) {
-
             size_t equals = part.find('=');
-
-            if (equals == string::npos) {
-                continue;
-            }
+            if (equals == string::npos) continue;
 
             string key = part.substr(0, equals);
+            string value = urlDecode(part.substr(equals + 1));
 
-            string value = part.substr(equals + 1);
-
-            if (key == "query") {
-                query = urlDecode(value);
-            }
+            if (key == "query") query = value;
+            else if (key == "field") field = value;
+            else if (key == "mode") mode = value;
         }
 
         // Route 1: Course search
@@ -633,7 +686,7 @@ string handleRequest(string request) {
         // Route 3: Learning path
         else if (path == "/api/learning-path") {
 
-            body = learningPathResponse();
+            body = learningPathResponse(field, mode);
         }
 
         // Route 4: Recommendations
@@ -744,7 +797,7 @@ int main() {
     cout << "/api/health\n";
     cout << "/api/resources/search?query=Machine%20Learning\n";
     cout << "/api/opportunities/sort\n";
-    cout << "/api/learning-path\n";
+    cout << "/api/learning-path?field=Web%20Development&mode=bfs\n";
     cout << "/api/recommendations\n";
 
     cout << "\nServer is running. Press Ctrl+C to stop.\n\n";
