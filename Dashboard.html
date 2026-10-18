@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard | EmpowerTech</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+        <i class="fa-solid fa-laptop-code"></i>
+        EmpowerTech
+    </div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#learning">Learning Hub</a></li>
+        <li><a href="index.html#opportunities">Opportunities</a></li>
+    </ul>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="page-hero">
+
+    <h1 id="dash-welcome">👤 My Dashboard</h1>
+
+    <p id="dash-sub">Loading your account...</p>
+
+</section>
+
+<div id="dashboard">
+
+    <!-- ================= PROGRESS ================= -->
+
+    <section class="resources">
+
+        <h2>My Progress</h2>
+
+        <div class="impact" id="dash-stats"></div>
+
+        <div class="progress-track" aria-label="Overall progress">
+            <div class="progress-fill" id="dash-bar"></div>
+        </div>
+
+    </section>
+
+    <!-- ================= COURSES ================= -->
+
+    <section class="projects">
+
+        <h2>My Courses</h2>
+
+        <div class="cards" id="dash-courses"></div>
+
+    </section>
+
+    <!-- ================= RECOMMENDED ================= -->
+
+    <section class="resources">
+
+        <h2>Recommended For You</h2>
+
+        <div class="cards" id="dash-recommended"></div>
+
+    </section>
+
+    <!-- ================= FAVORITES ================= -->
+
+    <section class="projects">
+
+        <h2>My Favorites</h2>
+
+        <div id="dash-favorites" class="favorites-box"></div>
+
+    </section>
+
+    <!-- ================= PROFILE ================= -->
+
+    <section class="resources">
+
+        <h2>My Profile</h2>
+
+        <form id="profile-form" class="auth-form profile-form">
+
+            <label for="p-name">Name</label>
+            <input type="text" id="p-name" name="name" maxlength="60" required>
+
+            <label for="p-university">University</label>
+            <input type="text" id="p-university" name="university" maxlength="500">
+
+            <label for="p-degree">Degree</label>
+            <input type="text" id="p-degree" name="degree" maxlength="500">
+
+            <label for="p-interests">Interests</label>
+            <input type="text" id="p-interests" name="interests" maxlength="500"
+                   placeholder="AI, Web Development, Cloud ...">
+
+            <label for="p-bio">About me</label>
+            <textarea id="p-bio" name="bio" rows="4" maxlength="500"></textarea>
+
+            <button type="submit" class="primary">Save Profile</button>
+
+            <p id="profile-status"></p>
+
+        </form>
+
+    </section>
+
+    <!-- ================= FIND A STUDENT ================= -->
+
+    <section class="projects">
+
+        <h2>Find a Student by ID</h2>
+
+        <form id="lookup-form" class="live-filters">
+
+            <input type="text" id="lookup-id" placeholder="For example EMP1001">
+
+            <button type="submit" class="btn">Search</button>
+
+        </form>
+
+        <p id="lookup-result" class="lookup-result"></p>
+
+    </section>
+
+    <!-- ================= LOGOUT ================= -->
+
+    <section class="resources">
+
+        <div class="buttons logout-row">
+            <button id="logout-btn" class="secondary">Log out</button>
+        </div>
+
+    </section>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
+
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
