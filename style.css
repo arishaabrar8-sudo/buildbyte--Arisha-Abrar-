@@ -1933,3 +1933,151 @@ border-radius:20px;
     }
 
 }
+/* =====================================================
+   ADD THESE RULES AT THE END OF style.css
+   (login.html and dashboard.html)
+===================================================== */
+
+/* ---------- login / register ---------- */
+
+.auth-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.auth-form{
+    background:#132238;
+    padding:35px;
+    border-radius:20px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.auth-form h2{
+    color:#38bdf8;
+    font-size:28px;
+    margin-bottom:10px;
+    text-align:left;
+}
+
+.auth-form label{
+    color:#cbd5e1;
+    font-size:14px;
+}
+
+.auth-form input,
+.auth-form textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid transparent;
+    outline:none;
+    border-radius:10px;
+    background:#08121f;
+    color:white;
+    font-size:15px;
+}
+
+.auth-form input:focus,
+.auth-form textarea:focus{
+    border-color:#38bdf8;
+}
+
+.auth-form textarea{
+    resize:vertical;
+}
+
+.auth-form button{
+    margin-top:10px;
+}
+
+.auth-form button:disabled{
+    opacity:.6;
+    cursor:wait;
+}
+
+#auth-message{
+    text-align:center;
+    min-height:1.6em;
+    margin-bottom:25px;
+    font-weight:600;
+}
+
+.auth-error{ color:#f87171; }
+.auth-ok{ color:#4ade80; }
+
+/* ---------- dashboard ---------- */
+
+.profile-form{
+    max-width:700px;
+    margin:0 auto;
+}
+
+#profile-status{
+    color:#38bdf8;
+    min-height:1.5em;
+}
+
+.progress-track{
+    max-width:900px;
+    height:14px;
+    margin:35px auto 0;
+    background:#132238;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    height:100%;
+    width:0;
+    background:#38bdf8;
+    border-radius:20px;
+    transition:width .6s;
+}
+
+.card-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:15px;
+}
+
+.btn-light{
+    background:transparent;
+    border:1px solid #38bdf8;
+    color:#38bdf8;
+}
+
+.favorites-box{
+    max-width:700px;
+    margin:0 auto;
+    color:#cbd5e1;
+}
+
+.favorites-box ul{
+    list-style:none;
+}
+
+.favorites-box li{
+    background:#132238;
+    padding:14px 18px;
+    margin:10px 0;
+    border-radius:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+}
+
+.lookup-result{
+    text-align:center;
+    margin-top:15px;
+    color:#cbd5e1;
+}
+
+.logout-row{
+    justify-content:center;
+}
