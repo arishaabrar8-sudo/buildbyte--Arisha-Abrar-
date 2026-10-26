@@ -1,177 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Artificial Intelligence | EmpowerTech</title>
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* ===== AI TOOLS & PROJECT IDEAS ===== */
+
+.projects {
+    padding: 40px 8%;
+    background: linear-gradient(135deg, #020c2b, #061a45, #03102f);
+    color: #ffffff;
+}
+
+.projects h2 {
+    color: #ffffff !important;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.projects ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.projects li {
+    color: #dbeafe !important;
+    background: #071d46;
+    border: 1px solid #124b91;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 0;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.projects li:hover {
+    background: #0b2d65;
+    border-color: #318bff;
+    transform: translateY(-3px);
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .projects {
+        padding: 35px 5%;
+    }
+
+    .projects h2 {
+        font-size: 23px;
+    }
+
+    .projects ul {
+        grid-template-columns: 1fr;
+    }
+}
+       /* ===== DARK BLUE YOUTUBE LEARNING CARDS ===== */
+
+.ai-resources {
+    padding: 50px 8%;
+    text-align: center;
+    background: linear-gradient(135deg, #020c2b, #061a45, #03102f);
+    color: #ffffff;
+}
+
+.ai-resources h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.ai-intro {
+    color: #b8cdec;
+    margin-bottom: 30px;
+}
+
+.ai-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Card background */
+.ai-card {
+    padding: 0;
+    background: #071d46 !important;
+    border: 1px solid #124b91;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 70, 180, 0.15);
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.ai-card:hover {
+    transform: translateY(-5px);
+    border-color: #318bff;
+}
+
+/* YouTube thumbnails */
+.ai-thumbnail {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Text area */
+.ai-card-content {
+    padding: 20px;
+    background: #071d46 !important;
+}
+
+.ai-card-content h3 {
+    color: #ffffff !important;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.ai-card-content p {
+    color: #b8cdec !important;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 18px;
+}
+
+/* Learning button */
+.ai-button {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #0a2c68;
+    color: #ffffff;
+    border: 1px solid #2468bd;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.ai-button:hover {
+    background: #1558b0;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .ai-resources {
+        padding: 35px 5%;
+    }
+
+    .ai-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-thumbnail {
+        height: 200px;
+    }
+}
+
+        /* AI Tools and Project Lists */
+
+        .projects {
+            padding: 40px 8%;
+        }
+
+        .projects li {
+            margin: 10px 0;
+        }
+
+        /* Responsive Design */
+
+        @media (max-width: 600px) {
+            .ai-resources {
+                padding: 35px 5%;
+            }
+
+            .ai-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .ai-thumbnail {
+                height: 200px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
+    <!-- Navbar -->
 
-<nav>
-    <div class="logo">
-        <i class="fa-solid fa-laptop-code"></i>
-        EmpowerTech
-    </div>
-
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#learning">Learning Hub</a></li>
-    </ul>
-</nav>
-
-<!-- Hero -->
-
-<section class="page-hero">
-
-    <h1>🤖 Artificial Intelligence</h1>
-
-    <p>
-        Learn Artificial Intelligence from the basics to advanced concepts.
-        Explore Machine Learning, Deep Learning, Generative AI, Computer Vision,
-        and Natural Language Processing with curated resources and projects.
-    </p>
-
-</section>
-
-<!-- Roadmap -->
-
-<section class="roadmap">
-
-    <h2>AI Learning Roadmap</h2>
-
-    <div class="roadmap-container">
-
-        <div class="roadmap-card">
-            <h3>Step 1</h3>
-            <p>Python Programming</p>
+    <nav>
+        <div class="logo">
+            <i class="fa-solid fa-laptop-code"></i>
+            EmpowerTech
         </div>
 
-        <div class="roadmap-card">
-            <h3>Step 2</h3>
-            <p>Mathematics for AI</p>
-        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#learning">Learning Hub</a></li>
+        </ul>
+    </nav>
 
-        <div class="roadmap-card">
-            <h3>Step 3</h3>
-            <p>Machine Learning</p>
-        </div>
 
-        <div class="roadmap-card">
-            <h3>Step 4</h3>
-            <p>Deep Learning</p>
-        </div>
+    <!-- Hero Section -->
 
-        <div class="roadmap-card">
-            <h3>Step 5</h3>
-            <p>Generative AI</p>
-        </div>
+    <section class="page-hero">
 
-        <div class="roadmap-card">
-            <h3>Step 6</h3>
-            <p>Build AI Projects</p>
-        </div>
+        <h1>🤖 Artificial Intelligence</h1>
 
-    </div>
+        <p>
+            Learn Artificial Intelligence from beginner to advanced level.
+            Explore Machine Learning, Deep Learning, and Generative AI
+            through free tutorials and practical projects.
+        </p>
 
-</section>
+    </section>
 
-<!-- Resources -->
 
-<section class="resources">
+    <!-- AI Learning Roadmap -->
 
-    <h2>Free Learning Resources</h2>
+    <section class="roadmap">
 
-    <div class="cards">
+        <h2>AI Learning Roadmap</h2>
 
-        <div class="card">
-            <h3>Machine Learning</h3>
+        <div class="roadmap-container">
 
-            <p>
-                Learn supervised learning, unsupervised learning, model evaluation,
-                and feature engineering.
-            </p>
+            <div class="roadmap-card">
+                <h3>Step 1</h3>
+                <p>Python Programming</p>
+            </div>
 
-            <a href="#">Start Learning →</a>
+            <div class="roadmap-card">
+                <h3>Step 2</h3>
+                <p>Mathematics for AI</p>
+            </div>
+
+            <div class="roadmap-card">
+                <h3>Step 3</h3>
+                <p>Machine Learning</p>
+            </div>
+
+            <div class="roadmap-card">
+                <h3>Step 4</h3>
+                <p>Deep Learning</p>
+            </div>
+
+            <div class="roadmap-card">
+                <h3>Step 5</h3>
+                <p>Generative AI</p>
+            </div>
+
+            <div class="roadmap-card">
+                <h3>Step 6</h3>
+                <p>Build AI Projects</p>
+            </div>
 
         </div>
 
-        <div class="card">
+    </section>
 
-            <h3>Deep Learning</h3>
 
-            <p>
-                Learn neural networks, CNNs, RNNs, transformers, and modern AI techniques.
-            </p>
+    <!-- AI Learning Resources -->
 
-            <a href="#">Start Learning →</a>
+    <section class="ai-resources">
+
+        <h2>
+            <i class="fa-brands fa-youtube"></i>
+            Free AI Learning Resources
+        </h2>
+
+        <p class="ai-intro">
+            Learn Artificial Intelligence through free tutorials.
+        </p>
+
+        <div class="ai-cards">
+
+
+            <!-- Machine Learning -->
+
+            <div class="ai-card">
+
+                <img
+                    src="https://img.youtube.com/vi/i_LwzRVP7bg/hqdefault.jpg"
+                    alt="Machine Learning Tutorial"
+                    class="ai-thumbnail"
+                    loading="lazy"
+                >
+
+                <div class="ai-card-content">
+
+                    <h3>Machine Learning</h3>
+
+                    <p>
+                        Learn machine learning algorithms and model training.
+                    </p>
+
+                    <a
+                        class="ai-button"
+                        href="https://www.youtube.com/results?search_query=machine+learning+course+for+beginners"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <i class="fa-solid fa-play"></i>
+                        Start Learning →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Deep Learning -->
+
+            <div class="ai-card">
+
+                <img
+                    src="https://img.youtube.com/vi/aircAruvnKk/hqdefault.jpg"
+                    alt="Deep Learning Tutorial"
+                    class="ai-thumbnail"
+                    loading="lazy"
+                >
+
+                <div class="ai-card-content">
+
+                    <h3>Deep Learning</h3>
+
+                    <p>
+                        Learn neural networks and deep learning fundamentals.
+                    </p>
+
+                    <a
+                        class="ai-button"
+                        href="https://www.youtube.com/results?search_query=deep+learning+full+course"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <i class="fa-solid fa-play"></i>
+                        Start Learning →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Generative AI -->
+
+            <div class="ai-card">
+
+                <img
+                    src="https://img.youtube.com/vi/2ePf9rue1Ao/hqdefault.jpg"
+                    alt="Generative AI Tutorial"
+                    class="ai-thumbnail"
+                    loading="lazy"
+                >
+
+                <div class="ai-card-content">
+
+                    <h3>Generative AI</h3>
+
+                    <p>
+                        Learn about LLMs, prompt engineering, and AI assistants.
+                    </p>
+
+                    <a
+                        class="ai-button"
+                        href="https://www.youtube.com/results?search_query=generative+AI+course+for+beginners"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <i class="fa-solid fa-play"></i>
+                        Start Learning →
+                    </a>
+
+                </div>
+
+            </div>
 
         </div>
 
-        <div class="card">
+    </section>
 
-            <h3>Generative AI</h3>
 
-            <p>
-                Explore Large Language Models (LLMs), prompt engineering,
-                AI assistants, and image generation.
-            </p>
+    <!-- Popular AI Tools -->
 
-            <a href="#">Start Learning →</a>
+    <section class="projects">
 
-        </div>
+        <h2>Popular AI Tools & Frameworks</h2>
 
-    </div>
+        <ul>
+            <li>Python</li>
+            <li>TensorFlow</li>
+            <li>PyTorch</li>
+            <li>Scikit-learn</li>
+            <li>Pandas & NumPy</li>
+            <li>OpenCV</li>
+        </ul>
 
-</section>
+    </section>
 
-<!-- AI Tools -->
 
-<section class="projects">
+    <!-- AI Project Ideas -->
 
-    <h2>Popular AI Tools & Frameworks</h2>
+    <section class="projects">
 
-    <ul>
-        <li>Python</li>
-        <li>TensorFlow</li>
-        <li>PyTorch</li>
-        <li>Scikit-learn</li>
-        <li>Pandas & NumPy</li>
-        <li>OpenCV</li>
-    </ul>
+        <h2>AI Project Ideas</h2>
 
-</section>
+        <ul>
+            <li>Chatbot Assistant</li>
+            <li>Image Classification System</li>
+            <li>Face Recognition App</li>
+            <li>Spam Email Detector</li>
+            <li>Movie Recommendation System</li>
+            <li>AI Resume Analyzer</li>
+        </ul>
 
-<!-- Projects -->
+    </section>
 
-<section class="projects">
 
-    <h2>AI Project Ideas</h2>
+    <!-- Footer -->
 
-    <ul>
-        <li>Chatbot Assistant</li>
-        <li>Image Classification System</li>
-        <li>Face Recognition App</li>
-        <li>Spam Email Detector</li>
-        <li>Movie Recommendation System</li>
-        <li>AI Resume Analyzer</li>
-    </ul>
-
-</section>
-
-<!-- Footer -->
-
-<footer>
-
-    <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
-
-</footer>
+    <footer>
+        <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
+    </footer>
 
 </body>
+
 </html>
