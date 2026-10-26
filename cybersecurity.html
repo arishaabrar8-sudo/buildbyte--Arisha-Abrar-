@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Cyber Security | EmpowerTech</title>
 
     <link rel="stylesheet" href="style.css">
@@ -10,10 +11,10 @@
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
+<!-- NAVBAR -->
 <nav>
     <div class="logo">
         <i class="fa-solid fa-laptop-code"></i>
@@ -23,155 +24,447 @@
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#learning">Learning Hub</a></li>
+        <li><a href="index.html#community">Community</a></li>
     </ul>
 </nav>
 
-<!-- ================= HERO ================= -->
+<!-- HERO SECTION -->
+<section class="cyber-hero">
 
-<section class="page-hero">
+    <div class="cyber-hero-content">
 
-    <h1>🔐 Cyber Security</h1>
+        <span class="cyber-badge">
+            <i class="fa-solid fa-shield-halved"></i>
+            Protect • Detect • Defend
+        </span>
 
-    <p>
-        Learn how to protect systems, networks, and data from cyber threats.
-        Explore ethical hacking, digital forensics, penetration testing,
-        and security best practices.
-    </p>
+        <h1>
+            Explore the World of
+            <span>Cyber Security</span>
+        </h1>
 
-</section>
+        <p>
+            Learn how to protect systems, networks, and data from cyber threats.
+            Explore ethical hacking, network security, digital forensics,
+            and secure coding through a structured learning path.
+        </p>
 
-<!-- ================= ROADMAP ================= -->
+        <div class="cyber-hero-buttons">
+            <a href="#cyber-roadmap" class="cyber-btn cyber-primary">
+                Explore Roadmap
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
 
-<section class="roadmap">
-
-    <h2>Cyber Security Roadmap</h2>
-
-    <div class="roadmap-container">
-
-        <div class="roadmap-card">
-            <h3>Step 1</h3>
-            <p>Computer & Networking Basics</p>
+            <a href="#cyber-resources" class="cyber-btn cyber-secondary">
+                Browse Resources
+            </a>
         </div>
 
-        <div class="roadmap-card">
-            <h3>Step 2</h3>
-            <p>Linux Fundamentals</p>
-        </div>
+        <div class="cyber-highlights">
 
-        <div class="roadmap-card">
-            <h3>Step 3</h3>
-            <p>Cyber Security Fundamentals</p>
-        </div>
+            <div>
+                <i class="fa-solid fa-network-wired"></i>
+                <span>Network Security</span>
+            </div>
 
-        <div class="roadmap-card">
-            <h3>Step 4</h3>
-            <p>Ethical Hacking</p>
-        </div>
+            <div>
+                <i class="fa-solid fa-user-shield"></i>
+                <span>Ethical Hacking</span>
+            </div>
 
-        <div class="roadmap-card">
-            <h3>Step 5</h3>
-            <p>Penetration Testing</p>
-        </div>
+            <div>
+                <i class="fa-solid fa-lock"></i>
+                <span>Data Protection</span>
+            </div>
 
-        <div class="roadmap-card">
-            <h3>Step 6</h3>
-            <p>Build Security Projects</p>
         </div>
 
     </div>
 
 </section>
 
-<!-- ================= RESOURCES ================= -->
+<!-- ROADMAP -->
+<section class="cyber-section" id="cyber-roadmap">
 
-<section class="resources">
+    <div class="cyber-section-heading">
+        <span class="cyber-label">YOUR LEARNING PATH</span>
+        <h2>Cyber Security Roadmap</h2>
+        <p>
+            Follow these steps to build your cybersecurity knowledge
+            from the fundamentals to practical projects.
+        </p>
+    </div>
 
-    <h2>Free Learning Resources</h2>
+    <div class="cyber-roadmap-grid">
 
-    <div class="cards">
-
-        <div class="card">
-            <h3>Networking</h3>
-
+        <div class="cyber-roadmap-card">
+            <span class="cyber-step-number">01</span>
+            <div class="cyber-card-icon">
+                <i class="fa-solid fa-computer"></i>
+            </div>
+            <h3>Computer Fundamentals</h3>
             <p>
-                Learn IP addresses, DNS, HTTP, TCP/IP, routers,
-                switches, and network security.
+                Understand operating systems, computer architecture,
+                files, processes, and basic command-line operations.
             </p>
-
-            <a href="#">Start Learning →</a>
-
+            <span class="cyber-tag">Beginner</span>
         </div>
 
-        <div class="card">
+        <div class="cyber-roadmap-card">
+            <span class="cyber-step-number">02</span>
+            <div class="cyber-card-icon">
+                <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <h3>Networking Basics</h3>
+            <p>
+                Learn IP addresses, DNS, HTTP/HTTPS, TCP/IP,
+                ports, routers, and network protocols.
+            </p>
+            <span class="cyber-tag">Beginner</span>
+        </div>
 
+        <div class="cyber-roadmap-card">
+            <span class="cyber-step-number">03</span>
+            <div class="cyber-card-icon">
+                <i class="fa-brands fa-linux"></i>
+            </div>
+            <h3>Linux Fundamentals</h3>
+            <p>
+                Practise terminal commands, file permissions,
+                users, processes, and basic shell scripting.
+            </p>
+            <span class="cyber-tag">Beginner</span>
+        </div>
+
+        <div class="cyber-roadmap-card">
+            <span class="cyber-step-number">04</span>
+            <div class="cyber-card-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Security Fundamentals</h3>
+            <p>
+                Study encryption, authentication, access control,
+                common threats, and secure coding principles.
+            </p>
+            <span class="cyber-tag">Intermediate</span>
+        </div>
+
+        <div class="cyber-roadmap-card">
+            <span class="cyber-step-number">05</span>
+            <div class="cyber-card-icon">
+                <i class="fa-solid fa-bug"></i>
+            </div>
             <h3>Ethical Hacking</h3>
-
             <p>
-                Learn reconnaissance, vulnerability assessment,
-                penetration testing, and ethical hacking concepts.
+                Learn security testing, vulnerability assessment,
+                web application security, and responsible disclosure.
             </p>
-
-            <a href="#">Start Learning →</a>
-
+            <span class="cyber-tag">Intermediate</span>
         </div>
 
-        <div class="card">
-
-            <h3>Digital Security</h3>
-
+        <div class="cyber-roadmap-card">
+            <span class="cyber-step-number">06</span>
+            <div class="cyber-card-icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
+            <h3>Build Security Projects</h3>
             <p>
-                Learn cryptography, authentication, malware analysis,
-                firewalls, and secure coding practices.
+                Apply your knowledge through password analysis,
+                log analysis, encryption, and defensive security projects.
             </p>
-
-            <a href="#">Start Learning →</a>
-
+            <span class="cyber-tag">Practical</span>
         </div>
 
     </div>
 
 </section>
 
-<!-- ================= TOOLS ================= -->
+<!-- LEARNING RESOURCES -->
+<section class="cyber-section cyber-resources-section" id="cyber-resources">
 
-<section class="projects">
+    <div class="cyber-section-heading">
+        <span class="cyber-label">LEARN AND PRACTISE</span>
+        <h2>Free Learning Resources</h2>
+        <p>
+            Start learning with trusted educational platforms
+            and beginner-friendly security labs.
+        </p>
+    </div>
 
-    <h2>Popular Cyber Security Tools</h2>
+    <div class="cyber-resource-grid">
 
-    <ul>
-        <li>Wireshark</li>
-        <li>Nmap</li>
-        <li>Metasploit</li>
-        <li>Burp Suite</li>
-        <li>OWASP ZAP</li>
-        <li>Kali Linux</li>
-    </ul>
+        <div class="cyber-resource-card">
+            <div class="cyber-resource-icon">
+                <i class="fa-solid fa-network-wired"></i>
+            </div>
+
+            <h3>Networking Basics</h3>
+
+            <p>
+                Understand networking concepts, protocols,
+                IP addressing, and how devices communicate.
+            </p>
+
+            <a href="https://skillsforall.com/"
+               target="_blank" rel="noopener noreferrer">
+                Start Learning
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="cyber-resource-card">
+            <div class="cyber-resource-icon">
+                <i class="fa-solid fa-user-shield"></i>
+            </div>
+
+            <h3>TryHackMe</h3>
+
+            <p>
+                Practise cybersecurity concepts through guided
+                rooms and hands-on learning exercises.
+            </p>
+
+            <a href="https://tryhackme.com/"
+               target="_blank" rel="noopener noreferrer">
+                Explore Learning Paths
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="cyber-resource-card">
+            <div class="cyber-resource-icon">
+                <i class="fa-solid fa-globe"></i>
+            </div>
+
+            <h3>OWASP</h3>
+
+            <p>
+                Learn about web application vulnerabilities,
+                security risks, and secure development practices.
+            </p>
+
+            <a href="https://owasp.org/"
+               target="_blank" rel="noopener noreferrer">
+                Explore OWASP
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="cyber-resource-card">
+            <div class="cyber-resource-icon">
+                <i class="fa-solid fa-terminal"></i>
+            </div>
+
+            <h3>OverTheWire</h3>
+
+            <p>
+                Improve your Linux and security skills through
+                interactive command-line challenges.
+            </p>
+
+            <a href="https://overthewire.org/wargames/"
+               target="_blank" rel="noopener noreferrer">
+                Start Challenges
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="cyber-resource-card">
+            <div class="cyber-resource-icon">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+
+            <h3>PortSwigger Academy</h3>
+
+            <p>
+                Study web security and practise vulnerabilities
+                in intentionally designed training labs.
+            </p>
+
+            <a href="https://portswigger.net/web-security"
+               target="_blank" rel="noopener noreferrer">
+                Access Academy
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="cyber-resource-card">
+            <div class="cyber-resource-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <h3>Cisco Skills for All</h3>
+
+            <p>
+                Explore networking, cybersecurity fundamentals,
+                and introductory professional learning courses.
+            </p>
+
+            <a href="https://skillsforall.com/"
+               target="_blank" rel="noopener noreferrer">
+                Explore Courses
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+    </div>
 
 </section>
 
-<!-- ================= PROJECTS ================= -->
+<!-- SECURITY TOOLS -->
+<section class="cyber-section">
 
-<section class="projects">
+    <div class="cyber-section-heading">
+        <span class="cyber-label">TOOLS OF THE TRADE</span>
+        <h2>Popular Cyber Security Tools</h2>
+        <p>
+            Become familiar with tools used for network analysis,
+            security testing, and defensive investigations.
+        </p>
+    </div>
 
-    <h2>Cyber Security Project Ideas</h2>
+    <div class="cyber-tools-grid">
 
-    <ul>
-        <li>Password Strength Checker</li>
-        <li>Network Scanner</li>
-        <li>Port Scanner</li>
-        <li>File Encryption Tool</li>
-        <li>Phishing Detection System</li>
-        <li>Website Vulnerability Scanner</li>
-    </ul>
+        <div class="cyber-tool">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h3>Nmap</h3>
+            <p>Network discovery and authorised security auditing.</p>
+        </div>
+
+        <div class="cyber-tool">
+            <i class="fa-solid fa-chart-network"></i>
+            <h3>Wireshark</h3>
+            <p>Network traffic analysis and protocol inspection.</p>
+        </div>
+
+        <div class="cyber-tool">
+            <i class="fa-solid fa-globe"></i>
+            <h3>Burp Suite</h3>
+            <p>Web application security testing in authorised labs.</p>
+        </div>
+
+        <div class="cyber-tool">
+            <i class="fa-solid fa-shield"></i>
+            <h3>OWASP ZAP</h3>
+            <p>Web application security testing and vulnerability discovery.</p>
+        </div>
+
+        <div class="cyber-tool">
+            <i class="fa-brands fa-linux"></i>
+            <h3>Kali Linux</h3>
+            <p>A Linux distribution for security testing and learning.</p>
+        </div>
+
+        <div class="cyber-tool">
+            <i class="fa-solid fa-bug"></i>
+            <h3>Metasploit</h3>
+            <p>A framework for authorised penetration testing and security research.</p>
+        </div>
+
+    </div>
 
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- PROJECT IDEAS -->
+<section class="cyber-section cyber-projects-section">
 
+    <div class="cyber-section-heading">
+        <span class="cyber-label">LEARN BY BUILDING</span>
+        <h2>Cyber Security Project Ideas</h2>
+        <p>
+            Build portfolio projects that demonstrate your programming
+            skills and understanding of defensive security.
+        </p>
+    </div>
+
+    <div class="cyber-project-grid">
+
+        <div class="cyber-project-card">
+            <i class="fa-solid fa-key"></i>
+            <h3>Password Strength Checker</h3>
+            <p>
+                Create a tool that evaluates password length,
+                character variety, and common weaknesses.
+            </p>
+            <span>Python • String Processing</span>
+        </div>
+
+        <div class="cyber-project-card">
+            <i class="fa-solid fa-lock"></i>
+            <h3>File Encryption Tool</h3>
+            <p>
+                Build a utility that encrypts and decrypts files
+                using a trusted cryptographic library.
+            </p>
+            <span>Python • Cryptography</span>
+        </div>
+
+        <div class="cyber-project-card">
+            <i class="fa-solid fa-envelope-open-text"></i>
+            <h3>Phishing Awareness Checker</h3>
+            <p>
+                Flag suspicious URLs and explain warning signs
+                that may indicate a phishing attempt.
+            </p>
+            <span>Python • Web Security</span>
+        </div>
+
+        <div class="cyber-project-card">
+            <i class="fa-solid fa-file-lines"></i>
+            <h3>Security Log Analyzer</h3>
+            <p>
+                Analyse sample logs to identify repeated failed
+                logins and unusual activity patterns.
+            </p>
+            <span>Python • File Handling</span>
+        </div>
+
+        <div class="cyber-project-card">
+            <i class="fa-solid fa-network-wired"></i>
+            <h3>Network Information Tool</h3>
+            <p>
+                Display network configuration and basic connection
+                information on your own computer.
+            </p>
+            <span>Python • Networking</span>
+        </div>
+
+        <div class="cyber-project-card">
+            <i class="fa-solid fa-code"></i>
+            <h3>Secure Login System</h3>
+            <p>
+                Develop a login system with password hashing,
+                input validation, and secure session handling.
+            </p>
+            <span>HTML • CSS • Python</span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SECURITY ETHICS -->
+<section class="cyber-ethics">
+
+    <div class="cyber-ethics-icon">
+        <i class="fa-solid fa-scale-balanced"></i>
+    </div>
+
+    <div>
+        <h2>Learn Cyber Security Responsibly</h2>
+        <p>
+            Practise only on systems you own or have explicit
+            permission to test. Use authorised training labs,
+            respect privacy, and follow responsible disclosure practices.
+        </p>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
 <footer>
-
     <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
-
+    <p>Learn Today. Secure Tomorrow.</p>
 </footer>
 
 </body>
