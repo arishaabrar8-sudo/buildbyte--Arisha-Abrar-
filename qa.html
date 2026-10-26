@@ -1,295 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Q&A Hub | EmpowerTech</title>
 
 <link rel="stylesheet" href="style.css">
-
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+<style>
+/* Q&A HUB THEME */
+.qa-page {
+    background: #080f1c;
+    color: #e2e8f0;
+    font-family: Arial, sans-serif;
+}
+
+.qa-page nav {
+    background: #0b1728;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.qa-page nav .logo {
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.qa-page nav ul {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.qa-page nav a {
+    color: #e2e8f0 !important;
+    text-decoration: none;
+}
+
+.qa-page nav a:hover {
+    color: #38e8ff !important;
+}
+
+.qa-page .qa-hero {
+    text-align: center;
+    padding: 65px 20px;
+    background: linear-gradient(135deg, #0b1728, #142b40);
+}
+
+.qa-page .qa-hero h1 {
+    color: #ffffff !important;
+    font-size: clamp(30px, 5vw, 44px);
+    margin-bottom: 15px;
+}
+
+.qa-page .qa-hero h1 span {
+    color: #38e8ff;
+}
+
+.qa-page .qa-hero p {
+    color: #cbd5e1 !important;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.qa-page .qa-section {
+    padding: 45px 20px;
+    text-align: center;
+}
+
+.qa-page .qa-section h2 {
+    color: #ffffff !important;
+    font-size: 29px;
+    margin-bottom: 28px;
+}
+
+.qa-page .qa-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.qa-page .qa-card {
+    background: #17263a !important;
+    color: #e2e8f0 !important;
+    border: 1px solid #34465e;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.25s;
+}
+
+.qa-page .qa-card:hover {
+    transform: translateY(-5px);
+    border-color: #38e8ff;
+}
+
+.qa-page .qa-card h3 {
+    color: #ffffff !important;
+    margin: 15px 0;
+}
+
+.qa-page .qa-card p {
+    color: #cbd5e1 !important;
+    line-height: 1.7;
+}
+
+.qa-page .qa-icon {
+    font-size: 32px;
+    color: #38e8ff;
+}
+
+.qa-page .qa-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 11px 19px;
+    background: #38e8ff;
+    color: #07111f !important;
+    border: none;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.qa-page .qa-btn:hover {
+    background: #a0f5ff;
+}
+
+.qa-page .qa-list {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.qa-page .qa-list li {
+    background: #17263a !important;
+    color: #e2e8f0 !important;
+    border: 1px solid #34465e;
+    padding: 16px;
+    margin: 11px 0;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.qa-page .qa-list a {
+    color: #38e8ff !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.qa-page .qa-list a:hover {
+    text-decoration: underline;
+}
+
+.qa-page .qa-footer {
+    background: #060d18;
+    padding: 22px;
+    text-align: center;
+    border-top: 1px solid #34465e;
+}
+
+.qa-page .qa-footer p {
+    color: #cbd5e1 !important;
+}
+
+.qa-page .qa-footer a {
+    color: #38e8ff;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .qa-page nav {
+        gap: 15px;
+    }
+
+    .qa-page nav ul {
+        padding: 0;
+        gap: 15px;
+    }
+
+    .qa-page .qa-section {
+        padding: 30px 15px;
+    }
+}
+</style>
 </head>
 
+<body class="qa-page">
 
-<body>
-
-
-<!-- ================= NAVBAR ================= -->
-
+<!-- NAVBAR -->
 <nav>
-
     <div class="logo">
         <i class="fa-solid fa-laptop-code"></i>
         EmpowerTech
     </div>
 
-
     <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#community">Community</a></li>
+        <li><a href="programming.html">Programming</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="qa-hero">
+    <h1>💬 Q&amp;A <span>Hub</span></h1>
+
+    <p>
+        Ask questions, solve problems, and learn from students,
+        developers, and technology enthusiasts. Explore trusted
+        communities and share your knowledge with others.
+    </p>
+</section>
+
+<!-- ASK AND ANSWER -->
+<section class="qa-section">
+    <h2>Connect, Ask &amp; Learn</h2>
+
+    <div class="qa-cards">
+
+        <div class="qa-card">
+            <i class="fa-solid fa-circle-question qa-icon"></i>
+            <h3>Ask a Question</h3>
+
+            <p>
+                Get help with programming errors, university subjects,
+                projects, and technical challenges.
+            </p>
+
+            <a class="qa-btn"
+               href="https://stackoverflow.com/questions/ask"
+               target="_blank" rel="noopener noreferrer">
+                Ask on Stack Overflow
+            </a>
+        </div>
+
+        <div class="qa-card">
+            <i class="fa-solid fa-lightbulb qa-icon"></i>
+            <h3>Share Knowledge</h3>
+
+            <p>
+                Answer technical questions and help other learners
+                understand programming concepts.
+            </p>
+
+            <a class="qa-btn"
+               href="https://stackoverflow.com/"
+               target="_blank" rel="noopener noreferrer">
+                Answer Questions
+            </a>
+        </div>
+
+        <div class="qa-card">
+            <i class="fa-solid fa-users qa-icon"></i>
+            <h3>Join Discussions</h3>
+
+            <p>
+                Meet developers, discuss projects, and learn
+                collaboratively with other programmers.
+            </p>
+
+            <a class="qa-btn"
+               href="https://github.com/orgs/community/discussions"
+               target="_blank" rel="noopener noreferrer">
+                Join Discussion
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- POPULAR CATEGORIES -->
+<section class="qa-section">
+    <h2>Popular Categories</h2>
+
+    <ul class="qa-list">
+
+        <li>💻 <a href="https://stackoverflow.com/questions/tagged/c%2B%2B"
+        target="_blank" rel="noopener noreferrer">Programming Problems — C++</a></li>
+
+        <li>🌐 <a href="https://stackoverflow.com/questions/tagged/web-development"
+        target="_blank" rel="noopener noreferrer">Web Development</a></li>
+
+        <li>🤖 <a href="https://www.reddit.com/r/learnmachinelearning/"
+        target="_blank" rel="noopener noreferrer">Artificial Intelligence &amp; Machine Learning</a></li>
+
+        <li>📊 <a href="https://www.kaggle.com/discussions"
+        target="_blank" rel="noopener noreferrer">Data Science</a></li>
+
+        <li>🔐 <a href="https://security.stackexchange.com/"
+        target="_blank" rel="noopener noreferrer">Cybersecurity</a></li>
+
+        <li>🎓 <a href="https://www.geeksforgeeks.org/"
+        target="_blank" rel="noopener noreferrer">University Subjects &amp; Computer Science</a></li>
+
+        <li>💼 <a href="https://www.reddit.com/r/careerguidance/"
+        target="_blank" rel="noopener noreferrer">Career Advice</a></li>
+
+        <li>🚀 <a href="https://www.reddit.com/r/freelance/"
+        target="_blank" rel="noopener noreferrer">Freelancing</a></li>
+
+    </ul>
+</section>
+
+<!-- FREQUENTLY ASKED QUESTIONS -->
+<section class="qa-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <ul class="qa-list">
 
         <li>
-            <a href="index.html">Home</a>
+            <strong>How should I start learning programming?</strong><br>
+            Begin with programming fundamentals, practise small problems,
+            and build projects.
+            <br><a href="programming.html">Explore the Programming Roadmap →</a>
         </li>
 
         <li>
-            <a href="index.html#community">Community</a>
+            <strong>Which language should beginners learn?</strong><br>
+            Python is beginner-friendly, while C++ is useful for
+            understanding programming fundamentals and DSA.
+            <br><a href="https://www.learnpython.org/"
+            target="_blank" rel="noopener noreferrer">Learn Python →</a>
+        </li>
+
+        <li>
+            <strong>How can I prepare for coding interviews?</strong><br>
+            Practise arrays, strings, trees, graphs, and common
+            problem-solving patterns.
+            <br><a href="https://leetcode.com/"
+            target="_blank" rel="noopener noreferrer">Practise on LeetCode →</a>
+        </li>
+
+        <li>
+            <strong>How do I build my first portfolio project?</strong><br>
+            Start with a small website or application, upload your code,
+            and explain your work.
+            <br><a href="https://github.com/"
+            target="_blank" rel="noopener noreferrer">Explore GitHub →</a>
+        </li>
+
+        <li>
+            <strong>Where can I find internships?</strong><br>
+            Search for internships and entry-level opportunities
+            relevant to your skills.
+            <br><a href="https://www.linkedin.com/jobs/"
+            target="_blank" rel="noopener noreferrer">Find Jobs on LinkedIn →</a>
+        </li>
+
+        <li>
+            <strong>How can I improve my GitHub profile?</strong><br>
+            Keep projects organised, write clear README files,
+            and document what you learned.
+            <br><a href="https://docs.github.com/en"
+            target="_blank" rel="noopener noreferrer">Read GitHub Docs →</a>
         </li>
 
     </ul>
-
-
-</nav>
-
-
-
-<!-- ================= HERO ================= -->
-
-
-<section class="page-hero">
-
-
-<h1>❓ Q&A Hub</h1>
-
-
-<p>
-Ask questions, solve problems, and learn from students,
-developers, and technology enthusiasts around the world.
-</p>
-
-
 </section>
 
+<!-- COMMUNITY GUIDELINES -->
+<section class="qa-section">
+    <h2>Q&amp;A Guidelines</h2>
 
-
-
-<!-- ================= ASK QUESTION ================= -->
-
-
-<section class="resources">
-
-
-<h2>Ask Your Question</h2>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-
-<h3>
-<i class="fa-solid fa-question"></i>
-Post a Question
-</h3>
-
-
-<p>
-Share your programming, academic, career,
-or technology-related questions with the community.
-</p>
-
-
-<button class="primary">
-Ask Now
-</button>
-
-
-</div>
-
-
-
-<div class="card">
-
-
-<h3>
-<i class="fa-solid fa-lightbulb"></i>
-Share Knowledge
-</h3>
-
-
-<p>
-Help other learners by answering questions
-and sharing your experience.
-</p>
-
-
-<button class="primary">
-Answer Questions
-</button>
-
-
-</div>
-
-
-
-<div class="card">
-
-
-<h3>
-<i class="fa-solid fa-users"></i>
-Community Support
-</h3>
-
-
-<p>
-Connect with learners and experts to
-solve problems together.
-</p>
-
-
-<button class="primary">
-Join Discussion
-</button>
-
-
-</div>
-
-
-</div>
-
-
+    <ul class="qa-list">
+        <li>🤝 Be respectful and supportive.</li>
+        <li>💡 Explain your answers clearly.</li>
+        <li>🚫 Avoid spam and irrelevant content.</li>
+        <li>🔎 Search before posting duplicate questions.</li>
+        <li>🌱 Help beginners learn.</li>
+        <li>✅ Share reliable resources only.</li>
+    </ul>
 </section>
 
-
-
-
-
-<!-- ================= QUESTION CATEGORIES ================= -->
-
-
-<section class="projects">
-
-
-<h2>Popular Categories</h2>
-
-
-<ul>
-
-<li>💻 Programming Problems</li>
-
-<li>🌐 Web Development</li>
-
-<li>🤖 Artificial Intelligence</li>
-
-<li>📊 Data Science</li>
-
-<li>🔐 Cyber Security</li>
-
-<li>🎓 University Subjects</li>
-
-<li>💼 Career Advice</li>
-
-<li>🚀 Freelancing</li>
-
-
-</ul>
-
-
-</section>
-
-
-
-
-
-<!-- ================= COMMON QUESTIONS ================= -->
-
-
-<section class="projects">
-
-
-<h2>Frequently Asked Questions</h2>
-
-
-<ul>
-
-<li>
-How should I start learning programming?
-</li>
-
-
-<li>
-Which programming language should beginners learn?
-</li>
-
-
-<li>
-How can I prepare for coding interviews?
-</li>
-
-
-<li>
-How do I build my first portfolio project?
-</li>
-
-
-<li>
-Where can I find internships?
-</li>
-
-
-<li>
-How can I improve my GitHub profile?
-</li>
-
-
-</ul>
-
-
-</section>
-
-
-
-
-
-<!-- ================= COMMUNITY RULES ================= -->
-
-
-<section class="projects">
-
-
-<h2>Q&A Guidelines</h2>
-
-
-<ul>
-
-<li>Be respectful and supportive.</li>
-
-<li>Explain your answers clearly.</li>
-
-<li>Avoid spam and irrelevant content.</li>
-
-<li>Search before posting duplicate questions.</li>
-
-<li>Help beginners learn.</li>
-
-<li>Share reliable resources only.</li>
-
-
-</ul>
-
-
-</section>
-
-
-
-
-
-<!-- ================= FOOTER ================= -->
-
-
-<footer>
-
-<p>
-&copy; 2026 EmpowerTech. All Rights Reserved.
-</p>
-
+<!-- FOOTER -->
+<footer class="qa-footer">
+    <p>
+        &copy; 2026 EmpowerTech. All Rights Reserved.
+    </p>
+
+    <p>
+        <a href="index.html">Home</a> |
+        <a href="programming.html">Learning Hub</a> |
+        <a href="mailto:empowertech@example.com">Contact</a>
+    </p>
 </footer>
 
-
 </body>
-
 </html>
