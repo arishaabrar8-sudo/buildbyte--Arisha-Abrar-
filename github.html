@@ -6,16 +6,14 @@
     <title>GitHub Portfolio | EmpowerTech</title>
 
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
 
-<!-- ================= NAVBAR ================= -->
+<body class="github-page">
 
+<!-- NAVBAR -->
 <nav>
-
     <div class="logo">
         <i class="fa-solid fa-laptop-code"></i>
         EmpowerTech
@@ -25,124 +23,432 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#career">Career Center</a></li>
     </ul>
-
 </nav>
 
-<!-- ================= HERO ================= -->
+<!-- HERO SECTION -->
+<section class="github-hero">
+    <div class="github-hero-content">
+        <span class="github-label">
+            <i class="fa-solid fa-code-branch"></i> SHOWCASE YOUR WORK
+        </span>
 
-<section class="page-hero">
+        <h1>
+            Build Your <span>GitHub Portfolio</span>
+        </h1>
 
-    <h1>🐙 GitHub Portfolio</h1>
+        <p>
+            Showcase your coding skills, academic projects, and
+            contributions through a professional GitHub profile.
+            Let your work demonstrate what you can build.
+        </p>
 
-    <p>
-        Learn how to create an impressive GitHub profile that showcases
-        your coding skills, projects, and contributions to recruiters
-        and employers.
-    </p>
+        <div class="github-hero-buttons">
+            <a href="https://github.com/" target="_blank"
+               rel="noopener noreferrer" class="github-btn">
+                Explore GitHub
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
 
+            <a href="#github-setup" class="github-secondary-btn">
+                Get Started
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="github-hero-visual">
+        <div class="github-main-icon">
+            <i class="fa-brands fa-github"></i>
+        </div>
+
+        <div class="github-floating-card github-float-one">
+            <i class="fa-solid fa-code"></i>
+            <span>Projects</span>
+        </div>
+
+        <div class="github-floating-card github-float-two">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Documentation</span>
+        </div>
+
+        <div class="github-floating-card github-float-three">
+            <i class="fa-solid fa-users"></i>
+            <span>Collaboration</span>
+        </div>
+    </div>
 </section>
 
-<!-- ================= PROFILE SETUP ================= -->
+<!-- PROFILE SETUP -->
+<section class="github-section" id="github-setup">
+    <div class="github-section-heading">
+        <span>START WITH THE BASICS</span>
+        <h2>Build Your GitHub Profile</h2>
+        <p>
+            Make your profile clear, organized, and easy for others to explore.
+        </p>
+    </div>
 
-<section class="resources">
+    <div class="github-profile-grid">
 
-    <h2>Build Your GitHub Profile</h2>
+        <div class="github-profile-card">
+            <div class="github-card-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
 
-    <div class="cards">
-
-        <div class="card">
-            <h3>👤 Complete Your Profile</h3>
+            <h3>Complete Your Profile</h3>
 
             <p>
-                Add a profile picture, bio, location, and portfolio
-                links to make your profile professional.
+                Add a profile picture, a concise bio, and relevant links
+                to your portfolio, LinkedIn, or personal website.
             </p>
 
+            <a href="https://docs.github.com/en/account-and-profile"
+               target="_blank" rel="noopener noreferrer">
+                Profile Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
         </div>
 
-        <div class="card">
+        <div class="github-profile-card">
+            <div class="github-card-icon">
+                <i class="fa-solid fa-folder-open"></i>
+            </div>
 
-            <h3>📂 Upload Projects</h3>
+            <h3>Upload Your Projects</h3>
 
             <p>
-                Upload your academic and personal projects with
-                proper folder structure and documentation.
+                Create repositories for your academic and personal
+                projects, keeping files organized and easy to navigate.
             </p>
 
+            <a href="https://docs.github.com/en/repositories"
+               target="_blank" rel="noopener noreferrer">
+                Repository Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
         </div>
 
-        <div class="card">
+        <div class="github-profile-card">
+            <div class="github-card-icon">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
 
-            <h3>📖 Write README Files</h3>
+            <h3>Write README Files</h3>
 
             <p>
-                Every project should include a clear README with
-                features, installation steps, and screenshots.
+                Explain each project's purpose, features, technologies,
+                setup instructions, and usage with a clear README.md.
             </p>
 
+            <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes"
+               target="_blank" rel="noopener noreferrer">
+                README Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
         </div>
 
     </div>
-
 </section>
 
-<!-- ================= BEST PRACTICES ================= -->
+<!-- README GUIDE -->
+<section class="github-readme-section">
+    <div class="github-readme-content">
+        <span class="github-label">MAKE A STRONG FIRST IMPRESSION</span>
+        <h2>What Makes a Good README?</h2>
 
-<section class="projects">
+        <p>
+            A README helps visitors understand your project before
+            they explore its source code.
+        </p>
 
-    <h2>GitHub Best Practices</h2>
+        <ul>
+            <li>
+                <i class="fa-solid fa-check-circle"></i>
+                <span><strong>Project Overview:</strong> Explain the problem your project solves.</span>
+            </li>
 
-    <ul>
-        <li>Write clean and readable code.</li>
-        <li>Use meaningful repository names.</li>
-        <li>Add descriptive commit messages.</li>
-        <li>Include a professional README.md file.</li>
-        <li>Keep projects updated regularly.</li>
-        <li>Organize repositories into categories.</li>
-    </ul>
+            <li>
+                <i class="fa-solid fa-check-circle"></i>
+                <span><strong>Features:</strong> Describe the main functionality.</span>
+            </li>
 
+            <li>
+                <i class="fa-solid fa-check-circle"></i>
+                <span><strong>Technologies:</strong> List the languages, frameworks, and tools used.</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-check-circle"></i>
+                <span><strong>Installation:</strong> Explain how someone can run the project.</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-check-circle"></i>
+                <span><strong>Screenshots:</strong> Show the interface or important results when relevant.</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-check-circle"></i>
+                <span><strong>Credits:</strong> Acknowledge collaborators and external resources.</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="github-readme-visual">
+        <i class="fa-brands fa-markdown"></i>
+        <h3>README.md</h3>
+        <div class="github-code-line">
+            <span>#</span> Project Name
+        </div>
+        <div class="github-code-line">
+            <span>##</span> Features
+        </div>
+        <div class="github-code-line">
+            <span>##</span> Installation
+        </div>
+        <div class="github-code-line">
+            <span>##</span> Usage
+        </div>
+        <div class="github-code-line">
+            <span>##</span> Technologies
+        </div>
+    </div>
 </section>
 
-<!-- ================= PROJECT IDEAS ================= -->
+<!-- BEST PRACTICES -->
+<section class="github-section">
+    <div class="github-section-heading">
+        <span>DEVELOP GOOD HABITS</span>
+        <h2>GitHub Best Practices</h2>
+        <p>
+            Small improvements can make your repositories
+            more professional and easier to maintain.
+        </p>
+    </div>
 
-<section class="projects">
+    <div class="github-practices-grid">
 
-    <h2>Projects to Showcase</h2>
+        <div class="github-practice-card">
+            <i class="fa-solid fa-code"></i>
+            <h3>Readable Code</h3>
+            <p>Use meaningful names, consistent formatting, and clear structure.</p>
+        </div>
 
-    <ul>
-        <li>Portfolio Website</li>
-        <li>Student Management System</li>
-        <li>Recipe Finder Website</li>
-        <li>Weather App</li>
-        <li>AI Chatbot</li>
-        <li>Hospital Management System</li>
-    </ul>
+        <div class="github-practice-card">
+            <i class="fa-solid fa-signature"></i>
+            <h3>Meaningful Commits</h3>
+            <p>Write concise commit messages that explain what changed.</p>
+        </div>
 
+        <div class="github-practice-card">
+            <i class="fa-solid fa-folder-tree"></i>
+            <h3>Organized Repositories</h3>
+            <p>Use suitable folder structures and descriptive repository names.</p>
+        </div>
+
+        <div class="github-practice-card">
+            <i class="fa-solid fa-arrows-rotate"></i>
+            <h3>Regular Updates</h3>
+            <p>Maintain your projects and document important improvements.</p>
+        </div>
+
+        <div class="github-practice-card">
+            <i class="fa-solid fa-code-branch"></i>
+            <h3>Use Git Branches</h3>
+            <p>Practice branching and merging to manage changes safely.</p>
+        </div>
+
+        <div class="github-practice-card">
+            <i class="fa-solid fa-lock"></i>
+            <h3>Protect Your Secrets</h3>
+            <p>Never commit passwords, API keys, tokens, or private information.</p>
+        </div>
+
+    </div>
 </section>
 
-<!-- ================= WHY GITHUB ================= -->
+<!-- PROJECT IDEAS -->
+<section class="github-project-section">
+    <div class="github-section-heading">
+        <span>TURN KNOWLEDGE INTO PROJECTS</span>
+        <h2>Projects to Showcase</h2>
+        <p>
+            Start with manageable projects and gradually build
+            more advanced applications.
+        </p>
+    </div>
 
-<section class="projects">
+    <div class="github-project-grid">
 
-    <h2>Why GitHub Matters</h2>
+        <div class="github-project-card">
+            <div class="github-project-icon">
+                <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="github-project-content">
+                <span class="github-project-tag">Web Development</span>
+                <h3>Portfolio Website</h3>
+                <p>
+                    Present your skills, projects, achievements,
+                    and contact information in one place.
+                </p>
+                <div class="github-tech-list">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+        </div>
 
-    <ul>
-        <li>Demonstrates your coding skills.</li>
-        <li>Shows consistency through contributions.</li>
-        <li>Helps recruiters review your projects.</li>
-        <li>Builds a professional developer portfolio.</li>
-        <li>Encourages collaboration on open-source projects.</li>
-        <li>Strengthens internship and job applications.</li>
-    </ul>
+        <div class="github-project-card">
+            <div class="github-project-icon">
+                <i class="fa-solid fa-users-gear"></i>
+            </div>
+            <div class="github-project-content">
+                <span class="github-project-tag">Software Engineering</span>
+                <h3>Student Management System</h3>
+                <p>
+                    Manage student records, course information,
+                    and academic data.
+                </p>
+                <div class="github-tech-list">
+                    <span>C++</span>
+                    <span>SQL</span>
+                </div>
+            </div>
+        </div>
 
+        <div class="github-project-card">
+            <div class="github-project-icon">
+                <i class="fa-solid fa-utensils"></i>
+            </div>
+            <div class="github-project-content">
+                <span class="github-project-tag">Web Application</span>
+                <h3>Recipe Finder</h3>
+                <p>
+                    Help users discover recipes based on ingredients
+                    and food preferences.
+                </p>
+                <div class="github-tech-list">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="github-project-card">
+            <div class="github-project-icon">
+                <i class="fa-solid fa-cloud-sun"></i>
+            </div>
+            <div class="github-project-content">
+                <span class="github-project-tag">API Integration</span>
+                <h3>Weather Application</h3>
+                <p>
+                    Display weather information using an external
+                    weather API.
+                </p>
+                <div class="github-tech-list">
+                    <span>JavaScript</span>
+                    <span>API</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="github-project-card">
+            <div class="github-project-icon">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+            <div class="github-project-content">
+                <span class="github-project-tag">Artificial Intelligence</span>
+                <h3>AI Chatbot</h3>
+                <p>
+                    Create a conversational application using
+                    suitable AI tools or APIs.
+                </p>
+                <div class="github-tech-list">
+                    <span>Python</span>
+                    <span>AI</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="github-project-card">
+            <div class="github-project-icon">
+                <i class="fa-solid fa-hospital"></i>
+            </div>
+            <div class="github-project-content">
+                <span class="github-project-tag">Data Structures</span>
+                <h3>Hospital Management System</h3>
+                <p>
+                    Organize patient records, appointments,
+                    and basic hospital operations.
+                </p>
+                <div class="github-tech-list">
+                    <span>C++</span>
+                    <span>DSA</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- WHY GITHUB MATTERS -->
+<section class="github-benefits-section">
+    <div class="github-section-heading">
+        <span>GROW YOUR DEVELOPER PROFILE</span>
+        <h2>Why GitHub Matters</h2>
+        <p>
+            A well-maintained GitHub profile can help you
+            demonstrate your development experience.
+        </p>
+    </div>
 
+    <div class="github-benefits-grid">
+
+        <div class="github-benefit">
+            <i class="fa-solid fa-laptop-code"></i>
+            <h3>Show Your Skills</h3>
+            <p>Give others a practical view of your coding abilities.</p>
+        </div>
+
+        <div class="github-benefit">
+            <i class="fa-solid fa-folder-open"></i>
+            <h3>Present Your Work</h3>
+            <p>Keep your projects organized and accessible in one place.</p>
+        </div>
+
+        <div class="github-benefit">
+            <i class="fa-solid fa-people-group"></i>
+            <h3>Collaborate</h3>
+            <p>Learn Git workflows and contribute to shared projects.</p>
+        </div>
+
+        <div class="github-benefit">
+            <i class="fa-solid fa-briefcase"></i>
+            <h3>Support Applications</h3>
+            <p>Share relevant repositories when applying for internships and jobs.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="github-cta">
+    <i class="fa-brands fa-github"></i>
+    <h2>Your Next Project Starts Here</h2>
+    <p>
+        Build consistently, document your work, and let your
+        projects tell the story of your learning journey.
+    </p>
+
+    <a href="https://github.com/" target="_blank"
+       rel="noopener noreferrer" class="github-btn">
+        Start Exploring GitHub
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+</section>
+
+<!-- FOOTER -->
 <footer>
-
     <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
-
 </footer>
 
 </body>
