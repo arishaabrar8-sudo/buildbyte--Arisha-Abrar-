@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Data Science | EmpowerTech</title>
 
     <link rel="stylesheet" href="style.css">
@@ -10,10 +11,10 @@
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
+<!-- NAVBAR -->
 <nav>
     <div class="logo">
         <i class="fa-solid fa-laptop-code"></i>
@@ -23,152 +24,451 @@
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#learning">Learning Hub</a></li>
+        <li><a href="index.html#community">Community</a></li>
     </ul>
 </nav>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
+<section class="ds-hero">
 
-<section class="page-hero">
+    <div class="ds-hero-content">
 
-    <h1>📊 Data Science</h1>
+        <span class="ds-badge">
+            <i class="fa-solid fa-chart-line"></i>
+            Discover • Analyze • Predict
+        </span>
 
-    <p>
-        Learn how to collect, analyze, visualize, and interpret data.
-        Master Python, SQL, statistics, machine learning, and real-world
-        data analysis projects.
-    </p>
+        <h1>
+            Turn Data Into
+            <span>Meaningful Insights</span>
+        </h1>
 
-</section>
+        <p>
+            Explore the world of Data Science by learning Python,
+            statistics, SQL, data visualization, and machine learning.
+            Build practical skills and transform raw data into
+            valuable insights for real-world problems.
+        </p>
 
-<!-- ================= ROADMAP ================= -->
+        <div class="ds-hero-buttons">
+            <a href="#ds-roadmap" class="ds-btn ds-primary">
+                Explore Roadmap
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
 
-<section class="roadmap">
-
-    <h2>Data Science Roadmap</h2>
-
-    <div class="roadmap-container">
-
-        <div class="roadmap-card">
-            <h3>Step 1</h3>
-            <p>Python Programming</p>
+            <a href="#ds-resources" class="ds-btn ds-secondary">
+                Start Learning
+            </a>
         </div>
 
-        <div class="roadmap-card">
-            <h3>Step 2</h3>
-            <p>Statistics & Mathematics</p>
-        </div>
+        <div class="ds-highlights">
+            <div>
+                <i class="fa-brands fa-python"></i>
+                Python
+            </div>
 
-        <div class="roadmap-card">
-            <h3>Step 3</h3>
-            <p>SQL & Databases</p>
-        </div>
+            <div>
+                <i class="fa-solid fa-database"></i>
+                SQL & Data
+            </div>
 
-        <div class="roadmap-card">
-            <h3>Step 4</h3>
-            <p>Data Analysis</p>
-        </div>
-
-        <div class="roadmap-card">
-            <h3>Step 5</h3>
-            <p>Machine Learning</p>
-        </div>
-
-        <div class="roadmap-card">
-            <h3>Step 6</h3>
-            <p>Real-World Projects</p>
+            <div>
+                <i class="fa-solid fa-brain"></i>
+                Machine Learning
+            </div>
         </div>
 
     </div>
 
 </section>
 
-<!-- ================= RESOURCES ================= -->
+<!-- ROADMAP -->
+<section class="ds-section" id="ds-roadmap">
 
-<section class="resources">
+    <div class="ds-section-heading">
+        <span class="ds-label">YOUR LEARNING JOURNEY</span>
+        <h2>Data Science Roadmap</h2>
+        <p>
+            Follow these steps to develop your data skills,
+            from programming fundamentals to machine learning projects.
+        </p>
+    </div>
 
-    <h2>Free Learning Resources</h2>
+    <div class="ds-roadmap-grid">
 
-    <div class="cards">
-
-        <div class="card">
-            <h3>Python for Data Science</h3>
-
+        <div class="ds-roadmap-card">
+            <span class="ds-step">01</span>
+            <div class="ds-icon">
+                <i class="fa-brands fa-python"></i>
+            </div>
+            <h3>Python Programming</h3>
             <p>
-                Learn Python fundamentals, NumPy, Pandas, and data manipulation.
+                Learn variables, loops, functions, lists, dictionaries,
+                and basic object-oriented programming.
             </p>
-
-            <a href="#">Start Learning →</a>
-
+            <span class="ds-tag">Beginner</span>
         </div>
 
-        <div class="card">
+        <div class="ds-roadmap-card">
+            <span class="ds-step">02</span>
+            <div class="ds-icon">
+                <i class="fa-solid fa-calculator"></i>
+            </div>
+            <h3>Math & Statistics</h3>
+            <p>
+                Understand probability, descriptive statistics,
+                distributions, correlation, and linear algebra basics.
+            </p>
+            <span class="ds-tag">Fundamentals</span>
+        </div>
 
+        <div class="ds-roadmap-card">
+            <span class="ds-step">03</span>
+            <div class="ds-icon">
+                <i class="fa-solid fa-database"></i>
+            </div>
             <h3>SQL & Databases</h3>
-
             <p>
-                Learn SQL queries, joins, database design, and data management.
+                Practise SELECT, filtering, joins, grouping,
+                aggregations, and database fundamentals.
             </p>
-
-            <a href="#">Start Learning →</a>
-
+            <span class="ds-tag">Data Management</span>
         </div>
 
-        <div class="card">
-
-            <h3>Machine Learning</h3>
-
+        <div class="ds-roadmap-card">
+            <span class="ds-step">04</span>
+            <div class="ds-icon">
+                <i class="fa-solid fa-chart-column"></i>
+            </div>
+            <h3>Data Analysis</h3>
             <p>
-                Learn regression, classification, clustering, and predictive models.
+                Use Pandas and NumPy to clean, organize,
+                transform, and analyze datasets.
             </p>
+            <span class="ds-tag">Practical Skills</span>
+        </div>
 
-            <a href="#">Start Learning →</a>
+        <div class="ds-roadmap-card">
+            <span class="ds-step">05</span>
+            <div class="ds-icon">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3>Machine Learning</h3>
+            <p>
+                Explore regression, classification, clustering,
+                model evaluation, and feature engineering.
+            </p>
+            <span class="ds-tag">Intermediate</span>
+        </div>
 
+        <div class="ds-roadmap-card">
+            <span class="ds-step">06</span>
+            <div class="ds-icon">
+                <i class="fa-solid fa-rocket"></i>
+            </div>
+            <h3>Build Projects</h3>
+            <p>
+                Apply your knowledge to real datasets and create
+                portfolio projects that demonstrate your skills.
+            </p>
+            <span class="ds-tag">Portfolio</span>
         </div>
 
     </div>
 
 </section>
 
-<!-- ================= TOOLS ================= -->
+<!-- LEARNING RESOURCES -->
+<section class="ds-section ds-resources-section" id="ds-resources">
 
-<section class="projects">
+    <div class="ds-section-heading">
+        <span class="ds-label">LEARN AND GROW</span>
+        <h2>Learning Resources</h2>
+        <p>
+            Explore useful educational platforms and documentation
+            to strengthen your Data Science foundations.
+        </p>
+    </div>
 
-    <h2>Popular Data Science Tools</h2>
+    <div class="ds-resource-grid">
 
-    <ul>
-        <li>Python</li>
-        <li>Pandas</li>
-        <li>NumPy</li>
-        <li>Matplotlib</li>
-        <li>Jupyter Notebook</li>
-        <li>Scikit-learn</li>
-    </ul>
+        <div class="ds-resource-card">
+            <div class="ds-resource-icon">
+                <i class="fa-brands fa-python"></i>
+            </div>
+
+            <h3>Python Fundamentals</h3>
+
+            <p>
+                Start with Python syntax, data structures,
+                functions, and programming fundamentals.
+            </p>
+
+            <a href="https://docs.python.org/3/tutorial/"
+               target="_blank" rel="noopener noreferrer">
+                Learn Python
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="ds-resource-card">
+            <div class="ds-resource-icon">
+                <i class="fa-solid fa-table"></i>
+            </div>
+
+            <h3>Pandas Documentation</h3>
+
+            <p>
+                Learn how to load datasets, clean missing values,
+                filter records, and analyze tabular data.
+            </p>
+
+            <a href="https://pandas.pydata.org/docs/getting_started/"
+               target="_blank" rel="noopener noreferrer">
+                Explore Pandas
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="ds-resource-card">
+            <div class="ds-resource-icon">
+                <i class="fa-solid fa-database"></i>
+            </div>
+
+            <h3>SQLBolt</h3>
+
+            <p>
+                Practise SQL through interactive lessons
+                covering queries, filtering, and joins.
+            </p>
+
+            <a href="https://sqlbolt.com/"
+               target="_blank" rel="noopener noreferrer">
+                Practise SQL
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="ds-resource-card">
+            <div class="ds-resource-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <h3>Kaggle Learn</h3>
+
+            <p>
+                Explore practical tutorials on Python,
+                Pandas, data visualization, and machine learning.
+            </p>
+
+            <a href="https://www.kaggle.com/learn"
+               target="_blank" rel="noopener noreferrer">
+                Explore Tutorials
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="ds-resource-card">
+            <div class="ds-resource-icon">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+
+            <h3>Scikit-learn</h3>
+
+            <p>
+                Learn the fundamentals of machine learning
+                with practical examples and model documentation.
+            </p>
+
+            <a href="https://scikit-learn.org/stable/getting_started.html"
+               target="_blank" rel="noopener noreferrer">
+                Start Machine Learning
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="ds-resource-card">
+            <div class="ds-resource-icon">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+
+            <h3>Google Colab</h3>
+
+            <p>
+                Write and run Python notebooks in your browser
+                without installing a complete local environment.
+            </p>
+
+            <a href="https://colab.research.google.com/"
+               target="_blank" rel="noopener noreferrer">
+                Open Colab
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+    </div>
 
 </section>
 
-<!-- ================= PROJECTS ================= -->
+<!-- TOOLS -->
+<section class="ds-section">
 
-<section class="projects">
+    <div class="ds-section-heading">
+        <span class="ds-label">YOUR TOOLKIT</span>
+        <h2>Popular Data Science Tools</h2>
+        <p>
+            Become familiar with the tools commonly used
+            for data processing, analysis, visualization, and modeling.
+        </p>
+    </div>
 
-    <h2>Data Science Project Ideas</h2>
+    <div class="ds-tools-grid">
 
-    <ul>
-        <li>Sales Data Dashboard</li>
-        <li>Movie Recommendation System</li>
-        <li>Customer Churn Prediction</li>
-        <li>Stock Market Analysis</li>
-        <li>COVID-19 Data Visualization</li>
-        <li>House Price Prediction</li>
-    </ul>
+        <div class="ds-tool-card">
+            <i class="fa-brands fa-python"></i>
+            <h3>Python</h3>
+            <p>Programming and data analysis.</p>
+        </div>
+
+        <div class="ds-tool-card">
+            <i class="fa-solid fa-table"></i>
+            <h3>Pandas</h3>
+            <p>Data cleaning and manipulation.</p>
+        </div>
+
+        <div class="ds-tool-card">
+            <i class="fa-solid fa-calculator"></i>
+            <h3>NumPy</h3>
+            <p>Numerical computing and arrays.</p>
+        </div>
+
+        <div class="ds-tool-card">
+            <i class="fa-solid fa-chart-area"></i>
+            <h3>Matplotlib</h3>
+            <p>Data visualization and charts.</p>
+        </div>
+
+        <div class="ds-tool-card">
+            <i class="fa-solid fa-book"></i>
+            <h3>Jupyter</h3>
+            <p>Interactive coding and experiments.</p>
+        </div>
+
+        <div class="ds-tool-card">
+            <i class="fa-solid fa-brain"></i>
+            <h3>Scikit-learn</h3>
+            <p>Machine learning models.</p>
+        </div>
+
+    </div>
 
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- PROJECT IDEAS -->
+<section class="ds-section ds-projects-section">
 
+    <div class="ds-section-heading">
+        <span class="ds-label">BUILD YOUR PORTFOLIO</span>
+        <h2>Data Science Project Ideas</h2>
+        <p>
+            Put your knowledge into practice by solving
+            real-world problems with data.
+        </p>
+    </div>
+
+    <div class="ds-project-grid">
+
+        <div class="ds-project-card">
+            <i class="fa-solid fa-chart-column"></i>
+            <h3>Sales Data Dashboard</h3>
+            <p>
+                Analyze sales trends, identify top-selling products,
+                and visualize business performance.
+            </p>
+            <span>Python • Pandas • Charts</span>
+        </div>
+
+        <div class="ds-project-card">
+            <i class="fa-solid fa-film"></i>
+            <h3>Movie Recommendation System</h3>
+            <p>
+                Recommend movies using user ratings,
+                genres, or content similarity.
+            </p>
+            <span>Python • Pandas • ML</span>
+        </div>
+
+        <div class="ds-project-card">
+            <i class="fa-solid fa-users"></i>
+            <h3>Customer Churn Prediction</h3>
+            <p>
+                Analyze customer behavior and predict which
+                customers may stop using a service.
+            </p>
+            <span>Python • Classification</span>
+        </div>
+
+        <div class="ds-project-card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Stock Market Analysis</h3>
+            <p>
+                Explore historical market data, calculate returns,
+                and visualize price movements.
+            </p>
+            <span>Python • Time Series</span>
+        </div>
+
+        <div class="ds-project-card">
+            <i class="fa-solid fa-house"></i>
+            <h3>House Price Prediction</h3>
+            <p>
+                Train a regression model to estimate house prices
+                from property features and historical data.
+            </p>
+            <span>Python • Regression</span>
+        </div>
+
+        <div class="ds-project-card">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <h3>Public Health Data Analysis</h3>
+            <p>
+                Explore a public health dataset and visualize
+                patterns, trends, and relationships.
+            </p>
+            <span>Python • Statistics</span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FINAL CALLOUT -->
+<section class="ds-callout">
+
+    <div class="ds-callout-icon">
+        <i class="fa-solid fa-lightbulb"></i>
+    </div>
+
+    <div>
+        <h2>Start Small. Analyze. Improve.</h2>
+        <p>
+            Choose a dataset that interests you, ask meaningful
+            questions, and use data to discover useful insights.
+            Every project is an opportunity to learn something new.
+        </p>
+    </div>
+
+    <a href="#ds-roadmap" class="ds-callout-button">
+        View Roadmap
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+</section>
+
+<!-- FOOTER -->
 <footer>
-
     <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
-
+    <p>Learn Today. Build Tomorrow.</p>
 </footer>
 
 </body>
