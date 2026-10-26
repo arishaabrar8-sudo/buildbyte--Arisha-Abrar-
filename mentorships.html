@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentorship | EmpowerTech</title>
+
+    <title>Mentorship Program | EmpowerTech</title>
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
 
-<!-- ================= NAVBAR ================= -->
+<body class="mentor-page">
 
-<nav>
-
+<!-- NAVBAR -->
+<nav class="mentor-navbar">
     <div class="logo">
         <i class="fa-solid fa-laptop-code"></i>
         EmpowerTech
@@ -24,141 +24,477 @@
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#community">Community</a></li>
+        <li><a href="index.html#career">Career Center</a></li>
     </ul>
-
 </nav>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
+<section class="mentor-hero">
+    <div class="mentor-hero-content">
 
-<section class="page-hero">
+        <span class="mentor-badge">
+            <i class="fa-solid fa-handshake-angle"></i>
+            LEARN FROM EXPERIENCE
+        </span>
 
-    <h1>👨‍🏫 Mentorship Program</h1>
+        <h1>Find Guidance. <span>Build Your Future.</span></h1>
 
-    <p>
-        Learn from experienced mentors who can guide you in academics,
-        programming, career planning, and professional development.
-    </p>
+        <p>
+            Everyone needs guidance at some point in their journey.
+            Connect your learning goals with mentorship in programming,
+            web development, artificial intelligence, career planning,
+            and professional growth.
+        </p>
 
-</section>
+        <div class="mentor-hero-buttons">
+            <a href="#mentor-categories" class="mentor-btn mentor-btn-primary">
+                Explore Mentorship
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
 
-<!-- ================= MENTORSHIP AREAS ================= -->
-
-<section class="resources">
-
-    <h2>Mentorship Categories</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>💻 Programming</h3>
-            <p>
-                Improve your coding skills with guidance in C++, Python,
-                Java, and JavaScript.
-            </p>
+            <a href="#mentor-request" class="mentor-btn mentor-btn-outline">
+                Request Guidance
+                <i class="fa-solid fa-paper-plane"></i>
+            </a>
         </div>
 
-        <div class="card">
-            <h3>🌐 Web Development</h3>
-            <p>
-                Get help with HTML, CSS, JavaScript, React, Node.js,
-                and full-stack development.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🤖 Artificial Intelligence</h3>
-            <p>
-                Learn Machine Learning, Deep Learning, and AI projects
-                from experienced mentors.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>💼 Career Guidance</h3>
-            <p>
-                Receive advice on internships, resume building,
-                interviews, and job preparation.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🎓 Higher Education</h3>
-            <p>
-                Get guidance on scholarships, exchange programs,
-                and postgraduate studies.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🚀 Freelancing</h3>
-            <p>
-                Learn how to build a freelancing career and find
-                your first clients online.
-            </p>
+        <div class="mentor-hero-features">
+            <span><i class="fa-solid fa-check-circle"></i> Learn at Your Pace</span>
+            <span><i class="fa-solid fa-check-circle"></i> Set Clear Goals</span>
+            <span><i class="fa-solid fa-check-circle"></i> Grow with Guidance</span>
         </div>
 
     </div>
 
+    <div class="mentor-hero-visual">
+        <div class="mentor-main-icon">
+            <i class="fa-solid fa-user-group"></i>
+        </div>
+
+        <div class="mentor-float-card">
+            <i class="fa-solid fa-lightbulb"></i>
+            <div>
+                <strong>Learn Together</strong>
+                <p>Progress starts with a conversation.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- ================= BENEFITS ================= -->
+<!-- INTRODUCTION -->
+<section class="mentor-intro">
 
-<section class="projects">
+    <div class="mentor-section-heading">
+        <span>THE POWER OF MENTORSHIP</span>
+        <h2>You Don't Have to Figure Everything Out Alone</h2>
+        <p>
+            A mentor can help you identify your strengths, navigate challenges,
+            and make informed decisions about your academic and professional journey.
+        </p>
+    </div>
 
-    <h2>Benefits of Having a Mentor</h2>
+    <div class="mentor-benefit-grid">
 
-    <ul>
-        <li>🎯 Set clear academic and career goals.</li>
-        <li>💡 Learn from real-world experience.</li>
-        <li>📈 Improve technical and soft skills.</li>
-        <li>🤝 Expand your professional network.</li>
-        <li>💼 Prepare for internships and jobs.</li>
-        <li>🚀 Gain confidence through personalized guidance.</li>
-    </ul>
+        <div class="mentor-benefit-card">
+            <i class="fa-solid fa-bullseye"></i>
+            <h3>Clear Direction</h3>
+            <p>Break big ambitions into manageable learning and career goals.</p>
+        </div>
 
+        <div class="mentor-benefit-card">
+            <i class="fa-solid fa-brain"></i>
+            <h3>Practical Knowledge</h3>
+            <p>Learn from another person's experience, mistakes, and insights.</p>
+        </div>
+
+        <div class="mentor-benefit-card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Personal Growth</h3>
+            <p>Build confidence, strengthen skills, and reflect on your progress.</p>
+        </div>
+
+    </div>
 </section>
 
-<!-- ================= GOOD MENTEE TIPS ================= -->
+<!-- MENTORSHIP CATEGORIES -->
+<section class="mentor-categories" id="mentor-categories">
 
-<section class="projects">
+    <div class="mentor-section-heading">
+        <span>EXPLORE YOUR OPTIONS</span>
+        <h2>Mentorship Categories</h2>
+        <p>
+            Choose an area that matches your current goals.
+            You can select more than one area in the request form.
+        </p>
+    </div>
 
-    <h2>How to Be a Good Mentee</h2>
+    <div class="mentor-category-grid">
 
-    <ul>
-        <li>Come prepared with questions.</li>
-        <li>Respect your mentor's time.</li>
-        <li>Act on the advice you receive.</li>
-        <li>Be open to constructive feedback.</li>
-        <li>Stay consistent and communicate regularly.</li>
-        <li>Express gratitude and professionalism.</li>
-    </ul>
+        <article class="mentor-category-card">
+            <div class="mentor-category-icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
+            <h3>Programming & DSA</h3>
+            <p>
+                Strengthen your programming fundamentals, problem-solving
+                abilities, and understanding of data structures and algorithms.
+            </p>
+            <div class="mentor-tags">
+                <span>C++</span>
+                <span>Python</span>
+                <span>DSA</span>
+            </div>
+            <a href="https://leetcode.com/"
+               target="_blank" rel="noopener noreferrer">
+                Practice Coding <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </article>
 
+        <article class="mentor-category-card">
+            <div class="mentor-category-icon">
+                <i class="fa-solid fa-globe"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>
+                Learn to build responsive websites and understand frontend,
+                backend, and full-stack development.
+            </p>
+            <div class="mentor-tags">
+                <span>HTML/CSS</span>
+                <span>JavaScript</span>
+                <span>React</span>
+            </div>
+            <a href="https://developer.mozilla.org/"
+               target="_blank" rel="noopener noreferrer">
+                Explore Web Docs <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </article>
+
+        <article class="mentor-category-card">
+            <div class="mentor-category-icon">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+            <h3>AI & Machine Learning</h3>
+            <p>
+                Explore machine learning fundamentals, datasets, model building,
+                and practical AI projects.
+            </p>
+            <div class="mentor-tags">
+                <span>Python</span>
+                <span>ML</span>
+                <span>Data</span>
+            </div>
+            <a href="https://www.kaggle.com/learn"
+               target="_blank" rel="noopener noreferrer">
+                Explore ML Courses <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </article>
+
+        <article class="mentor-category-card">
+            <div class="mentor-category-icon">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h3>Career Guidance</h3>
+            <p>
+                Prepare for internships, improve your CV, develop interview
+                skills, and plan your next career steps.
+            </p>
+            <div class="mentor-tags">
+                <span>CV</span>
+                <span>Interviews</span>
+                <span>Internships</span>
+            </div>
+            <a href="job-search.html">
+                Explore Job Search <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </article>
+
+        <article class="mentor-category-card">
+            <div class="mentor-category-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3>Higher Education</h3>
+            <p>
+                Learn about scholarships, graduate programs, academic planning,
+                and opportunities for further study.
+            </p>
+            <div class="mentor-tags">
+                <span>Scholarships</span>
+                <span>Study Plans</span>
+            </div>
+            <a href="https://www.hec.gov.pk/"
+               target="_blank" rel="noopener noreferrer">
+                Visit HEC <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </article>
+
+        <article class="mentor-category-card">
+            <div class="mentor-category-icon">
+                <i class="fa-solid fa-laptop"></i>
+            </div>
+            <h3>Freelancing & Projects</h3>
+            <p>
+                Develop a portfolio, understand client communication,
+                and learn how to approach freelance projects professionally.
+            </p>
+            <div class="mentor-tags">
+                <span>Portfolio</span>
+                <span>Clients</span>
+                <span>Projects</span>
+            </div>
+            <a href="https://www.freecodecamp.org/"
+               target="_blank" rel="noopener noreferrer">
+                Build Your Skills <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </article>
+
+    </div>
 </section>
 
-<!-- ================= MENTOR QUALITIES ================= -->
+<!-- HOW IT WORKS -->
+<section class="mentor-process">
 
-<section class="projects">
+    <div class="mentor-section-heading">
+        <span>YOUR MENTORSHIP JOURNEY</span>
+        <h2>How to Get Started</h2>
+        <p>Make your learning journey more structured and purposeful.</p>
+    </div>
 
-    <h2>Qualities of a Great Mentor</h2>
+    <div class="mentor-process-grid">
 
-    <ul>
-        <li>Strong technical knowledge.</li>
-        <li>Excellent communication skills.</li>
-        <li>Supportive and approachable.</li>
-        <li>Encourages continuous learning.</li>
-        <li>Provides honest feedback.</li>
-        <li>Inspires confidence and growth.</li>
-    </ul>
+        <div class="mentor-process-card">
+            <div class="mentor-step">01</div>
+            <i class="fa-solid fa-compass"></i>
+            <h3>Identify Your Goal</h3>
+            <p>Decide what you want to improve or which challenge you need help solving.</p>
+        </div>
 
+        <div class="mentor-process-card">
+            <div class="mentor-step">02</div>
+            <i class="fa-solid fa-list-check"></i>
+            <h3>Prepare Questions</h3>
+            <p>Write down your questions, current skill level, and the progress you've made.</p>
+        </div>
+
+        <div class="mentor-process-card">
+            <div class="mentor-step">03</div>
+            <i class="fa-solid fa-comments"></i>
+            <h3>Discuss & Learn</h3>
+            <p>Share your goals and ask for feedback, resources, and practical suggestions.</p>
+        </div>
+
+        <div class="mentor-process-card">
+            <div class="mentor-step">04</div>
+            <i class="fa-solid fa-chart-simple"></i>
+            <h3>Apply & Improve</h3>
+            <p>Act on the advice, track your progress, and adjust your goals when needed.</p>
+        </div>
+
+    </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- GOOD MENTEE -->
+<section class="mentor-mentee">
 
-<footer>
+    <div class="mentor-section-heading">
+        <span>MAKE THE MOST OF GUIDANCE</span>
+        <h2>How to Be a Good Mentee</h2>
+        <p>Mentorship works best when both people communicate and contribute.</p>
+    </div>
 
+    <div class="mentor-mentee-content">
+
+        <div class="mentor-mentee-list">
+
+            <div>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                    <h3>Come Prepared</h3>
+                    <p>Bring specific questions and explain what you've already tried.</p>
+                </div>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                    <h3>Respect Their Time</h3>
+                    <p>Be punctual, communicate clearly, and agree on realistic expectations.</p>
+                </div>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                    <h3>Accept Feedback</h3>
+                    <p>Listen carefully and use constructive feedback to improve your work.</p>
+                </div>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                    <h3>Take Initiative</h3>
+                    <p>Follow through on agreed actions instead of waiting for reminders.</p>
+                </div>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                    <h3>Show Appreciation</h3>
+                    <p>Thank your mentor and share meaningful updates about your progress.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mentor-quote-card">
+            <i class="fa-solid fa-quote-left"></i>
+            <h3>Growth Comes from Action</h3>
+            <p>
+                A mentor can help you see possibilities and avoid common mistakes,
+                but your progress comes from consistent effort, curiosity, and practice.
+            </p>
+            <span>Learn with purpose. Improve with consistency.</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- MENTOR QUALITIES -->
+<section class="mentor-qualities">
+
+    <div class="mentor-section-heading">
+        <span>LEARNING PARTNERSHIPS</span>
+        <h2>Qualities of a Great Mentor</h2>
+    </div>
+
+    <div class="mentor-quality-grid">
+
+        <div>
+            <i class="fa-solid fa-book-open"></i>
+            <h3>Knowledgeable</h3>
+            <p>Understands the subject and is willing to share useful experience.</p>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-ear-listen"></i>
+            <h3>Good Listener</h3>
+            <p>Understands your challenges before offering suggestions.</p>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-heart"></i>
+            <h3>Supportive</h3>
+            <p>Encourages progress while respecting your individual learning pace.</p>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-comments"></i>
+            <h3>Communicative</h3>
+            <p>Explains concepts clearly and provides constructive feedback.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- MENTORSHIP REQUEST FORM -->
+<section class="mentor-request" id="mentor-request">
+
+    <div class="mentor-section-heading">
+        <span>TAKE THE FIRST STEP</span>
+        <h2>What Guidance Are You Looking For?</h2>
+        <p>
+            Tell us about your learning goals. This demo form validates your
+            details locally; it does not yet send a request to a mentor.
+        </p>
+    </div>
+
+    <form id="mentor-request-form" class="mentor-form">
+
+        <div class="mentor-form-row">
+            <div>
+                <label for="mentee-name">Your Name</label>
+                <input
+                    type="text"
+                    id="mentee-name"
+                    name="name"
+                    placeholder="Enter your name"
+                    maxlength="60"
+                    required>
+            </div>
+
+            <div>
+                <label for="mentee-email">Email Address</label>
+                <input
+                    type="email"
+                    id="mentee-email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required>
+            </div>
+        </div>
+
+        <label for="mentor-area">Mentorship Area</label>
+
+        <select id="mentor-area" name="area" required>
+            <option value="">Choose an area</option>
+            <option value="Programming & DSA">Programming & DSA</option>
+            <option value="Web Development">Web Development</option>
+            <option value="AI & Machine Learning">AI & Machine Learning</option>
+            <option value="Career Guidance">Career Guidance</option>
+            <option value="Higher Education">Higher Education</option>
+            <option value="Freelancing & Projects">Freelancing & Projects</option>
+        </select>
+
+        <label for="mentee-goal">Your Goal or Question</label>
+
+        <textarea
+            id="mentee-goal"
+            name="goal"
+            rows="5"
+            maxlength="1000"
+            placeholder="Describe what you want to learn or where you need guidance..."
+            required></textarea>
+
+        <button type="submit" class="mentor-btn mentor-btn-primary">
+            Submit Request
+            <i class="fa-solid fa-paper-plane"></i>
+        </button>
+
+        <p id="mentor-form-message" role="status" aria-live="polite"></p>
+
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="mentor-footer">
     <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
-
+    <p>Learn. Connect. Grow Together.</p>
 </footer>
+
+<script>
+const mentorForm = document.getElementById("mentor-request-form");
+const mentorMessage = document.getElementById("mentor-form-message");
+
+mentorForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    if (!mentorForm.reportValidity()) {
+        return;
+    }
+
+    mentorMessage.textContent =
+        "Your details are valid, but the mentorship request has not been sent. Connect this form to a backend to submit it.";
+
+    mentorMessage.className = "mentor-form-notice";
+
+    mentorMessage.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+    });
+});
+</script>
 
 </body>
 </html>
