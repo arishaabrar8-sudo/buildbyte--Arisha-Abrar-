@@ -3,86 +3,1359 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Internships | EmpowerTech</title>
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+/* ===== BLUE THEME: INTERNSHIPS PAGE ===== */
+
+.internships-page {
+    --blue-dark: #07152e;
+    --blue-deep: #0b1f42;
+    --blue-card: #10294f;
+    --blue-primary: #287bff;
+    --blue-light: #54c8ff;
+    --blue-pale: #dceaff;
+    --text-main: #f1f6ff;
+    --text-muted: #a9bddb;
+
+    margin: 0 !important;
+    background: var(--blue-dark) !important;
+    color: var(--text-main) !important;
+    font-family: 'Segoe UI', Arial, sans-serif !important;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+.internships-page *,
+.internships-page *::before,
+.internships-page *::after {
+    box-sizing: border-box;
+}
+
+.internships-page a {
+    text-decoration: none !important;
+    transition: 0.3s ease;
+}
+
+.internships-page p {
+    color: var(--text-muted);
+}
+
+.internships-page h1,
+.internships-page h2,
+.internships-page h3,
+.internships-page strong {
+    color: var(--text-main);
+    line-height: 1.3;
+}
+
+.internships-page section {
+    padding: 85px 8%;
+}
+
+/* ===== NAVBAR ===== */
+
+.internships-page .intern-nav {
+    width: 100%;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background: rgba(7, 21, 46, 0.96);
+    border-bottom: 1px solid rgba(84, 200, 255, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(15px);
+}
+
+.internships-page .intern-logo {
+    color: #ffffff !important;
+    font-size: 23px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.internships-page .intern-logo i {
+    color: var(--blue-light);
+    margin-right: 8px;
+}
+
+.internships-page .intern-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.internships-page .intern-nav ul a {
+    color: #c5d6ef !important;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.internships-page .intern-nav ul a:hover {
+    color: var(--blue-light) !important;
+}
+
+/* ===== HERO SECTION ===== */
+
+.internships-page .intern-hero {
+    min-height: 590px;
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 85% 35%, rgba(40, 123, 255, 0.24), transparent 38%),
+        linear-gradient(135deg, #07152e, #0b2450 65%, #103c75);
+}
+
+.internships-page .intern-hero-content {
+    flex: 1.2;
+    max-width: 680px;
+    position: relative;
+    z-index: 2;
+}
+
+.internships-page .intern-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(84, 200, 255, 0.4);
+    border-radius: 30px;
+    background: rgba(40, 123, 255, 0.13);
+    color: var(--blue-light);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.internships-page .intern-hero h1 {
+    margin: 0 0 22px;
+    font-size: clamp(36px, 4.5vw, 62px);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.internships-page .intern-hero h1 span {
+    display: block;
+    color: var(--blue-light);
+    background: linear-gradient(90deg, #54c8ff, #4384ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.internships-page .intern-hero-content > p {
+    max-width: 590px;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 28px;
+}
+
+.internships-page .intern-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.internships-page .intern-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 23px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.internships-page .intern-btn-primary {
+    color: white !important;
+    background: linear-gradient(135deg, #287bff, #1760df);
+    border: 1px solid #4384ff;
+    box-shadow: 0 8px 25px rgba(40, 123, 255, 0.25);
+}
+
+.internships-page .intern-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(40, 123, 255, 0.4);
+}
+
+.internships-page .intern-btn-outline {
+    color: #dceaff !important;
+    border: 1px solid rgba(132, 181, 255, 0.5);
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.internships-page .intern-btn-outline:hover {
+    background: rgba(40, 123, 255, 0.2);
+    border-color: var(--blue-light);
+}
+
+.internships-page .intern-hero-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin-top: 28px;
+}
+
+.internships-page .intern-hero-points span {
+    color: #c6d8f1;
+    font-size: 12px;
+}
+
+.internships-page .intern-hero-points i {
+    color: var(--blue-light);
+    margin-right: 5px;
+}
+
+/* Hero visual */
+
+.internships-page .intern-hero-visual {
+    flex: 0.8;
+    min-width: 260px;
+    min-height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.internships-page .intern-visual-icon {
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45px;
+    transform: rotate(-7deg);
+    background: linear-gradient(145deg, #174d98, #0b2a59);
+    border: 1px solid rgba(84, 200, 255, 0.45);
+    box-shadow: 0 0 70px rgba(40, 123, 255, 0.25);
+}
+
+.internships-page .intern-visual-icon i {
+    font-size: 95px;
+    color: var(--blue-light);
+    filter: drop-shadow(0 0 18px rgba(84, 200, 255, 0.35));
+}
+
+.internships-page .intern-floating-card {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 16px;
+    border-radius: 12px;
+    background: rgba(15, 40, 79, 0.95);
+    border: 1px solid rgba(84, 200, 255, 0.3);
+    color: #eaf4ff;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    animation: internFloat 4s ease-in-out infinite;
+}
+
+.internships-page .intern-floating-card i {
+    color: var(--blue-light);
+    font-size: 17px;
+}
+
+.internships-page .intern-float-one {
+    top: 25px;
+    right: -5px;
+}
+
+.internships-page .intern-float-two {
+    bottom: 55px;
+    left: -20px;
+    animation-delay: 0.7s;
+}
+
+.internships-page .intern-float-three {
+    bottom: 0;
+    right: 0;
+    animation-delay: 1.3s;
+}
+
+@keyframes internFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-9px); }
+}
+
+/* ===== SECTION HEADINGS ===== */
+
+.internships-page .intern-section-heading {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.internships-page .intern-section-heading > span {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--blue-light);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.internships-page .intern-section-heading h2 {
+    margin: 0 0 15px;
+    font-size: clamp(27px, 3vw, 39px);
+    font-weight: 800;
+    letter-spacing: -0.7px;
+}
+
+.internships-page .intern-section-heading p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.internships-page .intern-heading-left {
+    margin-left: 0;
+    text-align: left;
+}
+
+.internships-page .intern-heading-left p {
+    margin-left: 0;
+}
+
+/* ===== INTRODUCTION ===== */
+
+.internships-page .intern-intro {
+    padding-bottom: 20px;
+    background: var(--blue-dark);
+}
+
+/* ===== INTERNSHIP CATEGORIES ===== */
+
+.internships-page .intern-categories {
+    padding-top: 30px;
+    background: var(--blue-dark);
+}
+
+.internships-page .intern-category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.internships-page .intern-category-card {
+    padding: 30px 25px;
+    border: 1px solid rgba(120, 170, 235, 0.17);
+    border-radius: 18px;
+    background: linear-gradient(145deg, #10294f, #0b1e3d);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.internships-page .intern-category-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(84, 200, 255, 0.65);
+    box-shadow: 0 15px 40px rgba(0, 75, 180, 0.18);
+}
+
+.internships-page .intern-category-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    border-radius: 15px;
+    color: var(--blue-light);
+    background: linear-gradient(135deg, rgba(40, 123, 255, 0.25), rgba(84, 200, 255, 0.08));
+    border: 1px solid rgba(84, 200, 255, 0.22);
+}
+
+.internships-page .intern-category-icon i {
+    font-size: 24px;
+}
+
+.internships-page .intern-category-card h3 {
+    margin: 0 0 13px;
+    font-size: 19px;
+}
+
+.internships-page .intern-category-card p {
+    min-height: 100px;
+    margin: 0 0 22px;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.internships-page .intern-category-card > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--blue-light) !important;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.internships-page .intern-category-card > a:hover {
+    color: white !important;
+    gap: 13px;
+}
+
+/* ===== INTERNSHIP PLATFORMS ===== */
+
+.internships-page .intern-platforms {
+    background: linear-gradient(180deg, #091a35, #0c2143);
+}
+
+.internships-page .intern-platform-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.internships-page .intern-platform-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 23px;
+    min-width: 0;
+    border: 1px solid rgba(120, 170, 235, 0.18);
+    border-radius: 15px;
+    background: rgba(16, 41, 79, 0.72);
+    transition: 0.3s ease;
+}
+
+.internships-page .intern-platform-card:hover {
+    transform: translateY(-4px);
+    background: #12315e;
+    border-color: rgba(84, 200, 255, 0.55);
+}
+
+.internships-page .intern-platform-icon {
+    flex-shrink: 0;
+    width: 57px;
+    height: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    color: var(--blue-light);
+    background: rgba(40, 123, 255, 0.15);
+    font-size: 26px;
+}
+
+.internships-page .intern-platform-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.internships-page .intern-platform-info h3 {
+    margin: 0 0 7px;
+    font-size: 17px;
+}
+
+.internships-page .intern-platform-info p {
+    margin: 0 0 10px;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.internships-page .intern-platform-type {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(40, 123, 255, 0.14);
+    color: var(--blue-light);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.internships-page .intern-platform-card > a {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(40, 123, 255, 0.15);
+    color: var(--blue-light) !important;
+}
+
+.internships-page .intern-platform-card > a:hover {
+    color: white !important;
+    background: var(--blue-primary);
+}
+
+/* ===== APPLICATION CHECKLIST ===== */
+
+.internships-page .intern-checklist {
+    background: var(--blue-dark);
+}
+
+.internships-page .intern-checklist-content {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+    gap: 55px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.internships-page .intern-checklist-content .intern-section-heading {
+    margin-bottom: 0;
+}
+
+.internships-page .intern-checklist-items {
+    display: grid;
+    gap: 13px;
+}
+
+.internships-page .intern-check-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    border: 1px solid rgba(120, 170, 235, 0.17);
+    border-radius: 12px;
+    background: #0e2345;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.internships-page .intern-check-item:hover {
+    border-color: var(--blue-primary);
+    background: #122b53;
+}
+
+.internships-page .intern-check-item input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.internships-page .intern-custom-check {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #52749f;
+    border-radius: 7px;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.internships-page .intern-custom-check i {
+    display: none;
+    font-size: 13px;
+}
+
+.internships-page .intern-check-item input:checked + .intern-custom-check {
+    border-color: var(--blue-primary);
+    background: var(--blue-primary);
+}
+
+.internships-page .intern-check-item input:checked + .intern-custom-check i {
+    display: block;
+}
+
+.internships-page .intern-check-item input:focus-visible + .intern-custom-check {
+    outline: 3px solid var(--blue-light);
+    outline-offset: 3px;
+}
+
+.internships-page .intern-check-item strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.internships-page .intern-check-item small {
+    display: block;
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.internships-page .intern-check-item input:checked ~ span:last-child strong {
+    color: #8bcaff;
+}
+
+/* ===== SKILLS SECTION ===== */
+
+.internships-page .intern-skills {
+    background: linear-gradient(180deg, #0b2041, #081831);
+}
+
+.internships-page .intern-skill-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.internships-page .intern-skill-item {
+    padding: 28px 22px;
+    text-align: center;
+    border: 1px solid rgba(120, 170, 235, 0.17);
+    border-radius: 15px;
+    background: rgba(16, 41, 79, 0.65);
+    transition: 0.3s ease;
+}
+
+.internships-page .intern-skill-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(84, 200, 255, 0.55);
+    background: #12305b;
+}
+
+.internships-page .intern-skill-item > i {
+    margin-bottom: 16px;
+    color: var(--blue-light);
+    font-size: 30px;
+}
+
+.internships-page .intern-skill-item h3 {
+    margin: 0 0 10px;
+    font-size: 17px;
+}
+
+.internships-page .intern-skill-item p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* ===== FINAL CALL TO ACTION ===== */
+
+.internships-page .intern-cta {
+    margin: 0;
+    padding: 80px 8%;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at center, rgba(40, 123, 255, 0.22), transparent 65%),
+        #0a1c39;
+    border-top: 1px solid rgba(84, 200, 255, 0.15);
+}
+
+.internships-page .intern-cta-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 22px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #287bff, #1551b7);
+    color: white;
+    box-shadow: 0 0 35px rgba(40, 123, 255, 0.3);
+}
+
+.internships-page .intern-cta-icon i {
+    font-size: 29px;
+}
+
+.internships-page .intern-cta h2 {
+    max-width: 700px;
+    margin: 0 auto 15px;
+    font-size: clamp(26px, 3vw, 38px);
+}
+
+.internships-page .intern-cta p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    font-size: 14px;
+}
+
+.internships-page .intern-cta .intern-btn {
+    margin-top: 5px;
+}
+
+/* ===== FOOTER ===== */
+
+.internships-page .intern-footer {
+    padding: 45px 8% 20px;
+    text-align: center;
+    background: #050f21;
+    border-top: 1px solid rgba(84, 200, 255, 0.17);
+}
+
+.internships-page .intern-footer-logo {
+    color: white;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.internships-page .intern-footer-logo i {
+    margin-right: 8px;
+    color: var(--blue-light);
+}
+
+.internships-page .intern-footer > p {
+    max-width: 560px;
+    margin: 12px auto 20px;
+    font-size: 13px;
+}
+
+.internships-page .intern-footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    margin: 25px 0;
+}
+
+.internships-page .intern-footer-links a {
+    color: #b4c8e5 !important;
+    font-size: 13px;
+}
+
+.internships-page .intern-footer-links a:hover {
+    color: var(--blue-light) !important;
+}
+
+.internships-page .intern-footer .intern-copyright {
+    margin: 25px 0 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(120, 170, 235, 0.13);
+    font-size: 11px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 1000px) {
+    .internships-page .intern-nav {
+        padding: 16px 5%;
+    }
+
+    .internships-page .intern-nav ul {
+        gap: 15px;
+    }
+
+    .internships-page .intern-hero {
+        padding: 70px 6%;
+        gap: 25px;
+    }
+
+    .internships-page section {
+        padding: 70px 6%;
+    }
+
+    .internships-page .intern-category-grid,
+    .internships-page .intern-skill-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .internships-page .intern-checklist-content {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .internships-page .intern-nav {
+        position: relative;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .internships-page .intern-nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+    }
+
+    .internships-page .intern-nav ul a {
+        font-size: 12px;
+    }
+
+    .internships-page .intern-hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 7%;
+    }
+
+    .internships-page .intern-hero-content {
+        width: 100%;
+    }
+
+    .internships-page .intern-hero-content > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .internships-page .intern-hero-buttons,
+    .internships-page .intern-hero-points {
+        justify-content: center;
+    }
+
+    .internships-page .intern-hero-visual {
+        width: 100%;
+        min-height: 300px;
+        margin-top: 10px;
+    }
+
+    .internships-page .intern-visual-icon {
+        width: 170px;
+        height: 170px;
+    }
+
+    .internships-page .intern-visual-icon i {
+        font-size: 70px;
+    }
+
+    .internships-page .intern-float-one {
+        right: 0;
+    }
+
+    .internships-page .intern-float-two {
+        left: 0;
+        bottom: 35px;
+    }
+
+    .internships-page .intern-float-three {
+        right: 0;
+        bottom: 0;
+    }
+
+    .internships-page section {
+        padding: 55px 6%;
+    }
+
+    .internships-page .intern-category-grid,
+    .internships-page .intern-platform-grid,
+    .internships-page .intern-skill-grid,
+    .internships-page .intern-checklist-content {
+        grid-template-columns: 1fr;
+    }
+
+    .internships-page .intern-category-card p {
+        min-height: 0;
+    }
+
+    .internships-page .intern-checklist-content {
+        gap: 35px;
+    }
+
+    .internships-page .intern-heading-left {
+        text-align: center;
+    }
+
+    .internships-page .intern-heading-left p {
+        margin-left: auto;
+    }
+
+    .internships-page .intern-platform-card {
+        padding: 17px;
+        gap: 12px;
+    }
+
+    .internships-page .intern-platform-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 21px;
+    }
+
+    .internships-page .intern-platform-info h3 {
+        font-size: 15px;
+    }
+
+    .internships-page .intern-platform-card > a {
+        width: 32px;
+        height: 32px;
+    }
+
+    .internships-page .intern-cta {
+        padding: 60px 7%;
+    }
+}
+
+@media (max-width: 400px) {
+    .internships-page .intern-hero h1 {
+        font-size: 34px;
+    }
+
+    .internships-page .intern-hero-buttons {
+        flex-direction: column;
+    }
+
+    .internships-page .intern-btn {
+        width: 100%;
+    }
+
+    .internships-page .intern-floating-card {
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .internships-page .intern-footer-links {
+        gap: 12px 18px;
+    }
+}
+</style>
 </head>
-<body>
 
-<!-- ================= NAVBAR ================= -->
+<body class="internships-page">
 
-<nav>
-    <div class="logo">
+<!-- NAVBAR -->
+<nav class="intern-nav">
+    <a href="index.html" class="intern-logo">
         <i class="fa-solid fa-laptop-code"></i>
         EmpowerTech
-    </div>
+    </a>
 
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#opportunities">Opportunities</a></li>
+        <li><a href="#internship-platforms">Platforms</a></li>
+        <li><a href="#application-checklist">Application Tips</a></li>
     </ul>
 </nav>
 
-<!-- ================= HERO ================= -->
 
-<section class="page-hero">
+<!-- HERO SECTION -->
+<header class="intern-hero">
 
-    <h1>💼 Internships</h1>
+    <div class="intern-hero-content">
 
-    <p>
-        Gain real-world experience through internships in software development,
-        AI, cybersecurity, cloud computing, and many other fields. Build your
-        skills and prepare for your future career.
-    </p>
+        <span class="intern-badge">
+            <i class="fa-solid fa-rocket"></i>
+            START YOUR CAREER
+        </span>
+
+        <h1>
+            Turn Your Skills Into
+            <span>Real Experience.</span>
+        </h1>
+
+        <p>
+            Discover internship opportunities, gain practical experience,
+            work on real-world projects, and take your first step toward
+            a successful career in technology.
+        </p>
+
+        <div class="intern-hero-buttons">
+            <a href="#internship-platforms" class="intern-btn intern-btn-primary">
+                Explore Platforms
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="#application-checklist" class="intern-btn intern-btn-outline">
+                Prepare to Apply
+            </a>
+        </div>
+
+        <div class="intern-hero-points">
+            <span><i class="fa-solid fa-circle-check"></i> Student Friendly</span>
+            <span><i class="fa-solid fa-circle-check"></i> Remote & On-site</span>
+            <span><i class="fa-solid fa-circle-check"></i> Technical & Non-Technical</span>
+        </div>
+
+    </div>
+
+    <div class="intern-hero-visual">
+        <div class="intern-visual-icon">
+            <i class="fa-solid fa-briefcase"></i>
+        </div>
+
+        <div class="intern-floating-card intern-float-one">
+            <i class="fa-solid fa-code"></i>
+            Software Development
+        </div>
+
+        <div class="intern-floating-card intern-float-two">
+            <i class="fa-solid fa-laptop"></i>
+            Remote Opportunities
+        </div>
+
+        <div class="intern-floating-card intern-float-three">
+            <i class="fa-solid fa-graduation-cap"></i>
+            Learn & Grow
+        </div>
+    </div>
+
+</header>
+
+
+<!-- INTRODUCTION -->
+<section class="intern-intro">
+
+    <div class="intern-section-heading">
+        <span>YOUR CAREER STARTS HERE</span>
+        <h2>Find an Internship That Fits Your Goals</h2>
+        <p>
+            Explore different career paths and discover where your skills
+            and interests can take you.
+        </p>
+    </div>
 
 </section>
 
-<!-- ================= INTERNSHIP CATEGORIES ================= -->
 
-<section class="resources">
+<!-- INTERNSHIP CATEGORIES -->
+<section class="intern-categories">
 
-    <h2>Internship Categories</h2>
+    <div class="intern-category-grid">
 
-    <div class="cards">
+        <article class="intern-category-card">
+            <div class="intern-category-icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
 
-        <div class="card">
-            <h3>💻 Software Development</h3>
+            <h3>Software Development</h3>
 
             <p>
-                Work on web, mobile, and desktop applications while learning
-                industry-standard development practices.
+                Build websites, applications, and software while learning
+                development tools and industry practices.
             </p>
 
-            <a href="#">Explore →</a>
+            <a href="https://www.linkedin.com/jobs/software-engineering-intern-jobs/"
+               target="_blank" rel="noopener noreferrer">
+                Find Opportunities
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </article>
 
+
+        <article class="intern-category-card">
+            <div class="intern-category-icon">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+
+            <h3>Artificial Intelligence</h3>
+
+            <p>
+                Explore machine learning, data science, deep learning,
+                and intelligent software applications.
+            </p>
+
+            <a href="https://www.linkedin.com/jobs/machine-learning-intern-jobs/"
+               target="_blank" rel="noopener noreferrer">
+                Find Opportunities
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </article>
+
+
+        <article class="intern-category-card">
+            <div class="intern-category-icon">
+                <i class="fa-solid fa-cloud"></i>
+            </div>
+
+            <h3>Cloud Computing</h3>
+
+            <p>
+                Learn cloud services, deployment, infrastructure,
+                automation, and DevOps practices.
+            </p>
+
+            <a href="https://www.linkedin.com/jobs/cloud-intern-jobs/"
+               target="_blank" rel="noopener noreferrer">
+                Find Opportunities
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </article>
+
+
+        <article class="intern-category-card">
+            <div class="intern-category-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <h3>Cybersecurity</h3>
+
+            <p>
+                Develop knowledge of security fundamentals, threat
+                analysis, network security, and risk management.
+            </p>
+
+            <a href="https://www.linkedin.com/jobs/cyber-security-intern-jobs/"
+               target="_blank" rel="noopener noreferrer">
+                Find Opportunities
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </article>
+
+
+        <article class="intern-category-card">
+            <div class="intern-category-icon">
+                <i class="fa-solid fa-database"></i>
+            </div>
+
+            <h3>Data Science & Analytics</h3>
+
+            <p>
+                Work with datasets, SQL, Python, dashboards, statistics,
+                and data-driven decision-making.
+            </p>
+
+            <a href="https://www.linkedin.com/jobs/data-analyst-intern-jobs/"
+               target="_blank" rel="noopener noreferrer">
+                Find Opportunities
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </article>
+
+
+        <article class="intern-category-card">
+            <div class="intern-category-icon">
+                <i class="fa-solid fa-palette"></i>
+            </div>
+
+            <h3>UI/UX & Product Design</h3>
+
+            <p>
+                Learn user research, wireframing, prototyping,
+                interface design, and usability testing.
+            </p>
+
+            <a href="https://www.linkedin.com/jobs/ui-ux-design-intern-jobs/"
+               target="_blank" rel="noopener noreferrer">
+                Find Opportunities
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- INTERNSHIP PLATFORMS -->
+<section class="intern-platforms" id="internship-platforms">
+
+    <div class="intern-section-heading">
+        <span>EXPLORE OPPORTUNITIES</span>
+        <h2>Popular Internship Platforms</h2>
+        <p>
+            Use these platforms to search for internships, entry-level
+            roles, and practical learning experiences.
+        </p>
+    </div>
+
+
+    <div class="intern-platform-grid">
+
+        <article class="intern-platform-card">
+            <div class="intern-platform-icon">
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+
+            <div class="intern-platform-info">
+                <h3>LinkedIn Jobs</h3>
+                <p>Search for internships, connect with professionals, and set job alerts.</p>
+                <span class="intern-platform-type">Jobs & Networking</span>
+            </div>
+
+            <a href="https://www.linkedin.com/jobs/internship-jobs/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Explore internships on LinkedIn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </article>
+
+
+        <article class="intern-platform-card">
+            <div class="intern-platform-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="intern-platform-info">
+                <h3>Indeed</h3>
+                <p>Search internship listings by role, location, and work arrangement.</p>
+                <span class="intern-platform-type">Job Search</span>
+            </div>
+
+            <a href="https://www.indeed.com/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Explore jobs on Indeed">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </article>
+
+
+        <article class="intern-platform-card">
+            <div class="intern-platform-icon">
+                <i class="fa-solid fa-laptop-file"></i>
+            </div>
+
+            <div class="intern-platform-info">
+                <h3>Forage</h3>
+                <p>Explore virtual job simulations and early-career opportunities.</p>
+                <span class="intern-platform-type">Virtual Experience</span>
+            </div>
+
+            <a href="https://www.theforage.com/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Explore virtual experiences on Forage">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </article>
+
+
+        <article class="intern-platform-card">
+            <div class="intern-platform-icon">
+                <i class="fa-solid fa-building"></i>
+            </div>
+
+            <div class="intern-platform-info">
+                <h3>Google Careers</h3>
+                <p>Explore student programs, internships, and early-career roles.</p>
+                <span class="intern-platform-type">Official Careers</span>
+            </div>
+
+            <a href="https://www.google.com/about/careers/applications/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Explore careers at Google">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </article>
+
+
+        <article class="intern-platform-card">
+            <div class="intern-platform-icon">
+                <i class="fa-brands fa-microsoft"></i>
+            </div>
+
+            <div class="intern-platform-info">
+                <h3>Microsoft Careers</h3>
+                <p>Find university internships and early-in-profession opportunities.</p>
+                <span class="intern-platform-type">Official Careers</span>
+            </div>
+
+            <a href="https://careers.microsoft.com/v2/global/en/students"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Explore student opportunities at Microsoft">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </article>
+
+
+        <article class="intern-platform-card">
+            <div class="intern-platform-icon">
+                <i class="fa-solid fa-globe"></i>
+            </div>
+
+            <div class="intern-platform-info">
+                <h3>Internshala</h3>
+                <p>Browse internships and training options. Check country eligibility before applying.</p>
+                <span class="intern-platform-type">Internship Listings</span>
+            </div>
+
+            <a href="https://internshala.com/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Visit Internshala">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- APPLICATION CHECKLIST -->
+<section class="intern-checklist" id="application-checklist">
+
+    <div class="intern-checklist-content">
+
+        <div class="intern-section-heading intern-heading-left">
+            <span>BE APPLICATION-READY</span>
+            <h2>Your Internship Application Checklist</h2>
+            <p>
+                Complete these steps before applying to make your
+                application more professional and convincing.
+            </p>
         </div>
 
-        <div class="card">
+        <div class="intern-checklist-items">
 
-            <h3>🤖 Artificial Intelligence</h3>
+            <label class="intern-check-item">
+                <input type="checkbox">
+                <span class="intern-custom-check">
+                    <i class="fa-solid fa-check"></i>
+                </span>
+                <span>
+                    <strong>Prepare your resume</strong>
+                    <small>Highlight your education, projects, skills, and achievements.</small>
+                </span>
+            </label>
 
-            <p>
-                Gain hands-on experience in machine learning, deep learning,
-                and AI-powered applications.
-            </p>
+            <label class="intern-check-item">
+                <input type="checkbox">
+                <span class="intern-custom-check">
+                    <i class="fa-solid fa-check"></i>
+                </span>
+                <span>
+                    <strong>Build a project portfolio</strong>
+                    <small>Upload clean, documented projects to GitHub.</small>
+                </span>
+            </label>
 
-            <a href="#">Explore →</a>
+            <label class="intern-check-item">
+                <input type="checkbox">
+                <span class="intern-custom-check">
+                    <i class="fa-solid fa-check"></i>
+                </span>
+                <span>
+                    <strong>Update your LinkedIn profile</strong>
+                    <small>Add relevant skills, projects, education, and certifications.</small>
+                </span>
+            </label>
 
-        </div>
+            <label class="intern-check-item">
+                <input type="checkbox">
+                <span class="intern-custom-check">
+                    <i class="fa-solid fa-check"></i>
+                </span>
+                <span>
+                    <strong>Write a tailored cover letter</strong>
+                    <small>Explain your interest in the role and what you can contribute.</small>
+                </span>
+            </label>
 
-        <div class="card">
+            <label class="intern-check-item">
+                <input type="checkbox">
+                <span class="intern-custom-check">
+                    <i class="fa-solid fa-check"></i>
+                </span>
+                <span>
+                    <strong>Practice interview questions</strong>
+                    <small>Review programming fundamentals and project explanations.</small>
+                </span>
+            </label>
 
-            <h3>☁️ Cloud Computing</h3>
-
-            <p>
-                Learn cloud platforms, deployment, DevOps, and infrastructure
-                management.
-            </p>
-
-            <a href="#">Explore →</a>
+            <label class="intern-check-item">
+                <input type="checkbox">
+                <span class="intern-custom-check">
+                    <i class="fa-solid fa-check"></i>
+                </span>
+                <span>
+                    <strong>Track your applications</strong>
+                    <small>Record deadlines, application dates, and follow-ups.</small>
+                </span>
+            </label>
 
         </div>
 
@@ -90,63 +1363,106 @@
 
 </section>
 
-<!-- ================= POPULAR PLATFORMS ================= -->
 
-<section class="projects">
+<!-- SKILLS SECTION -->
+<section class="intern-skills">
 
-    <h2>Popular Internship Platforms</h2>
+    <div class="intern-section-heading">
+        <span>GROW YOUR POTENTIAL</span>
+        <h2>Skills Employers Look For</h2>
+        <p>
+            Build a combination of technical knowledge and professional skills.
+        </p>
+    </div>
 
-    <ul>
-        <li>LinkedIn Jobs</li>
-        <li>Internshala</li>
-        <li>Forage Virtual Internships</li>
-        <li>Google Careers</li>
-        <li>Microsoft Careers</li>
-        <li>Indeed</li>
-    </ul>
+    <div class="intern-skill-grid">
+
+        <div class="intern-skill-item">
+            <i class="fa-solid fa-code"></i>
+            <h3>Programming</h3>
+            <p>Understand programming fundamentals and write readable code.</p>
+        </div>
+
+        <div class="intern-skill-item">
+            <i class="fa-solid fa-puzzle-piece"></i>
+            <h3>Problem Solving</h3>
+            <p>Practice algorithms, debugging, and logical thinking.</p>
+        </div>
+
+        <div class="intern-skill-item">
+            <i class="fa-brands fa-github"></i>
+            <h3>Git & GitHub</h3>
+            <p>Learn version control and collaborate on software projects.</p>
+        </div>
+
+        <div class="intern-skill-item">
+            <i class="fa-solid fa-people-group"></i>
+            <h3>Teamwork</h3>
+            <p>Communicate clearly and work effectively with others.</p>
+        </div>
+
+        <div class="intern-skill-item">
+            <i class="fa-solid fa-comments"></i>
+            <h3>Communication</h3>
+            <p>Explain your ideas, decisions, and projects confidently.</p>
+        </div>
+
+        <div class="intern-skill-item">
+            <i class="fa-solid fa-clock"></i>
+            <h3>Time Management</h3>
+            <p>Organize tasks, meet deadlines, and manage priorities.</p>
+        </div>
+
+    </div>
 
 </section>
 
-<!-- ================= APPLICATION CHECKLIST ================= -->
 
-<section class="projects">
+<!-- FINAL CTA -->
+<section class="intern-cta">
 
-    <h2>Internship Application Checklist</h2>
+    <div class="intern-cta-icon">
+        <i class="fa-solid fa-rocket"></i>
+    </div>
 
-    <ul>
-        <li>Create a professional one-page resume.</li>
-        <li>Build a GitHub portfolio with projects.</li>
-        <li>Optimize your LinkedIn profile.</li>
-        <li>Write a personalized cover letter.</li>
-        <li>Practice coding interview questions.</li>
-        <li>Apply consistently to multiple opportunities.</li>
-    </ul>
+    <h2>Your Next Opportunity Could Be One Click Away</h2>
 
-</section>
+    <p>
+        Keep learning, build projects, and apply consistently.
+        Every application is a chance to grow.
+    </p>
 
-<!-- ================= SKILLS ================= -->
-
-<section class="projects">
-
-    <h2>Skills Employers Look For</h2>
-
-    <ul>
-        <li>Problem Solving</li>
-        <li>Communication Skills</li>
-        <li>Teamwork</li>
-        <li>Git & GitHub</li>
-        <li>Programming Fundamentals</li>
-        <li>Time Management</li>
-    </ul>
+    <a href="https://www.linkedin.com/jobs/internship-jobs/"
+       target="_blank" rel="noopener noreferrer"
+       class="intern-btn intern-btn-primary">
+        Explore Internships
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
 
 </section>
 
-<!-- ================= FOOTER ================= -->
 
-<footer>
+<!-- FOOTER -->
+<footer class="intern-footer">
+    <div class="intern-footer-logo">
+        <i class="fa-solid fa-laptop-code"></i>
+        EmpowerTech
+    </div>
 
-    <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
+    <p>
+        Empowering students with the skills and opportunities to build their future.
+    </p>
 
+    <div class="intern-footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#opportunities">Opportunities</a>
+        <a href="#internship-platforms">Internship Platforms</a>
+        <a href="#application-checklist">Application Tips</a>
+    </div>
+
+    <p class="intern-copyright">
+        &copy; 2026 EmpowerTech. All Rights Reserved.
+    </p>
 </footer>
 
 </body>
