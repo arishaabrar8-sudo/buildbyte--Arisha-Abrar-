@@ -1,8 +1,9 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Coding Challenges | EmpowerTech</title>
 
     <link rel="stylesheet" href="style.css">
@@ -10,12 +11,11 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
+<!-- NAVBAR -->
 <nav>
-
     <div class="logo">
         <i class="fa-solid fa-laptop-code"></i>
         EmpowerTech
@@ -25,119 +25,531 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#community">Community</a></li>
     </ul>
-
 </nav>
 
-<!-- ================= HERO ================= -->
+<!-- HERO SECTION -->
+<section class="coding-hero">
 
-<section class="page-hero">
+    <div class="coding-hero-content">
+        <span class="coding-badge">
+            <i class="fa-solid fa-code"></i>
+            PRACTICE. IMPROVE. COMPETE.
+        </span>
 
-    <h1>💻 Coding Challenges</h1>
+        <h1>Master Coding Through <span>Challenges</span></h1>
 
-    <p>
-        Improve your programming skills by solving coding challenges,
-        participating in contests, and building your problem-solving abilities.
-    </p>
+        <p>
+            Strengthen your programming fundamentals, master Data Structures
+            and Algorithms, solve real coding problems, and prepare for
+            programming contests with EmpowerTech.
+        </p>
+
+        <div class="coding-hero-buttons">
+            <a href="#coding-platforms" class="coding-btn">
+                Start Practicing
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="#dsa-roadmap" class="coding-btn coding-btn-outline">
+                Explore DSA Roadmap
+            </a>
+        </div>
+
+        <div class="coding-highlights">
+            <div>
+                <i class="fa-solid fa-puzzle-piece"></i>
+                <h3>Problem Solving</h3>
+                <p>Build logical thinking</p>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-brain"></i>
+                <h3>DSA Practice</h3>
+                <p>Strengthen core concepts</p>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-trophy"></i>
+                <h3>Contest Ready</h3>
+                <p>Prepare for competitions</p>
+            </div>
+        </div>
+    </div>
 
 </section>
 
-<!-- ================= CHALLENGE LEVELS ================= -->
+<!-- CHALLENGE LEVELS -->
+<section class="coding-section" id="challenge-levels">
 
-<section class="resources">
+    <h2>Choose Your Challenge Level</h2>
 
-    <h2>Challenge Levels</h2>
+    <p class="coding-section-intro">
+        Start where you feel comfortable and gradually increase the difficulty
+        as your problem-solving skills improve.
+    </p>
 
-    <div class="cards">
+    <div class="challenge-level-grid">
 
-        <div class="card">
-            <h3>🟢 Beginner</h3>
+        <div class="challenge-level-card beginner-card">
+            <div class="challenge-icon">
+                <i class="fa-solid fa-seedling"></i>
+            </div>
+
+            <span class="difficulty beginner-label">BEGINNER</span>
+
+            <h3>Build Your Foundation</h3>
+
             <p>
-                Learn variables, loops, arrays, strings,
-                and basic programming concepts.
+                Learn programming fundamentals and solve simple problems
+                to develop confidence.
             </p>
+
+            <ul>
+                <li>Variables and Conditions</li>
+                <li>Loops and Functions</li>
+                <li>Arrays and Strings</li>
+                <li>Basic Sorting</li>
+            </ul>
+
+            <a href="https://leetcode.com/problemset/"
+               target="_blank" rel="noopener noreferrer">
+                Start Beginner Practice →
+            </a>
         </div>
 
-        <div class="card">
-            <h3>🟡 Intermediate</h3>
+        <div class="challenge-level-card intermediate-card">
+            <div class="challenge-icon">
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+
+            <span class="difficulty intermediate-label">INTERMEDIATE</span>
+
+            <h3>Strengthen Your DSA</h3>
+
             <p>
-                Practice binary search, two pointers,
-                recursion, stacks, queues, and sorting.
+                Practice common interview patterns and learn to optimize
+                your solutions.
             </p>
+
+            <ul>
+                <li>Binary Search</li>
+                <li>Two Pointers</li>
+                <li>Sliding Window</li>
+                <li>Stacks and Queues</li>
+            </ul>
+
+            <a href="https://leetcode.com/problemset/"
+               target="_blank" rel="noopener noreferrer">
+                Practice DSA →
+            </a>
         </div>
 
-        <div class="card">
-            <h3>🔴 Advanced</h3>
+        <div class="challenge-level-card advanced-card">
+            <div class="challenge-icon">
+                <i class="fa-solid fa-fire"></i>
+            </div>
+
+            <span class="difficulty advanced-label">ADVANCED</span>
+
+            <h3>Challenge Yourself</h3>
+
             <p>
-                Solve graph algorithms, dynamic programming,
-                trees, greedy algorithms, and advanced problems.
+                Tackle complex algorithmic problems and prepare for
+                competitive programming contests.
             </p>
+
+            <ul>
+                <li>Graph Algorithms</li>
+                <li>Dynamic Programming</li>
+                <li>Greedy Algorithms</li>
+                <li>Advanced Trees</li>
+            </ul>
+
+            <a href="https://codeforces.com/problemset"
+               target="_blank" rel="noopener noreferrer">
+                Solve Advanced Problems →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- CODING PLATFORMS -->
+<section class="coding-section coding-platform-section"
+         id="coding-platforms">
+
+    <h2>Explore Coding Platforms</h2>
+
+    <p class="coding-section-intro">
+        Choose a platform based on your learning goals, preferred problem style,
+        and competitive programming experience.
+    </p>
+
+    <div class="coding-platform-grid">
+
+        <div class="coding-platform-card">
+            <div class="platform-icon leetcode-icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
+
+            <h3>LeetCode</h3>
+
+            <p>
+                Practice algorithm problems, prepare for technical interviews,
+                and study common DSA patterns.
+            </p>
+
+            <a href="https://leetcode.com/problemset/"
+               target="_blank" rel="noopener noreferrer">
+                Visit Platform <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="coding-platform-card">
+            <div class="platform-icon codeforces-icon">
+                <i class="fa-solid fa-trophy"></i>
+            </div>
+
+            <h3>Codeforces</h3>
+
+            <p>
+                Improve problem-solving speed and participate in
+                competitive programming contests.
+            </p>
+
+            <a href="https://codeforces.com/problemset"
+               target="_blank" rel="noopener noreferrer">
+                Visit Platform <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="coding-platform-card">
+            <div class="platform-icon hackerrank-icon">
+                <i class="fa-brands fa-hackerrank"></i>
+            </div>
+
+            <h3>HackerRank</h3>
+
+            <p>
+                Practice programming, algorithms, data structures,
+                and language-specific exercises.
+            </p>
+
+            <a href="https://www.hackerrank.com/domains"
+               target="_blank" rel="noopener noreferrer">
+                Visit Platform <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="coding-platform-card">
+            <div class="platform-icon codechef-icon">
+                <i class="fa-solid fa-star"></i>
+            </div>
+
+            <h3>CodeChef</h3>
+
+            <p>
+                Develop algorithmic thinking through practice problems
+                and programming contests.
+            </p>
+
+            <a href="https://www.codechef.com/practice"
+               target="_blank" rel="noopener noreferrer">
+                Visit Platform <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="coding-platform-card">
+            <div class="platform-icon atcoder-icon">
+                <i class="fa-solid fa-terminal"></i>
+            </div>
+
+            <h3>AtCoder</h3>
+
+            <p>
+                Improve your algorithms and implementation skills
+                through structured programming contests.
+            </p>
+
+            <a href="https://atcoder.jp/"
+               target="_blank" rel="noopener noreferrer">
+                Visit Platform <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="coding-platform-card">
+            <div class="platform-icon gfg-icon">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+
+            <h3>GeeksforGeeks</h3>
+
+            <p>
+                Learn DSA concepts, study explanations, and practice
+                topic-based coding questions.
+            </p>
+
+            <a href="https://www.geeksforgeeks.org/practice/"
+               target="_blank" rel="noopener noreferrer">
+                Visit Platform <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- DSA ROADMAP -->
+<section class="coding-section dsa-roadmap-section" id="dsa-roadmap">
+
+    <h2>Your DSA Learning Roadmap</h2>
+
+    <p class="coding-section-intro">
+        Follow this suggested order to develop a strong foundation
+        before moving to advanced algorithms.
+    </p>
+
+    <div class="dsa-roadmap-grid">
+
+        <div class="dsa-step">
+            <span class="dsa-step-number">01</span>
+            <i class="fa-solid fa-code"></i>
+            <h3>Programming Basics</h3>
+            <p>Variables, loops, functions, conditions, and basic complexity.</p>
+            <span class="dsa-tag">Foundation</span>
+        </div>
+
+        <div class="dsa-step">
+            <span class="dsa-step-number">02</span>
+            <i class="fa-solid fa-layer-group"></i>
+            <h3>Arrays and Strings</h3>
+            <p>Traversal, sorting, frequency counting, and prefix sums.</p>
+            <span class="dsa-tag">Beginner</span>
+        </div>
+
+        <div class="dsa-step">
+            <span class="dsa-step-number">03</span>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h3>Problem-Solving Patterns</h3>
+            <p>Binary search, two pointers, and sliding window.</p>
+            <span class="dsa-tag">Beginner–Intermediate</span>
+        </div>
+
+        <div class="dsa-step">
+            <span class="dsa-step-number">04</span>
+            <i class="fa-solid fa-link"></i>
+            <h3>Linear Data Structures</h3>
+            <p>Linked lists, stacks, queues, and hash maps.</p>
+            <span class="dsa-tag">Intermediate</span>
+        </div>
+
+        <div class="dsa-step">
+            <span class="dsa-step-number">05</span>
+            <i class="fa-solid fa-diagram-project"></i>
+            <h3>Trees and Graphs</h3>
+            <p>Tree traversals, BFS, DFS, and graph representations.</p>
+            <span class="dsa-tag">Intermediate–Advanced</span>
+        </div>
+
+        <div class="dsa-step">
+            <span class="dsa-step-number">06</span>
+            <i class="fa-solid fa-brain"></i>
+            <h3>Advanced Algorithms</h3>
+            <p>Dynamic programming, greedy techniques, and advanced graph problems.</p>
+            <span class="dsa-tag">Advanced</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- IMPORTANT TOPICS -->
+<section class="coding-section">
+
+    <h2>Explore Important DSA Topics</h2>
+
+    <p class="coding-section-intro">
+        Use these topic categories to organize your practice sessions.
+    </p>
+
+    <div class="dsa-topic-grid">
+
+        <a href="https://leetcode.com/problemset/"
+           target="_blank" rel="noopener noreferrer" class="dsa-topic">
+            <i class="fa-solid fa-table-cells"></i>
+            <div>
+                <h3>Arrays and Strings</h3>
+                <p>Traversal, prefix sums, frequency maps</p>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square topic-arrow"></i>
+        </a>
+
+        <a href="https://leetcode.com/problemset/"
+           target="_blank" rel="noopener noreferrer" class="dsa-topic">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <div>
+                <h3>Binary Search</h3>
+                <p>Search space and sorted arrays</p>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square topic-arrow"></i>
+        </a>
+
+        <a href="https://leetcode.com/problemset/"
+           target="_blank" rel="noopener noreferrer" class="dsa-topic">
+            <i class="fa-solid fa-arrows-left-right"></i>
+            <div>
+                <h3>Two Pointers</h3>
+                <p>Pair problems and array optimization</p>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square topic-arrow"></i>
+        </a>
+
+        <a href="https://leetcode.com/problemset/"
+           target="_blank" rel="noopener noreferrer" class="dsa-topic">
+            <i class="fa-solid fa-window-maximize"></i>
+            <div>
+                <h3>Sliding Window</h3>
+                <p>Subarrays and substring problems</p>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square topic-arrow"></i>
+        </a>
+
+        <a href="https://leetcode.com/problemset/"
+           target="_blank" rel="noopener noreferrer" class="dsa-topic">
+            <i class="fa-solid fa-layer-group"></i>
+            <div>
+                <h3>Stacks and Queues</h3>
+                <p>Ordering, traversal, and monotonic stacks</p>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square topic-arrow"></i>
+        </a>
+
+        <a href="https://leetcode.com/problemset/"
+           target="_blank" rel="noopener noreferrer" class="dsa-topic">
+            <i class="fa-solid fa-diagram-project"></i>
+            <div>
+                <h3>Trees and Graphs</h3>
+                <p>Traversals, paths, and connectivity</p>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square topic-arrow"></i>
+        </a>
+
+        <a href="https://leetcode.com/problemset/"
+           target="_blank" rel="noopener noreferrer" class="dsa-topic">
+            <i class="fa-solid fa-puzzle-piece"></i>
+            <div>
+                <h3>Dynamic Programming</h3>
+                <p>Memoization and tabulation</p>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square topic-arrow"></i>
+        </a>
+
+        <a href="https://leetcode.com/problemset/"
+           target="_blank" rel="noopener noreferrer" class="dsa-topic">
+            <i class="fa-solid fa-gears"></i>
+            <div>
+                <h3>Greedy Algorithms</h3>
+                <p>Local choices and optimization</p>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square topic-arrow"></i>
+        </a>
+
+    </div>
+</section>
+
+<!-- CONTEST PREPARATION -->
+<section class="coding-section contest-section">
+
+    <h2>Prepare for Coding Contests</h2>
+
+    <p class="coding-section-intro">
+        Build speed, accuracy, and confidence through regular practice.
+    </p>
+
+    <div class="contest-grid">
+
+        <div class="contest-card">
+            <i class="fa-solid fa-calendar-check"></i>
+            <h3>Practice Regularly</h3>
+            <p>Set aside time for problem-solving and revise previous questions.</p>
+        </div>
+
+        <div class="contest-card">
+            <i class="fa-solid fa-stopwatch"></i>
+            <h3>Use Timed Sessions</h3>
+            <p>Practice under time limits to improve implementation speed.</p>
+        </div>
+
+        <div class="contest-card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Review Your Mistakes</h3>
+            <p>Identify weak topics and revisit problems you could not solve.</p>
+        </div>
+
+        <div class="contest-card">
+            <i class="fa-solid fa-users"></i>
+            <h3>Join a Community</h3>
+            <p>Discuss approaches, learn from editorials, and share solutions.</p>
+        </div>
+
+    </div>
+
+    <div class="contest-callout">
+        <i class="fa-solid fa-trophy"></i>
+
+        <div>
+            <h3>Your Next Challenge Starts Today!</h3>
+            <p>
+                Choose one problem, attempt it independently, test your solution,
+                and record what you learned.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<!-- PRACTICE TIPS -->
+<section class="coding-section">
+
+    <h2>Smart Problem-Solving Tips</h2>
+
+    <div class="coding-tips">
+
+        <div>
+            <span>01</span>
+            <p><strong>Understand the problem.</strong> Identify the input, output, and constraints.</p>
+        </div>
+
+        <div>
+            <span>02</span>
+            <p><strong>Start with brute force.</strong> Find a correct solution before optimizing.</p>
+        </div>
+
+        <div>
+            <span>03</span>
+            <p><strong>Analyze complexity.</strong> Consider time and space complexity.</p>
+        </div>
+
+        <div>
+            <span>04</span>
+            <p><strong>Test edge cases.</strong> Try empty inputs where allowed, duplicates, and boundary values.</p>
+        </div>
+
+        <div>
+            <span>05</span>
+            <p><strong>Review editorials.</strong> Learn a new approach after making a genuine attempt.</p>
+        </div>
+
+        <div>
+            <span>06</span>
+            <p><strong>Track your learning.</strong> Revisit difficult problems instead of memorizing code.</p>
         </div>
 
     </div>
 
 </section>
 
-<!-- ================= PRACTICE PLATFORMS ================= -->
-
-<section class="projects">
-
-    <h2>Recommended Coding Platforms</h2>
-
-    <ul>
-        <li>LeetCode</li>
-        <li>Codeforces</li>
-        <li>HackerRank</li>
-        <li>CodeChef</li>
-        <li>AtCoder</li>
-        <li>GeeksforGeeks Practice</li>
-    </ul>
-
-</section>
-
-<!-- ================= IMPORTANT TOPICS ================= -->
-
-<section class="projects">
-
-    <h2>Topics to Practice</h2>
-
-    <ul>
-        <li>Arrays & Strings</li>
-        <li>Binary Search</li>
-        <li>Sliding Window</li>
-        <li>Two Pointers</li>
-        <li>Linked Lists</li>
-        <li>Stacks & Queues</li>
-        <li>Trees & Graphs</li>
-        <li>Dynamic Programming</li>
-        <li>Greedy Algorithms</li>
-        <li>Bit Manipulation</li>
-    </ul>
-
-</section>
-
-<!-- ================= CHALLENGE TIPS ================= -->
-
-<section class="projects">
-
-    <h2>Tips for Success</h2>
-
-    <ul>
-        <li>Solve at least one problem every day.</li>
-        <li>Understand the problem before coding.</li>
-        <li>Start with a brute-force solution, then optimize.</li>
-        <li>Learn from your mistakes after contests.</li>
-        <li>Read editorials when you're stuck.</li>
-        <li>Stay consistent and track your progress.</li>
-    </ul>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-
+<!-- FOOTER -->
 <footer>
-
     <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
-
 </footer>
 
 </body>
