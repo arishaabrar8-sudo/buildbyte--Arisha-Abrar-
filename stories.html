@@ -3,193 +3,754 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Success Stories | EmpowerTech</title>
 
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* PAGE DESIGN */
+        :root {
+            --success-bg: #07111f;
+            --success-card: #101e30;
+            --success-cyan: #00d4ff;
+            --success-text: #eaf2ff;
+            --success-muted: #aab9ce;
+            --success-border: rgba(0, 212, 255, 0.18);
+        }
+
+        body {
+            background: var(--success-bg);
+            color: var(--success-text);
+        }
+
+        .success-hero {
+            text-align: center;
+            padding: 90px 20px 75px;
+            background:
+                radial-gradient(ellipse at top, #12344e 0%, transparent 65%),
+                var(--success-bg);
+        }
+
+        .success-badge {
+            display: inline-block;
+            padding: 9px 16px;
+            border: 1px solid var(--success-border);
+            border-radius: 30px;
+            color: var(--success-cyan);
+            background: rgba(0, 212, 255, 0.07);
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        .success-hero h1 {
+            font-size: clamp(34px, 5vw, 58px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .success-hero h1 span {
+            color: var(--success-cyan);
+        }
+
+        .success-hero p {
+            max-width: 720px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: var(--success-muted);
+            font-size: 17px;
+        }
+
+        .success-stats {
+            display: flex;
+            justify-content: center;
+            gap: 45px;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+
+        .success-stat {
+            text-align: center;
+        }
+
+        .success-stat strong {
+            display: block;
+            color: var(--success-cyan);
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .success-stat span {
+            color: var(--success-muted);
+            font-size: 13px;
+        }
+
+        .success-section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 55px 22px;
+        }
+
+        .success-heading {
+            text-align: center;
+            margin-bottom: 38px;
+        }
+
+        .success-heading h2 {
+            font-size: clamp(25px, 4vw, 36px);
+            margin-bottom: 12px;
+        }
+
+        .success-heading p {
+            color: var(--success-muted);
+            line-height: 1.7;
+        }
+
+        .success-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 23px;
+        }
+
+        .success-card {
+            position: relative;
+            overflow: hidden;
+            padding: 27px;
+            border: 1px solid var(--success-border);
+            border-radius: 18px;
+            background: linear-gradient(145deg, #12243a, #0c1929);
+            transition: transform 0.3s ease, border-color 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .success-card:hover {
+            transform: translateY(-7px);
+            border-color: var(--success-cyan);
+            box-shadow: 0 12px 35px rgba(0, 212, 255, 0.09);
+        }
+
+        .success-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 55px;
+            border-radius: 15px;
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--success-cyan);
+            font-size: 23px;
+            margin-bottom: 22px;
+        }
+
+        .success-card h3 {
+            font-size: 19px;
+            margin-bottom: 13px;
+            line-height: 1.5;
+        }
+
+        .success-card p {
+            color: var(--success-muted);
+            line-height: 1.8;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .success-tag {
+            display: inline-block;
+            padding: 7px 11px;
+            border-radius: 20px;
+            background: rgba(0, 212, 255, 0.08);
+            color: var(--success-cyan);
+            font-size: 12px;
+        }
+
+        .success-note {
+            margin-top: 25px;
+            text-align: center;
+            color: var(--success-muted);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .success-lessons {
+            background: linear-gradient(120deg, #0c2032, #0a1727);
+            border-top: 1px solid var(--success-border);
+            border-bottom: 1px solid var(--success-border);
+        }
+
+        .lesson-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .lesson-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 20px;
+            border: 1px solid var(--success-border);
+            border-radius: 13px;
+            background: rgba(255, 255, 255, 0.025);
+        }
+
+        .lesson-item i {
+            color: var(--success-cyan);
+            font-size: 19px;
+            margin-top: 3px;
+        }
+
+        .lesson-item h3 {
+            font-size: 16px;
+            margin-bottom: 7px;
+        }
+
+        .lesson-item p {
+            color: var(--success-muted);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .success-cta {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 45px 25px;
+            text-align: center;
+            border: 1px solid var(--success-border);
+            border-radius: 22px;
+            background:
+                radial-gradient(ellipse at top, #163b54, transparent 75%),
+                var(--success-card);
+        }
+
+        .success-cta h2 {
+            font-size: clamp(25px, 4vw, 34px);
+            margin-bottom: 15px;
+        }
+
+        .success-cta p {
+            max-width: 600px;
+            margin: 0 auto 25px;
+            color: var(--success-muted);
+            line-height: 1.8;
+        }
+
+        .success-button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 23px;
+            border: none;
+            border-radius: 9px;
+            background: var(--success-cyan);
+            color: #07111f;
+            font-size: 15px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .success-button:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .success-form-wrap {
+            display: none;
+            max-width: 650px;
+            margin: 30px auto 0;
+            padding: 25px;
+            text-align: left;
+            border: 1px solid var(--success-border);
+            border-radius: 15px;
+            background: #091522;
+        }
+
+        .success-form-wrap.show {
+            display: block;
+        }
+
+        .success-form-wrap h3 {
+            margin-bottom: 20px;
+        }
+
+        .success-form label {
+            display: block;
+            margin: 15px 0 8px;
+            font-size: 14px;
+        }
+
+        .success-form input,
+        .success-form select,
+        .success-form textarea {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            border: 1px solid #294158;
+            border-radius: 8px;
+            background: #101e30;
+            color: white;
+            font: inherit;
+        }
+
+        .success-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .success-form input:focus,
+        .success-form select:focus,
+        .success-form textarea:focus {
+            outline: 1px solid var(--success-cyan);
+            border-color: var(--success-cyan);
+        }
+
+        .success-form .success-button {
+            margin-top: 20px;
+        }
+
+        .success-message {
+            display: none;
+            margin-top: 18px;
+            padding: 13px;
+            border-radius: 8px;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .success-message.info {
+            color: #8de9ff;
+            background: rgba(0, 212, 255, 0.08);
+        }
+
+        .success-message.error {
+            color: #ffaaaa;
+            background: rgba(255, 70, 70, 0.1);
+        }
+
+        .success-footer {
+            padding: 25px 15px;
+            text-align: center;
+            border-top: 1px solid var(--success-border);
+            color: var(--success-muted);
+        }
+
+        .success-footer a {
+            color: var(--success-cyan);
+            text-decoration: none;
+        }
+
+        @media (max-width: 900px) {
+            .success-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .lesson-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .success-hero {
+                padding: 65px 18px 50px;
+            }
+
+            .success-stats {
+                gap: 25px;
+            }
+
+            .success-grid,
+            .lesson-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .success-card {
+                padding: 23px;
+            }
+
+            .success-section {
+                padding: 40px 16px;
+            }
+
+            .success-form-wrap {
+                padding: 18px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
-<nav>
-
-    <div class="logo">
-        <i class="fa-solid fa-laptop-code"></i>
-        EmpowerTech
-    </div>
-
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#community">Community</a></li>
-    </ul>
-
-</nav>
-
-
-<!-- ================= HERO ================= -->
-
-<section class="page-hero">
-
-    <h1>🌟 Success Stories</h1>
-
-    <p>
-        Get inspired by students and professionals who transformed
-        their careers through technology, learning, and dedication.
-    </p>
-
-</section>
-
-
-<!-- ================= STORIES ================= -->
-
-<section class="resources">
-
-<h2>Student Success Journeys</h2>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<h3>👩‍💻 From Beginner to Developer</h3>
-
-<p>
-A student started learning programming from scratch,
-built multiple projects, and secured a software internship.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>🎓 Scholarship Achievement</h3>
-
-<p>
-A learner improved their skills, created a strong profile,
-and earned an international scholarship opportunity.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>🚀 Freelancing Journey</h3>
-
-<p>
-A student learned web development and started earning
-through freelance projects online.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>🏆 Coding Competition Success</h3>
-
-<p>
-A beginner practiced algorithms consistently and achieved
-success in programming competitions.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>💼 Internship Success</h3>
-
-<p>
-A student built a professional resume and portfolio
-to land their first technology internship.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>🤖 AI Learning Journey</h3>
-
-<p>
-A learner explored Artificial Intelligence and developed
-real-world AI projects.
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- ================= LESSONS ================= -->
-
-<section class="projects">
-
-<h2>Lessons From Successful People</h2>
-
-<ul>
-
-<li>Consistency is more important than speed.</li>
-
-<li>Build projects while learning.</li>
-
-<li>Never stop improving your skills.</li>
-
-<li>Learn from failures and mistakes.</li>
-
-<li>Network with people in your field.</li>
-
-<li>Share your knowledge with others.</li>
-
-</ul>
-
-</section>
-
-
-
-<!-- ================= SHARE STORY ================= -->
-
-<section class="projects">
-
-<h2>Share Your Story</h2>
-
-<p>
-Have you achieved something amazing?
-Share your journey and inspire thousands of students.
-</p>
-
-<br>
-
-<button class="primary">
-Submit Your Story
-</button>
-
-
-</section>
-
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-<p>
-&copy; 2026 EmpowerTech. All Rights Reserved.
-</p>
-
-</footer>
-
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            <i class="fa-solid fa-laptop-code"></i>
+            EmpowerTech
+        </div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#community">Community</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header class="success-hero">
+        <div class="success-badge">
+            <i class="fa-solid fa-star"></i>
+            Inspiration for Your Journey
+        </div>
+
+        <h1>Every Success Has a <span>Story.</span></h1>
+
+        <p>
+            Every expert was once a beginner. Explore journeys of learning,
+            growth, scholarships, coding, and career development.
+            Your next step could be the beginning of your own success story.
+        </p>
+
+        <div class="success-stats">
+            <div class="success-stat">
+                <strong><i class="fa-solid fa-code"></i></strong>
+                <span>Learn by Building</span>
+            </div>
+
+            <div class="success-stat">
+                <strong><i class="fa-solid fa-graduation-cap"></i></strong>
+                <span>Grow Your Skills</span>
+            </div>
+
+            <div class="success-stat">
+                <strong><i class="fa-solid fa-rocket"></i></strong>
+                <span>Take the Next Step</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- SUCCESS STORIES -->
+    <main>
+        <section class="success-section">
+            <div class="success-heading">
+                <h2>Student Success Journeys</h2>
+                <p>
+                    Different goals, different paths, one common ingredient:
+                    the willingness to keep learning.
+                </p>
+            </div>
+
+            <div class="success-grid">
+
+                <article class="success-card">
+                    <div class="success-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3>From Beginner to Developer</h3>
+                    <p>
+                        A student starts with programming fundamentals,
+                        practices regularly, builds projects, and prepares
+                        a portfolio to pursue a software development internship.
+                    </p>
+                    <span class="success-tag">Web Development</span>
+                </article>
+
+                <article class="success-card">
+                    <div class="success-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3>A Journey Toward a Scholarship</h3>
+                    <p>
+                        A learner researches scholarship opportunities,
+                        strengthens their academic profile, prepares
+                        application documents, and works toward studying
+                        at their dream institution.
+                    </p>
+                    <span class="success-tag">Education</span>
+                </article>
+
+                <article class="success-card">
+                    <div class="success-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3>Landing the First Internship</h3>
+                    <p>
+                        By improving technical skills, creating a professional
+                        CV, and practicing interviews, a student becomes
+                        better prepared to apply for entry-level opportunities.
+                    </p>
+                    <span class="success-tag">Career Growth</span>
+                </article>
+
+                <article class="success-card">
+                    <div class="success-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <h3>Growing Through Coding Challenges</h3>
+                    <p>
+                        A beginner solves problems consistently, learns
+                        data structures and algorithms, reviews mistakes,
+                        and gradually develops stronger problem-solving skills.
+                    </p>
+                    <span class="success-tag">Competitive Programming</span>
+                </article>
+
+                <article class="success-card">
+                    <div class="success-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3>Turning Skills into Freelance Work</h3>
+                    <p>
+                        A learner develops web design and development skills,
+                        creates sample projects, communicates with clients,
+                        and begins exploring freelance opportunities.
+                    </p>
+                    <span class="success-tag">Freelancing</span>
+                </article>
+
+                <article class="success-card">
+                    <div class="success-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3>Exploring Artificial Intelligence</h3>
+                    <p>
+                        A curious student learns Python and machine learning,
+                        experiments with datasets, and creates projects
+                        that turn theoretical knowledge into practical experience.
+                    </p>
+                    <span class="success-tag">AI & Machine Learning</span>
+                </article>
+
+            </div>
+
+            <p class="success-note">
+                <i class="fa-solid fa-circle-info"></i>
+                These are illustrative learning journeys, not verified
+                testimonials from specific individuals.
+            </p>
+        </section>
+
+        <!-- LESSONS -->
+        <section class="success-lessons">
+            <div class="success-section">
+                <div class="success-heading">
+                    <h2>Lessons Worth Remembering</h2>
+                    <p>Small habits can make a meaningful difference over time.</p>
+                </div>
+
+                <div class="lesson-grid">
+
+                    <div class="lesson-item">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <div>
+                            <h3>Stay Consistent</h3>
+                            <p>Regular practice matters more than occasional bursts of effort.</p>
+                        </div>
+                    </div>
+
+                    <div class="lesson-item">
+                        <i class="fa-solid fa-code"></i>
+                        <div>
+                            <h3>Build Real Projects</h3>
+                            <p>Apply what you learn and create work you can demonstrate.</p>
+                        </div>
+                    </div>
+
+                    <div class="lesson-item">
+                        <i class="fa-solid fa-book-open"></i>
+                        <div>
+                            <h3>Keep Learning</h3>
+                            <p>Explore new tools and strengthen your fundamentals.</p>
+                        </div>
+                    </div>
+
+                    <div class="lesson-item">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <div>
+                            <h3>Learn from Mistakes</h3>
+                            <p>Use failures and feedback to understand what to improve.</p>
+                        </div>
+                    </div>
+
+                    <div class="lesson-item">
+                        <i class="fa-solid fa-people-group"></i>
+                        <div>
+                            <h3>Build Connections</h3>
+                            <p>Learn from peers, mentors, communities, and professionals.</p>
+                        </div>
+                    </div>
+
+                    <div class="lesson-item">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <div>
+                            <h3>Share Your Knowledge</h3>
+                            <p>Helping others can reinforce your own understanding.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SHARE YOUR STORY -->
+        <section class="success-section">
+            <div class="success-cta">
+                <div class="success-icon" style="margin: 0 auto 20px;">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </div>
+
+                <h2>Your Journey Matters, Too.</h2>
+
+                <p>
+                    Have you completed a project, earned a certificate,
+                    achieved an academic milestone, or learned something
+                    challenging? Share your journey and encourage other students.
+                </p>
+
+                <button
+                    type="button"
+                    class="success-button"
+                    id="openStoryForm"
+                    aria-expanded="false"
+                    aria-controls="storyFormWrap">
+                    Share Your Story
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <!-- STORY FORM -->
+                <div class="success-form-wrap" id="storyFormWrap">
+                    <h3>Tell Us About Your Journey</h3>
+
+                    <form class="success-form" id="storyForm">
+                        <label for="storyName">Your Name</label>
+                        <input
+                            type="text"
+                            id="storyName"
+                            name="name"
+                            maxlength="80"
+                            required
+                            placeholder="Enter your name">
+
+                        <label for="storyCategory">Story Category</label>
+                        <select id="storyCategory" name="category" required>
+                            <option value="">Select a category</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Artificial Intelligence">AI & Machine Learning</option>
+                            <option value="Scholarship">Scholarship</option>
+                            <option value="Internship">Internship</option>
+                            <option value="Competitive Programming">Competitive Programming</option>
+                            <option value="Freelancing">Freelancing</option>
+                            <option value="Other">Other</option>
+                        </select>
+
+                        <label for="storyTitle">Story Title</label>
+                        <input
+                            type="text"
+                            id="storyTitle"
+                            name="title"
+                            maxlength="120"
+                            required
+                            placeholder="Give your story a title">
+
+                        <label for="storyDescription">Your Story</label>
+                        <textarea
+                            id="storyDescription"
+                            name="description"
+                            minlength="30"
+                            maxlength="2000"
+                            required
+                            placeholder="What did you learn? What challenges did you overcome?"></textarea>
+
+                        <button type="submit" class="success-button">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Submit Story
+                        </button>
+
+                        <div
+                            id="storyMessage"
+                            class="success-message"
+                            role="status"
+                            aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="success-footer">
+        <p>
+            &copy; 2026 EmpowerTech. All Rights Reserved.
+        </p>
+        <p style="margin-top: 10px;">
+            Learn. Build. Grow.
+            <a href="index.html">Back to Home</a>
+        </p>
+    </footer>
+
+    <script>
+        const openStoryForm = document.getElementById("openStoryForm");
+        const storyFormWrap = document.getElementById("storyFormWrap");
+        const storyForm = document.getElementById("storyForm");
+        const storyMessage = document.getElementById("storyMessage");
+
+        openStoryForm.addEventListener("click", function () {
+            const isOpen = storyFormWrap.classList.toggle("show");
+
+            openStoryForm.setAttribute("aria-expanded", isOpen);
+            openStoryForm.innerHTML = isOpen
+                ? 'Close Form <i class="fa-solid fa-xmark"></i>'
+                : 'Share Your Story <i class="fa-solid fa-arrow-right"></i>';
+
+            if (isOpen) {
+                storyFormWrap.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            }
+        });
+
+        storyForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            storyMessage.className = "success-message";
+            storyMessage.textContent = "";
+
+            const story = {
+                name: document.getElementById("storyName").value.trim(),
+                category: document.getElementById("storyCategory").value,
+                title: document.getElementById("storyTitle").value.trim(),
+                description: document.getElementById("storyDescription").value.trim()
+            };
+
+            if (
+                story.name.length === 0 ||
+                story.title.length === 0 ||
+                story.description.length < 30
+            ) {
+                storyMessage.textContent =
+                    "Please complete every field. Your story must contain at least 30 characters.";
+                storyMessage.className = "success-message show error";
+                return;
+            }
+
+            /*
+              This form currently validates the story in the browser.
+              Connect it to your C++ backend to save submissions permanently.
+            */
+
+            storyMessage.textContent =
+                "Your story is ready! Permanent submission is not connected yet. Connect this form to the EmpowerTech backend to save it.";
+            storyMessage.className = "success-message show info";
+        });
+    </script>
 
 </body>
 </html>
