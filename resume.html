@@ -6,13 +6,203 @@
     <title>Resume Builder | EmpowerTech</title>
 
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
-<body>
 
-<!-- ================= NAVBAR ================= -->
+    <style>
+        body {
+            margin: 0;
+            background: #080f1c;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 7%;
+            background: #101b2d;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav .logo {
+            color: #36d6e7;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #36d6e7;
+        }
+
+        .resume-page section {
+            padding: 40px 7%;
+        }
+
+        .resume-hero {
+            text-align: center;
+            background: linear-gradient(135deg, #101b2d, #142d43);
+            padding: 65px 7% !important;
+        }
+
+        .resume-hero h1 {
+            font-size: 38px;
+            color: #36d6e7;
+            margin-bottom: 15px;
+        }
+
+        .resume-hero p {
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.8;
+            color: #e1e8f0;
+        }
+
+        .resume-page h2 {
+            text-align: center;
+            color: #36d6e7;
+            margin-bottom: 28px;
+        }
+
+        .resume-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .resume-card {
+            background: #142238;
+            border: 1px solid #304761;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .resume-card:hover {
+            transform: translateY(-5px);
+            border-color: #36d6e7;
+        }
+
+        .resume-card i {
+            font-size: 30px;
+            color: #36d6e7;
+            margin-bottom: 12px;
+        }
+
+        .resume-card h3 {
+            color: #ffffff;
+        }
+
+        .resume-card p {
+            color: #d4deeb;
+            line-height: 1.7;
+        }
+
+        .resume-button {
+            display: inline-block;
+            background: #36d6e7;
+            color: #08111f;
+            padding: 11px 18px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .resume-button:hover {
+            background: #ffffff;
+        }
+
+        .resume-list {
+            max-width: 750px;
+            margin: auto;
+            padding: 25px 35px;
+            background: #142238;
+            border: 1px solid #304761;
+            border-radius: 12px;
+        }
+
+        .resume-list li {
+            color: #ffffff;
+            line-height: 1.9;
+            margin-bottom: 8px;
+        }
+
+        .resume-list li::marker {
+            color: #36d6e7;
+        }
+
+        .resume-checklist label {
+            display: block;
+            padding: 10px 0;
+            color: #ffffff;
+            line-height: 1.6;
+            cursor: pointer;
+        }
+
+        .resume-checklist input {
+            accent-color: #36d6e7;
+            margin-right: 10px;
+            transform: scale(1.15);
+        }
+
+        .resume-checklist {
+            max-width: 750px;
+            margin: auto;
+            padding: 25px 35px;
+            background: #142238;
+            border: 1px solid #304761;
+            border-radius: 12px;
+        }
+
+        .resume-footer {
+            text-align: center;
+            padding: 22px;
+            background: #101b2d;
+            color: #d4deeb;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .resume-hero h1 {
+                font-size: 29px;
+            }
+
+            .resume-page section {
+                padding: 30px 5%;
+            }
+
+            .resume-list,
+            .resume-checklist {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
 
 <nav>
     <div class="logo">
@@ -26,153 +216,180 @@
     </ul>
 </nav>
 
-<!-- ================= HERO ================= -->
+<main class="resume-page">
 
-<section class="page-hero">
+    <!-- HERO -->
+    <section class="resume-hero">
+        <h1>📄 Resume Builder</h1>
+        <p>
+            Build a professional, ATS-friendly resume that highlights your
+            education, skills, projects, and experience. Explore useful
+            templates and resources to prepare for internships and jobs.
+        </p>
 
-    <h1>📄 Resume Builder</h1>
+        <a class="resume-button"
+           href="https://www.canva.com/resumes/templates/"
+           target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-file-lines"></i> Explore Resume Templates
+        </a>
+    </section>
 
-    <p>
-        Learn how to create a professional ATS-friendly resume that
-        increases your chances of getting internships and job interviews.
-    </p>
+    <!-- ESSENTIAL SECTIONS -->
+    <section>
+        <h2>📌 Essential Resume Sections</h2>
 
-</section>
+        <div class="resume-cards">
 
-<!-- ================= RESUME SECTIONS ================= -->
+            <div class="resume-card">
+                <i class="fa-solid fa-user"></i>
+                <h3>Personal Information</h3>
+                <p>
+                    Add your name, professional email, phone number,
+                    LinkedIn, GitHub, and portfolio links.
+                </p>
+            </div>
 
-<section class="resources">
+            <div class="resume-card">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h3>Education</h3>
+                <p>
+                    Mention your degree, university, GPA if relevant,
+                    graduation year, and relevant coursework.
+                </p>
+            </div>
 
-    <h2>Essential Resume Sections</h2>
+            <div class="resume-card">
+                <i class="fa-solid fa-code"></i>
+                <h3>Technical Skills</h3>
+                <p>
+                    Include programming languages, frameworks, databases,
+                    development tools, and technologies you know.
+                </p>
+            </div>
 
-    <div class="cards">
+            <div class="resume-card">
+                <i class="fa-solid fa-rocket"></i>
+                <h3>Projects</h3>
+                <p>
+                    Showcase personal and academic projects. Explain what
+                    you built, the technologies used, and the results.
+                </p>
+            </div>
 
-        <div class="card">
-            <h3>👤 Personal Information</h3>
+            <div class="resume-card">
+                <i class="fa-solid fa-certificate"></i>
+                <h3>Certifications</h3>
+                <p>
+                    List relevant courses, certifications, and technical
+                    achievements with the issuing organization.
+                </p>
+            </div>
 
-            <p>
-                Include your name, email, phone number,
-                LinkedIn profile, GitHub, and portfolio website.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <h3>🎓 Education</h3>
-
-            <p>
-                Mention your degree, university, GPA,
-                graduation year, and relevant coursework.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <h3>💻 Skills</h3>
-
-            <p>
-                Add programming languages, frameworks,
-                databases, tools, and technical skills.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <h3>🚀 Projects</h3>
-
-            <p>
-                Showcase your best academic and personal
-                projects with GitHub links.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <h3>🏆 Certifications</h3>
-
-            <p>
-                Include relevant certifications from
-                Google, Microsoft, Cisco, AWS, IBM, and others.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <h3>🤝 Experience</h3>
-
-            <p>
-                Mention internships, volunteer work,
-                leadership roles, and extracurricular activities.
-            </p>
+            <div class="resume-card">
+                <i class="fa-solid fa-handshake"></i>
+                <h3>Experience</h3>
+                <p>
+                    Include internships, volunteering, leadership roles,
+                    and other relevant professional experience.
+                </p>
+            </div>
 
         </div>
+    </section>
 
-    </div>
+    <!-- RESUME RESOURCES -->
+    <section>
+        <h2>🔗 Resume Resources</h2>
 
-</section>
+        <div class="resume-cards">
 
-<!-- ================= ATS TIPS ================= -->
+            <div class="resume-card">
+                <i class="fa-solid fa-file-word"></i>
+                <h3>Microsoft Word Templates</h3>
+                <p>Explore editable resume templates for students and professionals.</p>
+                <a class="resume-button"
+                   href="https://create.microsoft.com/en-us/templates/resumes-and-cover-letters"
+                   target="_blank" rel="noopener noreferrer">
+                    View Templates →
+                </a>
+            </div>
 
-<section class="projects">
+            <div class="resume-card">
+                <i class="fa-solid fa-palette"></i>
+                <h3>Canva Resume Templates</h3>
+                <p>Explore different resume layouts and customize your design.</p>
+                <a class="resume-button"
+                   href="https://www.canva.com/resumes/templates/"
+                   target="_blank" rel="noopener noreferrer">
+                    Explore Canva →
+                </a>
+            </div>
 
-    <h2>ATS Resume Tips</h2>
+            <div class="resume-card">
+                <i class="fa-solid fa-circle-check"></i>
+                <h3>ATS Resume Guidance</h3>
+                <p>Learn how to make your resume clearer and easier for hiring systems to process.</p>
+                <a class="resume-button"
+                   href="https://www.indeed.com/career-advice/resumes-cover-letters/ats-resume"
+                   target="_blank" rel="noopener noreferrer">
+                    Read the Guide →
+                </a>
+            </div>
 
-    <ul>
-        <li>Keep your resume to one page.</li>
-        <li>Use simple fonts like Arial or Calibri.</li>
-        <li>Avoid tables, images, and graphics.</li>
-        <li>Use keywords from the job description.</li>
-        <li>Highlight measurable achievements.</li>
-        <li>Save your resume as a PDF unless instructed otherwise.</li>
-    </ul>
+        </div>
+    </section>
 
-</section>
+    <!-- ATS TIPS -->
+    <section>
+        <h2>✅ ATS-Friendly Resume Tips</h2>
 
-<!-- ================= COMMON MISTAKES ================= -->
+        <ul class="resume-list">
+            <li>Keep your resume concise, usually one page for students.</li>
+            <li>Use readable fonts such as Arial or Calibri.</li>
+            <li>Use clear headings like Education, Skills, Projects, and Experience.</li>
+            <li>Avoid complicated layouts, excessive graphics, and text boxes.</li>
+            <li>Include relevant keywords from the job description naturally.</li>
+            <li>Describe achievements with specific results when possible.</li>
+            <li>Use consistent dates, formatting, and bullet points.</li>
+            <li>Submit a PDF unless the employer requests another format.</li>
+        </ul>
+    </section>
 
-<section class="projects">
+    <!-- COMMON MISTAKES -->
+    <section>
+        <h2>⚠️ Common Resume Mistakes</h2>
 
-    <h2>Common Resume Mistakes</h2>
+        <ul class="resume-list">
+            <li>Spelling and grammar errors.</li>
+            <li>Using an unprofessional email address.</li>
+            <li>Including unnecessary personal information.</li>
+            <li>Listing skills you cannot confidently demonstrate.</li>
+            <li>Writing long paragraphs instead of concise bullet points.</li>
+            <li>Adding projects without explaining your contribution.</li>
+            <li>Using the same resume for every role without tailoring it.</li>
+            <li>Including broken links or inaccurate information.</li>
+        </ul>
+    </section>
 
-    <ul>
-        <li>Spelling and grammar errors.</li>
-        <li>Using an unprofessional email address.</li>
-        <li>Adding unnecessary personal information.</li>
-        <li>Listing every skill without proof.</li>
-        <li>Writing long paragraphs instead of bullet points.</li>
-        <li>Using outdated resume formats.</li>
-    </ul>
+    <!-- CHECKLIST -->
+    <section>
+        <h2>📝 Resume Checklist</h2>
 
-</section>
+        <div class="resume-checklist">
+            <label><input type="checkbox"> My contact information is correct.</label>
+            <label><input type="checkbox"> My resume matches the target role.</label>
+            <label><input type="checkbox"> My skills reflect what I can actually do.</label>
+            <label><input type="checkbox"> My projects include working links where available.</label>
+            <label><input type="checkbox"> My spelling and grammar are checked.</label>
+            <label><input type="checkbox"> My layout is clear and ATS-friendly.</label>
+            <label><input type="checkbox"> My resume is saved in the required format.</label>
+        </div>
+    </section>
 
-<!-- ================= CHECKLIST ================= -->
+</main>
 
-<section class="projects">
-
-    <h2>Resume Checklist</h2>
-
-    <ul>
-        <li>✔ Contact information is correct.</li>
-        <li>✔ Skills match the job role.</li>
-        <li>✔ Projects include GitHub links.</li>
-        <li>✔ No spelling or grammar mistakes.</li>
-        <li>✔ ATS-friendly format.</li>
-        <li>✔ Resume saved as PDF.</li>
-    </ul>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
+<footer class="resume-footer">
     <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
-
 </footer>
 
 </body>
