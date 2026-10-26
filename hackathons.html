@@ -3,148 +3,1375 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Hackathons | EmpowerTech</title>
 
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
-<body>
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+/* ===== EMPOWERTECH HACKATHONS: BLUE THEME ===== */
 
-<!-- ================= NAVBAR ================= -->
+.hackathons-page {
+    --hack-bg: #07152e;
+    --hack-dark: #050f21;
+    --hack-card: #10294f;
+    --hack-blue: #287bff;
+    --hack-cyan: #54c8ff;
+    --hack-text: #f1f6ff;
+    --hack-muted: #a9bddb;
 
-<nav>
-    <div class="logo">
-        <i class="fa-solid fa-laptop-code"></i>
-        EmpowerTech
-    </div>
+    margin: 0 !important;
+    background: var(--hack-bg) !important;
+    color: var(--hack-text) !important;
+    font-family: 'Segoe UI', Arial, sans-serif !important;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
 
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#opportunities">Opportunities</a></li>
-    </ul>
-</nav>
+.hackathons-page *,
+.hackathons-page *::before,
+.hackathons-page *::after {
+    box-sizing: border-box;
+}
 
-<!-- ================= HERO ================= -->
+.hackathons-page h1,
+.hackathons-page h2,
+.hackathons-page h3 {
+    color: var(--hack-text);
+    line-height: 1.3;
+}
 
-<section class="page-hero">
+.hackathons-page p {
+    color: var(--hack-muted);
+}
 
-    <h1>🏆 Hackathons</h1>
+.hackathons-page a {
+    text-decoration: none !important;
+    transition: 0.3s ease;
+}
 
-    <p>
-        Participate in hackathons to solve real-world problems, improve your coding
-        skills, collaborate with teams, and win exciting prizes.
-    </p>
+.hackathons-page section {
+    padding: 85px 8%;
+}
 
-</section>
+/* ===== NAVBAR ===== */
 
-<!-- ================= TYPES ================= -->
+.hackathons-page nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 18px 7%;
+    background: rgba(7, 21, 46, 0.97);
+    border-bottom: 1px solid rgba(84, 200, 255, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(15px);
+}
 
-<section class="resources">
+.hackathons-page nav .logo {
+    color: #fff;
+    font-size: 23px;
+    font-weight: 800;
+    white-space: nowrap;
+}
 
-    <h2>Hackathon Categories</h2>
+.hackathons-page nav .logo i {
+    color: var(--hack-cyan);
+    margin-right: 8px;
+}
 
-    <div class="cards">
+.hackathons-page nav ul {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-        <div class="card">
-            <h3>💻 Software Development</h3>
+.hackathons-page nav ul a {
+    color: #c5d6ef !important;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hackathons-page nav ul a:hover {
+    color: var(--hack-cyan) !important;
+}
+
+/* ===== HERO SECTION ===== */
+
+.hackathons-page .hack-hero {
+    min-height: 590px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 85px 8%;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 85% 35%, rgba(40, 123, 255, 0.24), transparent 38%),
+        linear-gradient(135deg, #07152e, #0b2450 65%, #103c75);
+}
+
+.hackathons-page .hack-hero-content {
+    flex: 1.2;
+    max-width: 670px;
+    position: relative;
+    z-index: 2;
+}
+
+.hackathons-page .hack-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(84, 200, 255, 0.4);
+    border-radius: 30px;
+    background: rgba(40, 123, 255, 0.13);
+    color: var(--hack-cyan);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.hackathons-page .hack-hero h1 {
+    margin: 0 0 22px;
+    font-size: clamp(36px, 4.5vw, 61px);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.hackathons-page .hack-hero h1 span,
+.hackathons-page .hack-preparation-content h2 span {
+    color: var(--hack-cyan);
+    background: linear-gradient(90deg, #54c8ff, #4384ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hackathons-page .hack-hero-content > p {
+    max-width: 580px;
+    margin-bottom: 28px;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.hackathons-page .hack-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.hackathons-page .hack-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 23px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.hackathons-page .hack-btn-primary {
+    color: white !important;
+    background: linear-gradient(135deg, #287bff, #1760df);
+    border: 1px solid #4384ff;
+    box-shadow: 0 8px 25px rgba(40, 123, 255, 0.25);
+}
+
+.hackathons-page .hack-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(40, 123, 255, 0.4);
+}
+
+.hackathons-page .hack-btn-outline {
+    color: #dceaff !important;
+    border: 1px solid rgba(132, 181, 255, 0.5);
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.hackathons-page .hack-btn-outline:hover {
+    background: rgba(40, 123, 255, 0.2);
+    border-color: var(--hack-cyan);
+}
+
+.hackathons-page .hack-hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 25px;
+    margin-top: 30px;
+}
+
+.hackathons-page .hack-hero-stats > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #c6d8f1;
+    font-size: 12px;
+}
+
+.hackathons-page .hack-hero-stats i {
+    color: var(--hack-cyan);
+    font-size: 16px;
+}
+
+/* Hero visual card */
+
+.hackathons-page .hack-hero-visual {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 260px;
+}
+
+.hackathons-page .hack-visual-card {
+    width: 100%;
+    max-width: 340px;
+    padding: 30px;
+    border-radius: 23px;
+    background: linear-gradient(145deg, #123360, #0a1c39);
+    border: 1px solid rgba(84, 200, 255, 0.35);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25),
+                0 0 45px rgba(40, 123, 255, 0.12);
+    animation: hackFloat 5s ease-in-out infinite;
+}
+
+.hackathons-page .hack-visual-icon {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #287bff, #1551b7);
+    box-shadow: 0 0 30px rgba(40, 123, 255, 0.3);
+}
+
+.hackathons-page .hack-visual-icon i {
+    color: white;
+    font-size: 34px;
+}
+
+.hackathons-page .hack-visual-card h3 {
+    margin: 0 0 7px;
+    font-size: 23px;
+}
+
+.hackathons-page .hack-visual-card > p {
+    margin: 0 0 23px;
+    font-size: 13px;
+}
+
+.hackathons-page .hack-code-line {
+    padding: 12px 0;
+    border-top: 1px solid rgba(120, 170, 235, 0.16);
+    color: #dceaff;
+    font-size: 13px;
+}
+
+.hackathons-page .hack-code-line span {
+    margin-right: 12px;
+    color: var(--hack-cyan);
+    font-weight: 800;
+}
+
+@keyframes hackFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* ===== SECTION HEADINGS ===== */
+
+.hackathons-page .hack-section-heading {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.hackathons-page .hack-section-heading > span {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--hack-cyan);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hackathons-page .hack-section-heading h2 {
+    margin: 0 0 15px;
+    font-size: clamp(27px, 3vw, 39px);
+    font-weight: 800;
+    letter-spacing: -0.7px;
+}
+
+.hackathons-page .hack-section-heading p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* ===== HACKATHON CATEGORIES ===== */
+
+.hackathons-page .hack-section {
+    background: var(--hack-bg);
+}
+
+.hackathons-page .hack-category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.hackathons-page .hack-category-card {
+    padding: 30px 25px;
+    border: 1px solid rgba(120, 170, 235, 0.17);
+    border-radius: 18px;
+    background: linear-gradient(145deg, #10294f, #0b1e3d);
+    transition: transform 0.3s ease, border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.hackathons-page .hack-category-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(84, 200, 255, 0.65);
+    box-shadow: 0 15px 40px rgba(0, 75, 180, 0.18);
+}
+
+.hackathons-page .hack-category-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    border-radius: 15px;
+    color: var(--hack-cyan);
+    background: linear-gradient(135deg, rgba(40, 123, 255, 0.25), rgba(84, 200, 255, 0.08));
+    border: 1px solid rgba(84, 200, 255, 0.22);
+}
+
+.hackathons-page .hack-category-icon i {
+    font-size: 24px;
+}
+
+.hackathons-page .hack-category-card h3 {
+    margin: 0 0 13px;
+    font-size: 18px;
+}
+
+.hackathons-page .hack-category-card p {
+    min-height: 100px;
+    margin: 0 0 20px;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.hackathons-page .hack-category-card > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--hack-cyan) !important;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hackathons-page .hack-category-card > a:hover {
+    color: white !important;
+    gap: 13px;
+}
+
+/* ===== HACKATHON PLATFORMS ===== */
+
+.hackathons-page .hack-platform-section {
+    background: linear-gradient(180deg, #091a35, #0c2143);
+}
+
+.hackathons-page .hack-platform-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 23px;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.hackathons-page .hack-platform-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 27px;
+    border: 1px solid rgba(120, 170, 235, 0.18);
+    border-radius: 17px;
+    background: rgba(16, 41, 79, 0.75);
+    transition: 0.3s ease;
+}
+
+.hackathons-page .hack-platform-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(84, 200, 255, 0.6);
+    background: #12305b;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.hackathons-page .hack-platform-icon {
+    width: 57px;
+    height: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    border-radius: 15px;
+    background: rgba(40, 123, 255, 0.16);
+    color: var(--hack-cyan);
+    font-size: 27px;
+}
+
+.hackathons-page .hack-platform-icon.google-icon {
+    color: #78baff;
+}
+
+.hackathons-page .hack-platform-icon.nasa-icon {
+    color: #69c9ff;
+}
+
+.hackathons-page .hack-platform-icon.mlh-icon {
+    color: #7da9ff;
+}
+
+.hackathons-page .hack-platform-icon.devpost-icon {
+    color: #54c8ff;
+}
+
+.hackathons-page .hack-platform-icon.microsoft-icon {
+    color: #71b9ff;
+}
+
+.hackathons-page .hack-platform-icon.ieee-icon {
+    color: #54c8ff;
+}
+
+.hackathons-page .hack-platform-type {
+    display: inline-block;
+    padding: 5px 11px;
+    margin-bottom: 14px;
+    border-radius: 20px;
+    background: rgba(40, 123, 255, 0.14);
+    color: var(--hack-cyan);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+}
+
+.hackathons-page .hack-platform-card h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
+}
+
+.hackathons-page .hack-platform-card p {
+    flex: 1;
+    margin: 0 0 22px;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.hackathons-page .hack-platform-card > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--hack-cyan) !important;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hackathons-page .hack-platform-card > a:hover {
+    color: white !important;
+    gap: 13px;
+}
+
+.hackathons-page .hack-disclaimer {
+    max-width: 900px;
+    margin: 30px auto 0;
+    padding: 15px 20px;
+    border: 1px solid rgba(84, 200, 255, 0.2);
+    border-radius: 10px;
+    background: rgba(40, 123, 255, 0.07);
+    font-size: 12px;
+    text-align: center;
+}
+
+.hackathons-page .hack-disclaimer i {
+    margin-right: 7px;
+    color: var(--hack-cyan);
+}
+
+/* ===== WHY PARTICIPATE ===== */
+
+.hackathons-page .hack-benefits-section {
+    background: var(--hack-bg);
+}
+
+.hackathons-page .hack-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.hackathons-page .hack-benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px;
+    border: 1px solid rgba(120, 170, 235, 0.17);
+    border-radius: 15px;
+    background: linear-gradient(145deg, #10294f, #0b1e3d);
+    transition: 0.3s ease;
+}
+
+.hackathons-page .hack-benefit-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(84, 200, 255, 0.55);
+}
+
+.hackathons-page .hack-benefit-item > i {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    background: rgba(40, 123, 255, 0.16);
+    color: var(--hack-cyan);
+    font-size: 22px;
+}
+
+.hackathons-page .hack-benefit-item h3 {
+    margin: 0 0 8px;
+    font-size: 17px;
+}
+
+.hackathons-page .hack-benefit-item p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* ===== PREPARATION SECTION ===== */
+
+.hackathons-page .hack-preparation-section {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 60px;
+    background: linear-gradient(180deg, #0b2041, #081831);
+}
+
+.hackathons-page .hack-prep-tag {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--hack-cyan);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.hackathons-page .hack-preparation-content h2 {
+    margin: 0 0 18px;
+    font-size: clamp(29px, 3vw, 42px);
+    font-weight: 800;
+}
+
+.hackathons-page .hack-preparation-content > p {
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.hackathons-page .hack-checklist {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.hackathons-page .hack-checklist > div {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #d4e3f7;
+    font-size: 13px;
+}
+
+.hackathons-page .hack-checklist i {
+    margin-top: 4px;
+    color: var(--hack-cyan);
+}
+
+.hackathons-page .hack-preparation-visual {
+    padding: 38px 30px;
+    text-align: center;
+    border: 1px solid rgba(84, 200, 255, 0.3);
+    border-radius: 23px;
+    background:
+        radial-gradient(ellipse at center top, rgba(40, 123, 255, 0.2), transparent 65%),
+        linear-gradient(145deg, #10294f, #091a35);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.hackathons-page .hack-trophy-circle {
+    width: 125px;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    border: 1px solid rgba(84, 200, 255, 0.4);
+    border-radius: 50%;
+    background: linear-gradient(145deg, #1b58a6, #0c2b58);
+    box-shadow: 0 0 45px rgba(40, 123, 255, 0.2);
+    animation: hackFloat 4s ease-in-out infinite;
+}
+
+.hackathons-page .hack-trophy-circle i {
+    color: var(--hack-cyan);
+    font-size: 55px;
+}
+
+.hackathons-page .hack-preparation-visual h3 {
+    margin: 0 0 12px;
+    font-size: 22px;
+}
+
+.hackathons-page .hack-preparation-visual > p {
+    margin: 0 auto 22px;
+    max-width: 330px;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.hackathons-page .hack-mini-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hackathons-page .hack-mini-tags span {
+    padding: 7px 15px;
+    border: 1px solid rgba(84, 200, 255, 0.25);
+    border-radius: 25px;
+    background: rgba(40, 123, 255, 0.12);
+    color: var(--hack-cyan);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ===== FINAL CTA ===== */
+
+.hackathons-page .hack-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background:
+        radial-gradient(ellipse at 30% 50%, rgba(40, 123, 255, 0.2), transparent 65%),
+        #0a1c39;
+    border-top: 1px solid rgba(84, 200, 255, 0.15);
+}
+
+.hackathons-page .hack-cta h2 {
+    margin: 0 0 12px;
+    font-size: clamp(25px, 3vw, 36px);
+}
+
+.hackathons-page .hack-cta p {
+    max-width: 600px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.hackathons-page .hack-btn-light {
+    flex-shrink: 0;
+    color: #07152e !important;
+    background: linear-gradient(135deg, #8be1ff, #54c8ff);
+    box-shadow: 0 8px 25px rgba(84, 200, 255, 0.18);
+}
+
+.hackathons-page .hack-btn-light:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(84, 200, 255, 0.3);
+}
+
+/* ===== FOOTER ===== */
+
+.hackathons-page footer {
+    padding: 28px 8%;
+    text-align: center;
+    background: var(--hack-dark);
+    border-top: 1px solid rgba(84, 200, 255, 0.16);
+}
+
+.hackathons-page footer p {
+    margin: 0;
+    color: #8fa8cb;
+    font-size: 12px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 1000px) {
+    .hackathons-page section {
+        padding: 70px 6%;
+    }
+
+    .hackathons-page .hack-hero {
+        padding: 70px 6%;
+        gap: 30px;
+    }
+
+    .hackathons-page .hack-category-grid,
+    .hackathons-page .hack-platform-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hackathons-page .hack-preparation-section {
+        gap: 35px;
+    }
+}
+
+@media (max-width: 700px) {
+    .hackathons-page nav {
+        position: relative;
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 5%;
+    }
+
+    .hackathons-page nav ul {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .hackathons-page .hack-hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 7%;
+    }
+
+    .hackathons-page .hack-hero-content {
+        width: 100%;
+    }
+
+    .hackathons-page .hack-hero-content > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hackathons-page .hack-hero-buttons,
+    .hackathons-page .hack-hero-stats {
+        justify-content: center;
+    }
+
+    .hackathons-page .hack-hero-visual {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .hackathons-page .hack-visual-card {
+        max-width: 360px;
+    }
+
+    .hackathons-page section {
+        padding: 55px 6%;
+    }
+
+    .hackathons-page .hack-category-grid,
+    .hackathons-page .hack-platform-grid,
+    .hackathons-page .hack-benefits-grid,
+    .hackathons-page .hack-preparation-section {
+        grid-template-columns: 1fr;
+    }
+
+    .hackathons-page .hack-category-card p {
+        min-height: 0;
+    }
+
+    .hackathons-page .hack-preparation-section {
+        gap: 35px;
+    }
+
+    .hackathons-page .hack-cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hackathons-page .hack-btn-light {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .hackathons-page .hack-hero h1 {
+        font-size: 34px;
+    }
+
+    .hackathons-page .hack-hero-buttons {
+        flex-direction: column;
+    }
+
+    .hackathons-page .hack-btn {
+        width: 100%;
+    }
+
+    .hackathons-page .hack-visual-card {
+        padding: 23px;
+    }
+
+    .hackathons-page .hack-benefit-item {
+        padding: 18px;
+        gap: 13px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .hackathons-page *,
+    .hackathons-page *::before,
+    .hackathons-page *::after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+</style>
+        </head>
+
+<body class="hackathons-page">
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            <i class="fa-solid fa-laptop-code"></i>
+            EmpowerTech
+        </div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#opportunities">Opportunities</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hack-hero">
+        <div class="hack-hero-content">
+            <span class="hack-tag">
+                <i class="fa-solid fa-code"></i> BUILD. INNOVATE. COMPETE.
+            </span>
+
+            <h1>Turn Your Ideas Into <span>Innovation</span></h1>
 
             <p>
-                Build innovative websites, mobile apps, and software solutions.
+                Join hackathons to solve real-world problems, collaborate with
+                talented developers, learn new technologies, and transform
+                your ideas into impactful projects.
             </p>
 
-            <a href="#">Explore →</a>
+            <div class="hack-hero-buttons">
+                <a href="#hack-platforms" class="hack-btn hack-btn-primary">
+                    Explore Hackathons
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#hack-preparation" class="hack-btn hack-btn-outline">
+                    Get Prepared
+                </a>
+            </div>
+
+            <div class="hack-hero-stats">
+                <div>
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span>Think Creatively</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-people-group"></i>
+                    <span>Build Together</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>Show Your Skills</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hack-hero-visual">
+            <div class="hack-visual-card">
+                <div class="hack-visual-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+
+                <h3>Have an Idea?</h3>
+                <p>Code it. Test it. Present it.</p>
+
+                <div class="hack-code-line">
+                    <span>01</span> Think of a problem
+                </div>
+
+                <div class="hack-code-line">
+                    <span>02</span> Build a solution
+                </div>
+
+                <div class="hack-code-line">
+                    <span>03</span> Make an impact
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HACKATHON CATEGORIES -->
+    <section class="hack-section">
+        <div class="hack-section-heading">
+            <span>FIND YOUR INTEREST</span>
+            <h2>Explore Hackathon Categories</h2>
+            <p>
+                Choose a challenge that matches your interests and the skills
+                you want to develop.
+            </p>
+        </div>
+
+        <div class="hack-category-grid">
+
+            <div class="hack-category-card">
+                <div class="hack-category-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <h3>Software Development</h3>
+
+                <p>
+                    Build websites, mobile applications, and software
+                    solutions that address real-world challenges.
+                </p>
+
+                <a href="#hack-platforms">
+                    Explore opportunities
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="hack-category-card">
+                <div class="hack-category-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+
+                <h3>Artificial Intelligence</h3>
+
+                <p>
+                    Experiment with machine learning, generative AI,
+                    data science, and intelligent applications.
+                </p>
+
+                <a href="#hack-platforms">
+                    Explore opportunities
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="hack-category-card">
+                <div class="hack-category-icon">
+                    <i class="fa-solid fa-earth-asia"></i>
+                </div>
+
+                <h3>Social Impact</h3>
+
+                <p>
+                    Create technology-driven solutions for healthcare,
+                    education, sustainability, and local communities.
+                </p>
+
+                <a href="#hack-platforms">
+                    Explore opportunities
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="hack-category-card">
+                <div class="hack-category-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <h3>Cybersecurity</h3>
+
+                <p>
+                    Explore security challenges, ethical hacking concepts,
+                    privacy, and secure software development.
+                </p>
+
+                <a href="#hack-platforms">
+                    Explore opportunities
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="hack-category-card">
+                <div class="hack-category-icon">
+                    <i class="fa-solid fa-satellite"></i>
+                </div>
+
+                <h3>Space & Science</h3>
+
+                <p>
+                    Use technology, scientific data, and creative thinking
+                    to explore challenges related to Earth and space.
+                </p>
+
+                <a href="#hack-platforms">
+                    Explore opportunities
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="hack-category-card">
+                <div class="hack-category-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <h3>Data & Innovation</h3>
+
+                <p>
+                    Turn datasets into useful insights through visualization,
+                    analytics, and data-driven applications.
+                </p>
+
+                <a href="#hack-platforms">
+                    Explore opportunities
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- HACKATHON PLATFORMS -->
+    <section class="hack-platform-section" id="hack-platforms">
+        <div class="hack-section-heading">
+            <span>START EXPLORING</span>
+            <h2>Discover Hackathon Opportunities</h2>
+            <p>
+                Explore these platforms and check their current events,
+                eligibility criteria, deadlines, and participation rules.
+            </p>
+        </div>
+
+        <div class="hack-platform-grid">
+
+            <div class="hack-platform-card">
+                <div class="hack-platform-icon google-icon">
+                    <i class="fa-brands fa-google"></i>
+                </div>
+
+                <span class="hack-platform-type">Innovation</span>
+
+                <h3>Google Developer Events</h3>
+
+                <p>
+                    Discover developer events, community activities,
+                    and opportunities to learn and build with Google technologies.
+                </p>
+
+                <a href="https://developers.google.com/events"
+                   target="_blank" rel="noopener noreferrer">
+                    Explore Events
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="hack-platform-card">
+                <div class="hack-platform-icon nasa-icon">
+                    <i class="fa-solid fa-earth-americas"></i>
+                </div>
+
+                <span class="hack-platform-type">Space & Science</span>
+
+                <h3>NASA Space Apps Challenge</h3>
+
+                <p>
+                    Work with open data to develop creative solutions
+                    for challenges related to Earth and space science.
+                </p>
+
+                <a href="https://www.spaceappschallenge.org/"
+                   target="_blank" rel="noopener noreferrer">
+                    Explore Challenge
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="hack-platform-card">
+                <div class="hack-platform-icon mlh-icon">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+
+                <span class="hack-platform-type">Student Community</span>
+
+                <h3>Major League Hacking</h3>
+
+                <p>
+                    Discover student hackathons, collaborative coding events,
+                    and opportunities to connect with other builders.
+                </p>
+
+                <a href="https://mlh.io/"
+                   target="_blank" rel="noopener noreferrer">
+                    Explore MLH
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="hack-platform-card">
+                <div class="hack-platform-icon devpost-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+
+                <span class="hack-platform-type">Project Showcase</span>
+
+                <h3>Devpost</h3>
+
+                <p>
+                    Browse hackathons, explore project submissions,
+                    and find challenges where you can showcase your work.
+                </p>
+
+                <a href="https://devpost.com/hackathons"
+                   target="_blank" rel="noopener noreferrer">
+                    Find Hackathons
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="hack-platform-card">
+                <div class="hack-platform-icon microsoft-icon">
+                    <i class="fa-brands fa-microsoft"></i>
+                </div>
+
+                <span class="hack-platform-type">Technology</span>
+
+                <h3>Microsoft Imagine Cup</h3>
+
+                <p>
+                    Explore Microsoft's student startup competition and
+                    check the latest eligibility requirements and program details.
+                </p>
+
+                <a href="https://imaginecup.microsoft.com/"
+                   target="_blank" rel="noopener noreferrer">
+                    Visit Imagine Cup
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="hack-platform-card">
+                <div class="hack-platform-icon ieee-icon">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+
+                <span class="hack-platform-type">Engineering</span>
+
+                <h3>IEEE Opportunities</h3>
+
+                <p>
+                    Explore IEEE activities, technical competitions,
+                    student programs, and engineering community events.
+                </p>
+
+                <a href="https://www.ieee.org/"
+                   target="_blank" rel="noopener noreferrer">
+                    Explore IEEE
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
 
         </div>
 
-        <div class="card">
+        <p class="hack-disclaimer">
+            <i class="fa-solid fa-circle-info"></i>
+            Events, eligibility, registration dates, and availability can change.
+            Always confirm details on the official platform.
+        </p>
+    </section>
 
-            <h3>🤖 Artificial Intelligence</h3>
-
+    <!-- WHY PARTICIPATE -->
+    <section class="hack-benefits-section">
+        <div class="hack-section-heading">
+            <span>LEARN BY BUILDING</span>
+            <h2>Why Participate in Hackathons?</h2>
             <p>
-                Create AI-powered applications using machine learning and deep learning.
+                Hackathons help you turn classroom knowledge into practical experience.
             </p>
-
-            <a href="#">Explore →</a>
-
         </div>
 
-        <div class="card">
+        <div class="hack-benefits-grid">
 
-            <h3>🌱 Social Impact</h3>
+            <div class="hack-benefit-item">
+                <i class="fa-solid fa-lightbulb"></i>
+                <div>
+                    <h3>Problem-Solving</h3>
+                    <p>Learn to analyze problems and develop practical solutions.</p>
+                </div>
+            </div>
 
-            <p>
-                Develop technology solutions for healthcare, education, sustainability,
-                and community development.
-            </p>
+            <div class="hack-benefit-item">
+                <i class="fa-solid fa-users"></i>
+                <div>
+                    <h3>Teamwork</h3>
+                    <p>Collaborate, divide tasks, and learn from other participants.</p>
+                </div>
+            </div>
 
-            <a href="#">Explore →</a>
+            <div class="hack-benefit-item">
+                <i class="fa-solid fa-folder-open"></i>
+                <div>
+                    <h3>Portfolio Projects</h3>
+                    <p>Create projects that demonstrate your skills to recruiters.</p>
+                </div>
+            </div>
+
+            <div class="hack-benefit-item">
+                <i class="fa-solid fa-user-tie"></i>
+                <div>
+                    <h3>Networking</h3>
+                    <p>Connect with students, mentors, developers, and professionals.</p>
+                </div>
+            </div>
+
+            <div class="hack-benefit-item">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <div>
+                    <h3>New Technologies</h3>
+                    <p>Experiment with tools and technologies outside your coursework.</p>
+                </div>
+            </div>
+
+            <div class="hack-benefit-item">
+                <i class="fa-solid fa-award"></i>
+                <div>
+                    <h3>Career Growth</h3>
+                    <p>Build experience that you can discuss in internship interviews.</p>
+                </div>
+            </div>
 
         </div>
+    </section>
 
-    </div>
+    <!-- PREPARATION CHECKLIST -->
+    <section class="hack-preparation-section" id="hack-preparation">
+        <div class="hack-preparation-content">
+            <span class="hack-prep-tag">YOUR FIRST HACKATHON</span>
 
-</section>
+            <h2>Prepare, Participate, <span>Progress.</span></h2>
 
-<!-- ================= POPULAR HACKATHONS ================= -->
+            <p>
+                You do not need to know everything before joining a hackathon.
+                Start with the basics, find a team, and focus on learning.
+            </p>
 
-<section class="projects">
+            <div class="hack-checklist">
 
-    <h2>Popular Hackathons</h2>
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Practice programming and problem-solving.</span>
+                </div>
 
-    <ul>
-        <li>Google Solution Challenge</li>
-        <li>NASA Space Apps Challenge</li>
-        <li>Microsoft Imagine Cup</li>
-        <li>MLH Global Hack Week</li>
-        <li>Devpost Hackathons</li>
-        <li>IEEE Student Competitions</li>
-    </ul>
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Learn Git and GitHub for collaboration.</span>
+                </div>
 
-</section>
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Build a small project before the event.</span>
+                </div>
 
-<!-- ================= BENEFITS ================= -->
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Choose teammates with complementary skills.</span>
+                </div>
 
-<section class="projects">
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Prepare your laptop and development tools.</span>
+                </div>
 
-    <h2>Why Participate?</h2>
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Read the rules, judging criteria, and submission format.</span>
+                </div>
 
-    <ul>
-        <li>Improve problem-solving skills.</li>
-        <li>Build an impressive portfolio.</li>
-        <li>Network with developers and mentors.</li>
-        <li>Learn new technologies.</li>
-        <li>Win prizes and recognition.</li>
-        <li>Boost your resume for internships and jobs.</li>
-    </ul>
+            </div>
 
-</section>
+            <a href="https://github.com/"
+               target="_blank" rel="noopener noreferrer"
+               class="hack-btn hack-btn-primary">
+                Get Started with GitHub
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
 
-<!-- ================= PREPARATION ================= -->
+        <div class="hack-preparation-visual">
+            <div class="hack-trophy-circle">
+                <i class="fa-solid fa-trophy"></i>
+            </div>
 
-<section class="projects">
+            <h3>Your Next Big Idea Starts Here</h3>
 
-    <h2>Hackathon Preparation Checklist</h2>
+            <p>
+                Every project is a chance to learn something new.
+                Focus on progress, not perfection.
+            </p>
 
-    <ul>
-        <li>Practice coding regularly.</li>
-        <li>Learn Git & GitHub.</li>
-        <li>Build a few projects before participating.</li>
-        <li>Improve teamwork and communication.</li>
-        <li>Prepare your development environment.</li>
-        <li>Read hackathon rules carefully.</li>
-    </ul>
+            <div class="hack-mini-tags">
+                <span>Learn</span>
+                <span>Build</span>
+                <span>Present</span>
+            </div>
+        </div>
+    </section>
 
-</section>
+    <!-- FINAL CTA -->
+    <section class="hack-cta">
+        <div>
+            <h2>Ready to Build Something Amazing?</h2>
+            <p>
+                Explore opportunities, find a challenge, and take your first step
+                toward becoming a better developer.
+            </p>
+        </div>
 
-<!-- ================= FOOTER ================= -->
+        <a href="#hack-platforms" class="hack-btn hack-btn-light">
+            Find Your Next Hackathon
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </section>
 
-<footer>
-
-    <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
-
-</footer>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
