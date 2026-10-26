@@ -3,158 +3,378 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>My Dashboard | EmpowerTech</title>
 
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* ===== GLOBAL THEME ===== */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #06101e !important;
+            color: #e5eefb !important;
+        }
+
+        /* ===== NAVBAR ===== */
+        body > nav {
+            background: #081630 !important;
+            color: #ffffff;
+            border-bottom: 1px solid #1e3550;
+        }
+
+        body > nav .logo {
+            color: #ffffff !important;
+        }
+
+        body > nav .logo i {
+            color: #38bdf8;
+        }
+
+        body > nav ul a {
+            color: #cbd5e1 !important;
+            text-decoration: none;
+        }
+
+        body > nav ul a:hover {
+            color: #38bdf8 !important;
+        }
+
+        /* ===== HERO ===== */
+        .page-hero {
+            background: linear-gradient(135deg, #0b223d, #06101e) !important;
+            color: #ffffff !important;
+            border-bottom: 1px solid #1e3550;
+        }
+
+        .page-hero h1,
+        .page-hero p {
+            color: #ffffff !important;
+        }
+
+        .page-hero p {
+            color: #bdcde0 !important;
+        }
+
+        /* ===== DASHBOARD BACKGROUND ===== */
+        #dashboard {
+            background: #06101e !important;
+            color: #e5eefb !important;
+            padding: 25px 6%;
+        }
+
+        #dashboard > section {
+            background: #0a1728 !important;
+            color: #e5eefb !important;
+            border: 1px solid #1e3550;
+            border-radius: 16px;
+            padding: 28px;
+            margin: 25px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        #dashboard h2 {
+            color: #f1f5f9 !important;
+        }
+
+        #dashboard p,
+        #dashboard label {
+            color: #bdcde0;
+        }
+
+        /* ===== STATISTICS ===== */
+        #dash-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+        }
+
+        #dash-stats > * {
+            background: #0e2036 !important;
+            color: #e5eefb !important;
+            border: 1px solid #1e3a5a;
+            border-radius: 12px;
+            padding: 18px;
+        }
+
+        /* ===== COURSE AND RECOMMENDATION CARDS ===== */
+        #dashboard .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        #dashboard .cards > * {
+            background: #0d1e33 !important;
+            color: #e5eefb !important;
+            border: 1px solid #1e3a5a;
+            border-radius: 12px;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        #dashboard .cards > *:hover {
+            border-color: #38bdf8;
+            transform: translateY(-3px);
+        }
+
+        #dashboard .cards h3 {
+            color: #7dd3fc !important;
+        }
+
+        #dashboard .cards p {
+            color: #bdcde0 !important;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-track {
+            background: #172c44 !important;
+            height: 12px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #0284c7, #22d3ee) !important;
+            height: 100%;
+            border-radius: 20px;
+            transition: width 0.4s ease;
+        }
+
+        /* ===== FAVORITES ===== */
+        .favorites-box {
+            background: #0d1e33 !important;
+            color: #e5eefb !important;
+            border: 1px solid #1e3a5a;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        /* ===== PROFILE FORM ===== */
+        #profile-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        #profile-form label {
+            color: #cbd5e1 !important;
+            font-weight: 600;
+        }
+
+        #profile-form input,
+        #profile-form textarea,
+        #lookup-form input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 13px 15px;
+            background: #06101e !important;
+            color: #ffffff !important;
+            border: 1px solid #223c5a !important;
+            border-radius: 8px;
+        }
+
+        #profile-form input::placeholder,
+        #profile-form textarea::placeholder,
+        #lookup-form input::placeholder {
+            color: #8fa6c2 !important;
+        }
+
+        #profile-form input:focus,
+        #profile-form textarea:focus,
+        #lookup-form input:focus {
+            outline: none;
+            border-color: #38bdf8 !important;
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+        }
+
+        /* ===== BUTTONS ===== */
+        #dashboard button {
+            padding: 12px 20px;
+            background: #0284c7 !important;
+            color: #ffffff !important;
+            border: 1px solid #0ea5e9;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        #dashboard button:hover {
+            background: #0369a1 !important;
+        }
+
+        #dashboard #logout-btn {
+            background: #13273f !important;
+            border-color: #2b496c;
+        }
+
+        #dashboard #logout-btn:hover {
+            background: #1f3754 !important;
+        }
+
+        /* ===== STUDENT LOOKUP ===== */
+        #lookup-form {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        #lookup-result,
+        #profile-status {
+            color: #7dd3fc !important;
+        }
+
+        /* ===== FOOTER ===== */
+        body > footer {
+            background: #040c17 !important;
+            color: #9cb3cc !important;
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #1e3550;
+        }
+
+        body > footer p {
+            color: #9cb3cc !important;
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 700px) {
+            #dashboard {
+                padding: 15px 4%;
+            }
+
+            #dashboard > section {
+                padding: 20px;
+            }
+
+            #lookup-form {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            #lookup-form button {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<!-- ================= NAVBAR ================= -->
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            <i class="fa-solid fa-laptop-code"></i>
+            EmpowerTech
+        </div>
 
-<nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#learning">Learning Hub</a></li>
+            <li><a href="index.html#opportunities">Opportunities</a></li>
+        </ul>
+    </nav>
 
-    <div class="logo">
-        <i class="fa-solid fa-laptop-code"></i>
-        EmpowerTech
+    <!-- HERO -->
+    <section class="page-hero">
+        <h1 id="dash-welcome">👤 My Dashboard</h1>
+        <p id="dash-sub">Loading your account...</p>
+    </section>
+
+    <div id="dashboard">
+
+        <!-- PROGRESS -->
+        <section class="resources">
+            <h2>My Progress</h2>
+            <div class="impact" id="dash-stats"></div>
+
+            <div class="progress-track" aria-label="Overall progress">
+                <div class="progress-fill" id="dash-bar"></div>
+            </div>
+        </section>
+
+        <!-- COURSES -->
+        <section class="projects">
+            <h2>My Courses</h2>
+            <div class="cards" id="dash-courses"></div>
+        </section>
+
+        <!-- RECOMMENDATIONS -->
+        <section class="resources">
+            <h2>Recommended For You</h2>
+            <div class="cards" id="dash-recommended"></div>
+        </section>
+
+        <!-- FAVORITES -->
+        <section class="projects">
+            <h2>My Favorites</h2>
+            <div id="dash-favorites" class="favorites-box"></div>
+        </section>
+
+        <!-- PROFILE -->
+        <section class="resources">
+            <h2>My Profile</h2>
+
+            <form id="profile-form" class="auth-form profile-form">
+                <label for="p-name">Name</label>
+                <input type="text" id="p-name" name="name"
+                       maxlength="60" required>
+
+                <label for="p-university">University</label>
+                <input type="text" id="p-university" name="university"
+                       maxlength="500">
+
+                <label for="p-degree">Degree</label>
+                <input type="text" id="p-degree" name="degree"
+                       maxlength="500">
+
+                <label for="p-interests">Interests</label>
+                <input type="text" id="p-interests" name="interests"
+                       maxlength="500"
+                       placeholder="AI, Web Development, Cloud ...">
+
+                <label for="p-bio">About me</label>
+                <textarea id="p-bio" name="bio"
+                          rows="4" maxlength="500"></textarea>
+
+                <button type="submit" class="primary">Save Profile</button>
+                <p id="profile-status"></p>
+            </form>
+        </section>
+
+        <!-- FIND A STUDENT -->
+        <section class="projects">
+            <h2>Find a Student by ID</h2>
+
+            <form id="lookup-form" class="live-filters">
+                <input type="text" id="lookup-id"
+                       placeholder="For example EMP1001">
+
+                <button type="submit" class="btn">Search</button>
+            </form>
+
+            <p id="lookup-result" class="lookup-result"></p>
+        </section>
+
+        <!-- LOGOUT -->
+        <section class="resources">
+            <div class="buttons logout-row">
+                <button id="logout-btn" class="secondary">Log out</button>
+            </div>
+        </section>
+
     </div>
 
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#learning">Learning Hub</a></li>
-        <li><a href="index.html#opportunities">Opportunities</a></li>
-    </ul>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
+    </footer>
 
-</nav>
-
-<!-- ================= HERO ================= -->
-
-<section class="page-hero">
-
-    <h1 id="dash-welcome">👤 My Dashboard</h1>
-
-    <p id="dash-sub">Loading your account...</p>
-
-</section>
-
-<div id="dashboard">
-
-    <!-- ================= PROGRESS ================= -->
-
-    <section class="resources">
-
-        <h2>My Progress</h2>
-
-        <div class="impact" id="dash-stats"></div>
-
-        <div class="progress-track" aria-label="Overall progress">
-            <div class="progress-fill" id="dash-bar"></div>
-        </div>
-
-    </section>
-
-    <!-- ================= COURSES ================= -->
-
-    <section class="projects">
-
-        <h2>My Courses</h2>
-
-        <div class="cards" id="dash-courses"></div>
-
-    </section>
-
-    <!-- ================= RECOMMENDED ================= -->
-
-    <section class="resources">
-
-        <h2>Recommended For You</h2>
-
-        <div class="cards" id="dash-recommended"></div>
-
-    </section>
-
-    <!-- ================= FAVORITES ================= -->
-
-    <section class="projects">
-
-        <h2>My Favorites</h2>
-
-        <div id="dash-favorites" class="favorites-box"></div>
-
-    </section>
-
-    <!-- ================= PROFILE ================= -->
-
-    <section class="resources">
-
-        <h2>My Profile</h2>
-
-        <form id="profile-form" class="auth-form profile-form">
-
-            <label for="p-name">Name</label>
-            <input type="text" id="p-name" name="name" maxlength="60" required>
-
-            <label for="p-university">University</label>
-            <input type="text" id="p-university" name="university" maxlength="500">
-
-            <label for="p-degree">Degree</label>
-            <input type="text" id="p-degree" name="degree" maxlength="500">
-
-            <label for="p-interests">Interests</label>
-            <input type="text" id="p-interests" name="interests" maxlength="500"
-                   placeholder="AI, Web Development, Cloud ...">
-
-            <label for="p-bio">About me</label>
-            <textarea id="p-bio" name="bio" rows="4" maxlength="500"></textarea>
-
-            <button type="submit" class="primary">Save Profile</button>
-
-            <p id="profile-status"></p>
-
-        </form>
-
-    </section>
-
-    <!-- ================= FIND A STUDENT ================= -->
-
-    <section class="projects">
-
-        <h2>Find a Student by ID</h2>
-
-        <form id="lookup-form" class="live-filters">
-
-            <input type="text" id="lookup-id" placeholder="For example EMP1001">
-
-            <button type="submit" class="btn">Search</button>
-
-        </form>
-
-        <p id="lookup-result" class="lookup-result"></p>
-
-    </section>
-
-    <!-- ================= LOGOUT ================= -->
-
-    <section class="resources">
-
-        <div class="buttons logout-row">
-            <button id="logout-btn" class="secondary">Log out</button>
-        </div>
-
-    </section>
-
-</div>
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
-
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
