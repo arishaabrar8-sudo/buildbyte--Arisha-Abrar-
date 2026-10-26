@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LinkedIn Guide | EmpowerTech</title>
+
+    <title>LinkedIn Profile Guide | EmpowerTech</title>
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
 
-<!-- ================= NAVBAR ================= -->
+<body class="linkedin-page">
 
-<nav>
-
+<!-- NAVBAR -->
+<nav class="lg-navbar">
     <div class="logo">
         <i class="fa-solid fa-laptop-code"></i>
         EmpowerTech
@@ -24,157 +24,810 @@
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#career">Career Center</a></li>
+        <li><a href="job-search.html">Job Search</a></li>
     </ul>
-
 </nav>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
+<section class="lg-hero">
+    <div class="lg-hero-content">
+        <span class="lg-badge">
+            <i class="fa-brands fa-linkedin"></i>
+            PROFESSIONAL DEVELOPMENT
+        </span>
 
-<section class="page-hero">
+        <h1>Build a Powerful <span>LinkedIn Profile</span></h1>
 
-    <h1>🌐 LinkedIn Profile Guide</h1>
+        <p>
+            Your LinkedIn profile is more than an online resume.
+            Use it to showcase your projects, connect with professionals,
+            discover internships, and grow your career.
+        </p>
 
-    <p>
-        Build a professional LinkedIn profile that helps you connect
-        with recruiters, showcase your skills, and discover internships
-        and job opportunities.
-    </p>
+        <div class="lg-hero-buttons">
+            <a href="https://www.linkedin.com/"
+               target="_blank" rel="noopener noreferrer"
+               class="lg-btn lg-btn-primary">
+                Open LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
 
+            <a href="#profile-sections" class="lg-btn lg-btn-secondary">
+                Explore the Guide <i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="lg-hero-icon">
+        <i class="fa-brands fa-linkedin"></i>
+        <div class="lg-floating-card">
+            <i class="fa-solid fa-circle-check"></i>
+            Your professional journey starts here!
+        </div>
+    </div>
 </section>
 
-<!-- ================= PROFILE SECTIONS ================= -->
+<!-- INTRODUCTION -->
+<section class="lg-intro">
+    <div class="lg-section-heading">
+        <span>GETTING STARTED</span>
+        <h2>Why Does LinkedIn Matter?</h2>
+        <p>
+            A strong profile helps people understand who you are,
+            what you can do, and what opportunities interest you.
+        </p>
+    </div>
 
-<section class="resources">
-
-    <h2>Essential LinkedIn Sections</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>📸 Professional Photo</h3>
-
-            <p>
-                Use a clear, professional headshot with a simple background.
-            </p>
-
+    <div class="lg-benefit-grid">
+        <div class="lg-benefit">
+            <i class="fa-solid fa-user-tie"></i>
+            <h3>Professional Identity</h3>
+            <p>Present your education, interests, skills, and achievements.</p>
         </div>
 
-        <div class="card">
-
-            <h3>📝 Headline</h3>
-
-            <p>
-                Write a concise headline highlighting your role, skills,
-                and career interests.
-            </p>
-
+        <div class="lg-benefit">
+            <i class="fa-solid fa-briefcase"></i>
+            <h3>Career Opportunities</h3>
+            <p>Explore internships, graduate programs, and entry-level roles.</p>
         </div>
 
-        <div class="card">
+        <div class="lg-benefit">
+            <i class="fa-solid fa-people-group"></i>
+            <h3>Professional Network</h3>
+            <p>Connect with students, alumni, mentors, recruiters, and developers.</p>
+        </div>
+    </div>
+</section>
 
-            <h3>👤 About Section</h3>
+<!-- PROFILE SECTIONS -->
+<section class="lg-profile-section" id="profile-sections">
+    <div class="lg-section-heading">
+        <span>YOUR PROFILE CHECKLIST</span>
+        <h2>Essential LinkedIn Sections</h2>
+        <p>Build your profile step by step. Focus on accuracy and authenticity.</p>
+    </div>
 
-            <p>
-                Introduce yourself, your goals, achievements,
-                and technical expertise.
-            </p>
+    <div class="lg-profile-grid">
 
+        <div class="lg-profile-card">
+            <div class="lg-card-icon"><i class="fa-solid fa-camera"></i></div>
+            <h3>01. Profile Photo</h3>
+            <p>Choose a clear, recent photo with good lighting and a simple background.</p>
+            <strong>Tip:</strong>
+            <p>Use a photo that looks professional and represents you accurately.</p>
         </div>
 
-        <div class="card">
-
-            <h3>💻 Skills</h3>
-
-            <p>
-                Add your technical and soft skills to make your profile
-                more discoverable.
-            </p>
-
+        <div class="lg-profile-card">
+            <div class="lg-card-icon"><i class="fa-solid fa-heading"></i></div>
+            <h3>02. Headline</h3>
+            <p>Describe your current role, main skills, and professional interests.</p>
+            <div class="lg-example">
+                <strong>Example:</strong>
+                <p>Software Engineering Student | C++ | Web Development | Learning Machine Learning</p>
+            </div>
         </div>
 
-        <div class="card">
-
-            <h3>🚀 Projects</h3>
-
-            <p>
-                Showcase your best projects with GitHub or portfolio links.
-            </p>
-
+        <div class="lg-profile-card">
+            <div class="lg-card-icon"><i class="fa-solid fa-user"></i></div>
+            <h3>03. About Section</h3>
+            <p>Summarize your background, interests, achievements, and career goals.</p>
+            <strong>Tip:</strong>
+            <p>Write naturally in the first person and focus on what you can contribute.</p>
         </div>
 
-        <div class="card">
+        <div class="lg-profile-card">
+            <div class="lg-card-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>04. Skills</h3>
+            <p>Add relevant technical and professional skills that reflect your actual abilities.</p>
+            <strong>Examples:</strong>
+            <p>C++, HTML, CSS, JavaScript, Git, Problem Solving, Communication.</p>
+        </div>
 
-            <h3>🏆 Certifications</h3>
+        <div class="lg-profile-card">
+            <div class="lg-card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>05. Projects</h3>
+            <p>Showcase projects that demonstrate how you apply your knowledge.</p>
+            <strong>Include:</strong>
+            <p>Project purpose, technologies, your contribution, and a working demo or repository link.</p>
+        </div>
 
-            <p>
-                Display certificates from Google, Microsoft, Cisco,
-                IBM, AWS, and other providers.
-            </p>
+        <div class="lg-profile-card">
+            <div class="lg-card-icon"><i class="fa-solid fa-certificate"></i></div>
+            <h3>06. Certifications</h3>
+            <p>Display relevant courses and certifications you have actually completed.</p>
+            <strong>Include:</strong>
+            <p>Issuing organization, certificate name, completion date, and credential link when available.</p>
+        </div>
 
+        <div class="lg-profile-card">
+            <div class="lg-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>07. Education</h3>
+            <p>Add your university, degree, study period, and relevant activities.</p>
+            <strong>Tip:</strong>
+            <p>Include academic achievements when they strengthen your professional profile.</p>
+        </div>
+
+        <div class="lg-profile-card">
+            <div class="lg-card-icon"><i class="fa-solid fa-people-group"></i></div>
+            <h3>08. Experience & Activities</h3>
+            <p>Include internships, volunteering, student societies, and relevant leadership roles.</p>
+            <strong>Tip:</strong>
+            <p>Explain your responsibilities and contributions instead of listing titles alone.</p>
+        </div>
+
+        <div class="lg-profile-card">
+            <div class="lg-card-icon"><i class="fa-solid fa-link"></i></div>
+            <h3>09. Featured Section</h3>
+            <p>Highlight your strongest work so visitors can find it quickly.</p>
+            <strong>Showcase:</strong>
+            <p>GitHub repositories, portfolio websites, project demonstrations, or published articles.</p>
         </div>
 
     </div>
-
 </section>
 
-<!-- ================= OPTIMIZATION TIPS ================= -->
+<!-- HEADLINE AND ABOUT EXAMPLES -->
+<section class="lg-examples">
+    <div class="lg-section-heading">
+        <span>MAKE YOUR PROFILE STAND OUT</span>
+        <h2>Examples You Can Learn From</h2>
+        <p>Use these as starting points and personalize them to reflect your real experience.</p>
+    </div>
 
-<section class="projects">
+    <div class="lg-example-box">
+        <div class="lg-example-heading">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <h3>Headline Example</h3>
+        </div>
 
-    <h2>Profile Optimization Tips</h2>
+        <p>
+            Software Engineering Student | C++ & Web Development |
+            Problem Solving | Exploring Machine Learning
+        </p>
 
-    <ul>
-        <li>Use a professional profile picture.</li>
-        <li>Write a keyword-rich headline.</li>
-        <li>Complete every profile section.</li>
-        <li>Upload projects and certifications.</li>
-        <li>Keep your experience updated.</li>
-        <li>Customize your LinkedIn URL.</li>
-    </ul>
+        <button class="lg-copy-btn" data-copy="Software Engineering Student | C++ & Web Development | Problem Solving | Exploring Machine Learning">
+            <i class="fa-regular fa-copy"></i> Copy Example
+        </button>
+    </div>
 
+    <div class="lg-example-box">
+        <div class="lg-example-heading">
+            <i class="fa-solid fa-file-lines"></i>
+            <h3>About Section Example</h3>
+        </div>
+
+        <p id="lg-about-example">
+            I am a Software Engineering student interested in software
+            development, problem solving, and emerging technologies.
+            I enjoy building projects that help me apply my technical
+            knowledge and develop practical skills. I am continuously
+            learning, exploring new tools, and looking for opportunities
+            to collaborate with others, contribute to meaningful projects,
+            and grow as a developer.
+        </p>
+
+        <button class="lg-copy-btn" data-copy="I am a Software Engineering student interested in software development, problem solving, and emerging technologies. I enjoy building projects that help me apply my technical knowledge and develop practical skills. I am continuously learning, exploring new tools, and looking for opportunities to collaborate with others, contribute to meaningful projects, and grow as a developer.">
+            <i class="fa-regular fa-copy"></i> Copy Example
+        </button>
+    </div>
+
+    <p class="lg-note">
+        <i class="fa-solid fa-circle-info"></i>
+        These are examples, not ready-made claims. Edit them to match your own skills and experience.
+    </p>
 </section>
 
-<!-- ================= NETWORKING ================= -->
+<!-- OPTIMIZATION TIPS -->
+<section class="lg-tips">
+    <div class="lg-section-heading">
+        <span>PROFILE IMPROVEMENT</span>
+        <h2>Profile Optimization Tips</h2>
+    </div>
 
-<section class="projects">
-
-    <h2>Networking Tips</h2>
-
-    <ul>
-        <li>Connect with classmates and professors.</li>
-        <li>Follow technology companies.</li>
-        <li>Join LinkedIn groups related to your field.</li>
-        <li>Engage with posts by commenting and sharing.</li>
-        <li>Connect with recruiters professionally.</li>
-        <li>Share your projects and achievements regularly.</li>
-    </ul>
-
+    <div class="lg-tips-list">
+        <div><i class="fa-solid fa-check"></i><span>Use relevant keywords naturally in your headline, About section, and experience.</span></div>
+        <div><i class="fa-solid fa-check"></i><span>Complete the sections that are relevant to your career stage.</span></div>
+        <div><i class="fa-solid fa-check"></i><span>Use clear descriptions that explain your work and contributions.</span></div>
+        <div><i class="fa-solid fa-check"></i><span>Keep your skills, education, projects, and experience up to date.</span></div>
+        <div><i class="fa-solid fa-check"></i><span>Customize your public profile URL if the option is available.</span></div>
+        <div><i class="fa-solid fa-check"></i><span>Check spelling, grammar, dates, and links before publishing changes.</span></div>
+    </div>
 </section>
 
-<!-- ================= COMMON MISTAKES ================= -->
+<!-- NETWORKING -->
+<section class="lg-networking">
+    <div class="lg-section-heading">
+        <span>BUILD REAL CONNECTIONS</span>
+        <h2>Smart Networking Strategies</h2>
+        <p>Build genuine professional relationships instead of collecting connections.</p>
+    </div>
 
-<section class="projects">
+    <div class="lg-network-grid">
+        <div class="lg-network-card">
+            <i class="fa-solid fa-user-plus"></i>
+            <h3>Personalize Requests</h3>
+            <p>Introduce yourself briefly and explain why you would like to connect.</p>
+        </div>
 
-    <h2>Common Mistakes to Avoid</h2>
+        <div class="lg-network-card">
+            <i class="fa-solid fa-building"></i>
+            <h3>Follow Companies</h3>
+            <p>Follow organizations that match your interests and review their career updates.</p>
+        </div>
 
-    <ul>
-        <li>Using an unprofessional photo.</li>
-        <li>Leaving your profile incomplete.</li>
-        <li>Ignoring spelling and grammar mistakes.</li>
-        <li>Not adding projects or certifications.</li>
-        <li>Sending connection requests without a message.</li>
-        <li>Being inactive for long periods.</li>
-    </ul>
+        <div class="lg-network-card">
+            <i class="fa-solid fa-comments"></i>
+            <h3>Engage Thoughtfully</h3>
+            <p>Ask useful questions and leave meaningful comments on relevant posts.</p>
+        </div>
 
+        <div class="lg-network-card">
+            <i class="fa-solid fa-share-nodes"></i>
+            <h3>Share Your Progress</h3>
+            <p>Post genuine project updates, lessons learned, and milestones.</p>
+        </div>
+    </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- CONNECTION MESSAGE -->
+<section class="lg-message">
+    <div class="lg-message-content">
+        <span>CONNECTION MESSAGE TEMPLATE</span>
+        <h2>Reach Out Professionally</h2>
 
-<footer>
+        <p id="lg-connection-message">
+            Hi [Name], I am a Software Engineering student interested in
+            [specific field]. I came across your profile and would love
+            to connect and learn from your professional journey. Thank you!
+        </p>
 
+        <button class="lg-copy-btn" data-copy="Hi [Name], I am a Software Engineering student interested in [specific field]. I came across your profile and would love to connect and learn from your professional journey. Thank you!">
+            <i class="fa-regular fa-copy"></i> Copy Message
+        </button>
+    </div>
+</section>
+
+<!-- COMMON MISTAKES -->
+<section class="lg-mistakes">
+    <div class="lg-section-heading">
+        <span>AVOID THESE PITFALLS</span>
+        <h2>Common LinkedIn Mistakes</h2>
+    </div>
+
+    <div class="lg-mistake-grid">
+        <div><i class="fa-solid fa-xmark"></i> Leaving important profile sections incomplete.</div>
+        <div><i class="fa-solid fa-xmark"></i> Listing skills or achievements you cannot support.</div>
+        <div><i class="fa-solid fa-xmark"></i> Sharing projects without explaining your contribution.</div>
+        <div><i class="fa-solid fa-xmark"></i> Sending generic messages to every recruiter.</div>
+        <div><i class="fa-solid fa-xmark"></i> Posting content without checking accuracy and professionalism.</div>
+        <div><i class="fa-solid fa-xmark"></i> Sharing private information or clicking suspicious job links.</div>
+    </div>
+</section>
+
+<!-- USEFUL RESOURCES -->
+<section class="lg-resources">
+    <div class="lg-section-heading">
+        <span>OFFICIAL RESOURCES</span>
+        <h2>Useful LinkedIn Links</h2>
+        <p>Continue improving your profile with LinkedIn's own resources.</p>
+    </div>
+
+    <div class="lg-resource-grid">
+        <a href="https://www.linkedin.com/"
+           target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin"></i>
+            <span><strong>LinkedIn</strong><small>Open your profile and network</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/jobs/"
+           target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-briefcase"></i>
+            <span><strong>LinkedIn Jobs</strong><small>Explore jobs and internships</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/learning/"
+           target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span><strong>LinkedIn Learning</strong><small>Explore professional courses</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/help/linkedin/"
+           target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-circle-question"></i>
+            <span><strong>LinkedIn Help</strong><small>Find profile and account guidance</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="lg-cta">
+    <i class="fa-brands fa-linkedin"></i>
+    <h2>Your Next Opportunity Starts With One Step</h2>
+    <p>Update your profile, showcase your work, and keep learning.</p>
+
+    <a href="https://www.linkedin.com/"
+       target="_blank" rel="noopener noreferrer"
+       class="lg-btn lg-btn-primary">
+        Visit LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="lg-footer">
     <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
-
+    <p>Learn. Connect. Build Your Future.</p>
 </footer>
+
+<script>
+document.querySelectorAll(".lg-copy-btn").forEach(function(button) {
+    button.addEventListener("click", async function() {
+        const text = button.getAttribute("data-copy");
+        const originalText = button.innerHTML;
+
+        try {
+            await navigator.clipboard.writeText(text);
+            button.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+        } catch (error) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+
+            try {
+                document.execCommand("copy");
+                button.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+            } catch (copyError) {
+                button.innerHTML = "Copy unavailable";
+            }
+
+            textArea.remove();
+        }
+
+        setTimeout(function() {
+            button.innerHTML = originalText;
+        }, 1800);
+    });
+});
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LinkedIn Profile Guide | EmpowerTech</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="linkedin-page">
+
+<!-- NAVBAR -->
+<nav class="lg-navbar">
+    <div class="logo">
+        <i class="fa-solid fa-laptop-code"></i>
+        EmpowerTech
+    </div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#career">Career Center</a></li>
+        <li><a href="job-search.html">Job Search</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="lg-hero">
+    <div class="lg-hero-content">
+        <span class="lg-badge">
+            <i class="fa-brands fa-linkedin"></i>
+            PROFESSIONAL DEVELOPMENT
+        </span>
+
+        <h1>Build a Powerful <span>LinkedIn Profile</span></h1>
+
+        <p>
+            Your LinkedIn profile is more than an online resume.
+            Use it to showcase your projects, connect with professionals,
+            discover internships, and grow your career.
+        </p>
+
+        <div class="lg-hero-buttons">
+            <a href="https://www.linkedin.com/"
+               target="_blank" rel="noopener noreferrer"
+               class="lg-btn lg-btn-primary">
+                Open LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <a href="#profile-sections" class="lg-btn lg-btn-secondary">
+                Explore the Guide <i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="lg-hero-icon">
+        <i class="fa-brands fa-linkedin"></i>
+        <div class="lg-floating-card">
+            <i class="fa-solid fa-circle-check"></i>
+            Your professional journey starts here!
+        </div>
+    </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="lg-intro">
+    <div class="lg-section-heading">
+        <span>GETTING STARTED</span>
+        <h2>Why Does LinkedIn Matter?</h2>
+        <p>
+            A strong profile helps people understand who you are,
+            what you can do, and what opportunities interest you.
+        </p>
+    </div>
+
+    <div class="lg-benefit-grid">
+        <div class="lg-benefit">
+            <i class="fa-solid fa-user-tie"></i>
+            <h3>Professional Identity</h3>
+            <p>Present your education, interests, skills, and achievements.</p>
+        </div>
+
+        <div class="lg-benefit">
+            <i class="fa-solid fa-briefcase"></i>
+            <h3>Career Opportunities</h3>
+            <p>Explore internships, graduate programs, and entry-level roles.</p>
+        </div>
+
+        <div class="lg-benefit">
+            <i class="fa-solid fa-people-group"></i>
+            <h3>Professional Network</h3>
+            <p>Connect with students, alumni, mentors, recruiters, and developers.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PROFILE SECTIONS -->
+<section class="lg-profile-section" id="profile-sections">
+    <div class="lg-section-heading">
+        <span>YOUR PROFILE CHECKLIST</span>
+        <h2>Essential LinkedIn Sections</h2>
+        <p>Build your profile step by step. Focus on accuracy and authenticity.</p>
+    </div>
+
+    <div class="lg-profile-grid">
+
+        <div class="lg-profile-card">
+            <div class="lg-card-icon"><i class="fa-solid fa-camera"></i></div>
+            <h3>01. Profile Photo</h3>
+            <p>Choose a clear, recent photo with good lighting and a simple background.</p>
+            <strong>Tip:</strong>
+            <p>Use a photo that looks professional and represents you accurately.</p>
+        </div>
+
+        <div class="lg-profile-card">
+            <div class="lg-card-icon"><i class="fa-solid fa-heading"></i></div>
+            <h3>02. Headline</h3>
+            <p>Describe your current role, main skills, and professional interests.</p>
+            <div class="lg-example">
+                <strong>Example:</strong>
+                <p>Software Engineering Student | C++ | Web Development | Learning Machine Learning</p>
+            </div>
+        </div>
+
+        <div class="lg-profile-card">
+            <div class="lg-card-icon"><i class="fa-solid fa-user"></i></div>
+            <h3>03. About Section</h3>
+            <p>Summarize your background, interests, achievements, and career goals.</p>
+            <strong>Tip:</strong>
+            <p>Write naturally in the first person and focus on what you can contribute.</p>
+        </div>
+
+        <div class="lg-profile-card">
+            <div class="lg-card-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>04. Skills</h3>
+            <p>Add relevant technical and professional skills that reflect your actual abilities.</p>
+            <strong>Examples:</strong>
+            <p>C++, HTML, CSS, JavaScript, Git, Problem Solving, Communication.</p>
+        </div>
+
+        <div class="lg-profile-card">
+            <div class="lg-card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>05. Projects</h3>
+            <p>Showcase projects that demonstrate how you apply your knowledge.</p>
+            <strong>Include:</strong>
+            <p>Project purpose, technologies, your contribution, and a working demo or repository link.</p>
+        </div>
+
+        <div class="lg-profile-card">
+            <div class="lg-card-icon"><i class="fa-solid fa-certificate"></i></div>
+            <h3>06. Certifications</h3>
+            <p>Display relevant courses and certifications you have actually completed.</p>
+            <strong>Include:</strong>
+            <p>Issuing organization, certificate name, completion date, and credential link when available.</p>
+        </div>
+
+        <div class="lg-profile-card">
+            <div class="lg-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>07. Education</h3>
+            <p>Add your university, degree, study period, and relevant activities.</p>
+            <strong>Tip:</strong>
+            <p>Include academic achievements when they strengthen your professional profile.</p>
+        </div>
+
+        <div class="lg-profile-card">
+            <div class="lg-card-icon"><i class="fa-solid fa-people-group"></i></div>
+            <h3>08. Experience & Activities</h3>
+            <p>Include internships, volunteering, student societies, and relevant leadership roles.</p>
+            <strong>Tip:</strong>
+            <p>Explain your responsibilities and contributions instead of listing titles alone.</p>
+        </div>
+
+        <div class="lg-profile-card">
+            <div class="lg-card-icon"><i class="fa-solid fa-link"></i></div>
+            <h3>09. Featured Section</h3>
+            <p>Highlight your strongest work so visitors can find it quickly.</p>
+            <strong>Showcase:</strong>
+            <p>GitHub repositories, portfolio websites, project demonstrations, or published articles.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- HEADLINE AND ABOUT EXAMPLES -->
+<section class="lg-examples">
+    <div class="lg-section-heading">
+        <span>MAKE YOUR PROFILE STAND OUT</span>
+        <h2>Examples You Can Learn From</h2>
+        <p>Use these as starting points and personalize them to reflect your real experience.</p>
+    </div>
+
+    <div class="lg-example-box">
+        <div class="lg-example-heading">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <h3>Headline Example</h3>
+        </div>
+
+        <p>
+            Software Engineering Student | C++ & Web Development |
+            Problem Solving | Exploring Machine Learning
+        </p>
+
+        <button class="lg-copy-btn" data-copy="Software Engineering Student | C++ & Web Development | Problem Solving | Exploring Machine Learning">
+            <i class="fa-regular fa-copy"></i> Copy Example
+        </button>
+    </div>
+
+    <div class="lg-example-box">
+        <div class="lg-example-heading">
+            <i class="fa-solid fa-file-lines"></i>
+            <h3>About Section Example</h3>
+        </div>
+
+        <p id="lg-about-example">
+            I am a Software Engineering student interested in software
+            development, problem solving, and emerging technologies.
+            I enjoy building projects that help me apply my technical
+            knowledge and develop practical skills. I am continuously
+            learning, exploring new tools, and looking for opportunities
+            to collaborate with others, contribute to meaningful projects,
+            and grow as a developer.
+        </p>
+
+        <button class="lg-copy-btn" data-copy="I am a Software Engineering student interested in software development, problem solving, and emerging technologies. I enjoy building projects that help me apply my technical knowledge and develop practical skills. I am continuously learning, exploring new tools, and looking for opportunities to collaborate with others, contribute to meaningful projects, and grow as a developer.">
+            <i class="fa-regular fa-copy"></i> Copy Example
+        </button>
+    </div>
+
+    <p class="lg-note">
+        <i class="fa-solid fa-circle-info"></i>
+        These are examples, not ready-made claims. Edit them to match your own skills and experience.
+    </p>
+</section>
+
+<!-- OPTIMIZATION TIPS -->
+<section class="lg-tips">
+    <div class="lg-section-heading">
+        <span>PROFILE IMPROVEMENT</span>
+        <h2>Profile Optimization Tips</h2>
+    </div>
+
+    <div class="lg-tips-list">
+        <div><i class="fa-solid fa-check"></i><span>Use relevant keywords naturally in your headline, About section, and experience.</span></div>
+        <div><i class="fa-solid fa-check"></i><span>Complete the sections that are relevant to your career stage.</span></div>
+        <div><i class="fa-solid fa-check"></i><span>Use clear descriptions that explain your work and contributions.</span></div>
+        <div><i class="fa-solid fa-check"></i><span>Keep your skills, education, projects, and experience up to date.</span></div>
+        <div><i class="fa-solid fa-check"></i><span>Customize your public profile URL if the option is available.</span></div>
+        <div><i class="fa-solid fa-check"></i><span>Check spelling, grammar, dates, and links before publishing changes.</span></div>
+    </div>
+</section>
+
+<!-- NETWORKING -->
+<section class="lg-networking">
+    <div class="lg-section-heading">
+        <span>BUILD REAL CONNECTIONS</span>
+        <h2>Smart Networking Strategies</h2>
+        <p>Build genuine professional relationships instead of collecting connections.</p>
+    </div>
+
+    <div class="lg-network-grid">
+        <div class="lg-network-card">
+            <i class="fa-solid fa-user-plus"></i>
+            <h3>Personalize Requests</h3>
+            <p>Introduce yourself briefly and explain why you would like to connect.</p>
+        </div>
+
+        <div class="lg-network-card">
+            <i class="fa-solid fa-building"></i>
+            <h3>Follow Companies</h3>
+            <p>Follow organizations that match your interests and review their career updates.</p>
+        </div>
+
+        <div class="lg-network-card">
+            <i class="fa-solid fa-comments"></i>
+            <h3>Engage Thoughtfully</h3>
+            <p>Ask useful questions and leave meaningful comments on relevant posts.</p>
+        </div>
+
+        <div class="lg-network-card">
+            <i class="fa-solid fa-share-nodes"></i>
+            <h3>Share Your Progress</h3>
+            <p>Post genuine project updates, lessons learned, and milestones.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONNECTION MESSAGE -->
+<section class="lg-message">
+    <div class="lg-message-content">
+        <span>CONNECTION MESSAGE TEMPLATE</span>
+        <h2>Reach Out Professionally</h2>
+
+        <p id="lg-connection-message">
+            Hi [Name], I am a Software Engineering student interested in
+            [specific field]. I came across your profile and would love
+            to connect and learn from your professional journey. Thank you!
+        </p>
+
+        <button class="lg-copy-btn" data-copy="Hi [Name], I am a Software Engineering student interested in [specific field]. I came across your profile and would love to connect and learn from your professional journey. Thank you!">
+            <i class="fa-regular fa-copy"></i> Copy Message
+        </button>
+    </div>
+</section>
+
+<!-- COMMON MISTAKES -->
+<section class="lg-mistakes">
+    <div class="lg-section-heading">
+        <span>AVOID THESE PITFALLS</span>
+        <h2>Common LinkedIn Mistakes</h2>
+    </div>
+
+    <div class="lg-mistake-grid">
+        <div><i class="fa-solid fa-xmark"></i> Leaving important profile sections incomplete.</div>
+        <div><i class="fa-solid fa-xmark"></i> Listing skills or achievements you cannot support.</div>
+        <div><i class="fa-solid fa-xmark"></i> Sharing projects without explaining your contribution.</div>
+        <div><i class="fa-solid fa-xmark"></i> Sending generic messages to every recruiter.</div>
+        <div><i class="fa-solid fa-xmark"></i> Posting content without checking accuracy and professionalism.</div>
+        <div><i class="fa-solid fa-xmark"></i> Sharing private information or clicking suspicious job links.</div>
+    </div>
+</section>
+
+<!-- USEFUL RESOURCES -->
+<section class="lg-resources">
+    <div class="lg-section-heading">
+        <span>OFFICIAL RESOURCES</span>
+        <h2>Useful LinkedIn Links</h2>
+        <p>Continue improving your profile with LinkedIn's own resources.</p>
+    </div>
+
+    <div class="lg-resource-grid">
+        <a href="https://www.linkedin.com/"
+           target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin"></i>
+            <span><strong>LinkedIn</strong><small>Open your profile and network</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/jobs/"
+           target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-briefcase"></i>
+            <span><strong>LinkedIn Jobs</strong><small>Explore jobs and internships</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/learning/"
+           target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span><strong>LinkedIn Learning</strong><small>Explore professional courses</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/help/linkedin/"
+           target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-circle-question"></i>
+            <span><strong>LinkedIn Help</strong><small>Find profile and account guidance</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="lg-cta">
+    <i class="fa-brands fa-linkedin"></i>
+    <h2>Your Next Opportunity Starts With One Step</h2>
+    <p>Update your profile, showcase your work, and keep learning.</p>
+
+    <a href="https://www.linkedin.com/"
+       target="_blank" rel="noopener noreferrer"
+       class="lg-btn lg-btn-primary">
+        Visit LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="lg-footer">
+    <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
+    <p>Learn. Connect. Build Your Future.</p>
+</footer>
+
+<script>
+document.querySelectorAll(".lg-copy-btn").forEach(function(button) {
+    button.addEventListener("click", async function() {
+        const text = button.getAttribute("data-copy");
+        const originalText = button.innerHTML;
+
+        try {
+            await navigator.clipboard.writeText(text);
+            button.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+        } catch (error) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+
+            try {
+                document.execCommand("copy");
+                button.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+            } catch (copyError) {
+                button.innerHTML = "Copy unavailable";
+            }
+
+            textArea.remove();
+        }
+
+        setTimeout(function() {
+            button.innerHTML = originalText;
+        }, 1800);
+    });
+});
+</script>
 
 </body>
 </html>
