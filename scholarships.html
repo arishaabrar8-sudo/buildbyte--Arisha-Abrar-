@@ -3,17 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Scholarships | EmpowerTech</title>
 
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            background: #080f1c;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 18px 7%;
+            background: #101b2d;
+        }
+
+        nav .logo {
+            color: #36d6e7;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #36d6e7;
+        }
+
+        .scholarship-page section {
+            padding: 40px 7%;
+        }
+
+        .scholarship-hero {
+            text-align: center;
+            background: linear-gradient(135deg, #101b2d, #142d43);
+            padding: 65px 7% !important;
+        }
+
+        .scholarship-hero h1 {
+            color: #36d6e7;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .scholarship-hero p {
+            max-width: 780px;
+            margin: auto;
+            line-height: 1.8;
+            color: #e1e8f0;
+        }
+
+        .scholarship-page h2 {
+            text-align: center;
+            color: #36d6e7;
+            margin-bottom: 28px;
+        }
+
+        .scholarship-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .scholarship-card {
+            background: #142238;
+            border: 1px solid #304761;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .scholarship-card:hover {
+            transform: translateY(-5px);
+            border-color: #36d6e7;
+        }
+
+        .scholarship-card i {
+            color: #36d6e7;
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .scholarship-card h3 {
+            color: #ffffff;
+        }
+
+        .scholarship-card p {
+            color: #d4deeb;
+            line-height: 1.7;
+        }
+
+        .scholarship-button {
+            display: inline-block;
+            background: #36d6e7;
+            color: #08111f;
+            padding: 11px 17px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .scholarship-button:hover {
+            background: #ffffff;
+        }
+
+        .scholarship-list {
+            max-width: 800px;
+            margin: auto;
+            padding: 25px 35px;
+            background: #142238;
+            border: 1px solid #304761;
+            border-radius: 12px;
+        }
+
+        .scholarship-list li {
+            color: #ffffff;
+            line-height: 1.9;
+            margin-bottom: 9px;
+        }
+
+        .scholarship-list li::marker {
+            color: #36d6e7;
+        }
+
+        .scholarship-list a {
+            color: #36d6e7;
+            text-decoration: none;
+        }
+
+        .scholarship-list a:hover {
+            text-decoration: underline;
+        }
+
+        .scholarship-checklist {
+            max-width: 800px;
+            margin: auto;
+            padding: 25px 35px;
+            background: #142238;
+            border: 1px solid #304761;
+            border-radius: 12px;
+        }
+
+        .scholarship-checklist label {
+            display: block;
+            padding: 9px 0;
+            color: #ffffff;
+            line-height: 1.6;
+            cursor: pointer;
+        }
+
+        .scholarship-checklist input {
+            accent-color: #36d6e7;
+            margin-right: 10px;
+        }
+
+        .scholarship-footer {
+            text-align: center;
+            padding: 22px;
+            background: #101b2d;
+            color: #d4deeb;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .scholarship-hero h1 {
+                font-size: 29px;
+            }
+
+            .scholarship-page section {
+                padding: 30px 5%;
+            }
+
+            .scholarship-list,
+            .scholarship-checklist {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
+<!-- NAVBAR -->
 <nav>
     <div class="logo">
         <i class="fa-solid fa-laptop-code"></i>
@@ -26,127 +226,162 @@
     </ul>
 </nav>
 
-<!-- ================= HERO ================= -->
+<main class="scholarship-page">
 
-<section class="page-hero">
+    <!-- HERO -->
+    <section class="scholarship-hero">
+        <h1>🎓 Scholarships</h1>
 
-    <h1>🎓 Scholarships</h1>
+        <p>
+            Discover scholarships from universities, governments, and
+            international organizations. Explore funding opportunities,
+            check eligibility requirements, and prepare a strong application
+            for your educational journey.
+        </p>
+    </section>
 
-    <p>
-        Discover scholarships from universities, governments,
-        and global organizations to support your education
-        and help you achieve your academic goals.
-    </p>
+    <!-- TYPES OF SCHOLARSHIPS -->
+    <section>
+        <h2>🌟 Types of Scholarships</h2>
 
-</section>
+        <div class="scholarship-cards">
 
-<!-- ================= TYPES ================= -->
+            <div class="scholarship-card">
+                <i class="fa-solid fa-landmark"></i>
+                <h3>Government Scholarships</h3>
 
-<section class="resources">
+                <p>
+                    Explore government-funded opportunities for undergraduate,
+                    postgraduate, and research students.
+                </p>
 
-    <h2>Types of Scholarships</h2>
+                <a class="scholarship-button"
+                   href="https://www.hec.gov.pk/english/scholarshipsgrants/Pages/default.aspx"
+                   target="_blank" rel="noopener noreferrer">
+                    Explore HEC →
+                </a>
+            </div>
 
-    <div class="cards">
+            <div class="scholarship-card">
+                <i class="fa-solid fa-building-columns"></i>
+                <h3>University Scholarships</h3>
 
-        <div class="card">
-            <h3>🏛 Government Scholarships</h3>
+                <p>
+                    Find merit-based and need-based financial support
+                    offered by universities.
+                </p>
 
-            <p>
-                Scholarships offered by governments for undergraduate,
-                postgraduate, and research students.
-            </p>
+                <a class="scholarship-button"
+                   href="https://www.neduet.edu.pk/"
+                   target="_blank" rel="noopener noreferrer">
+                    Visit NED →
+                </a>
+            </div>
 
-            <a href="#">Explore →</a>
+            <div class="scholarship-card">
+                <i class="fa-solid fa-earth-americas"></i>
+                <h3>International Scholarships</h3>
+
+                <p>
+                    Explore international funding opportunities for
+                    studying and conducting research abroad.
+                </p>
+
+                <a class="scholarship-button"
+                   href="https://education.ec.europa.eu/study-in-europe/opportunities/scholarships-and-funding"
+                   target="_blank" rel="noopener noreferrer">
+                    Explore Funding →
+                </a>
+            </div>
 
         </div>
+    </section>
 
-        <div class="card">
+    <!-- POPULAR SCHOLARSHIPS -->
+    <section>
+        <h2>🌍 Popular Scholarship Programs</h2>
 
-            <h3>🎓 University Scholarships</h3>
+        <ul class="scholarship-list">
+            <li>
+                <strong>HEC Scholarships — Pakistan:</strong>
+                <a href="https://www.hec.gov.pk/english/scholarshipsgrants/Pages/default.aspx"
+                   target="_blank" rel="noopener noreferrer">Official Website →</a>
+            </li>
 
-            <p>
-                Merit-based and need-based scholarships offered by
-                universities around the world.
-            </p>
+            <li>
+                <strong>Erasmus Mundus — Europe:</strong>
+                <a href="https://erasmus-plus.ec.europa.eu/"
+                   target="_blank" rel="noopener noreferrer">Official Website →</a>
+            </li>
 
-            <a href="#">Explore →</a>
+            <li>
+                <strong>Chevening — United Kingdom:</strong>
+                <a href="https://www.chevening.org/"
+                   target="_blank" rel="noopener noreferrer">Official Website →</a>
+            </li>
 
+            <li>
+                <strong>Fulbright — United States:</strong>
+                <a href="https://usefp.org/"
+                   target="_blank" rel="noopener noreferrer">USEFP Pakistan →</a>
+            </li>
+
+            <li>
+                <strong>DAAD — Germany:</strong>
+                <a href="https://www.daad.de/en/"
+                   target="_blank" rel="noopener noreferrer">Official Website →</a>
+            </li>
+
+            <li>
+                <strong>MEXT — Japan:</strong>
+                <a href="https://www.pk.emb-japan.go.jp/"
+                   target="_blank" rel="noopener noreferrer">Embassy of Japan in Pakistan →</a>
+            </li>
+        </ul>
+
+        <p style="text-align:center; color:#d4deeb; line-height:1.8; margin-top:20px;">
+            Eligibility, funding, deadlines, and available programs vary.
+            Check each official website for the latest information.
+        </p>
+    </section>
+
+    <!-- APPLICATION TIPS -->
+    <section>
+        <h2>💡 Scholarship Application Tips</h2>
+
+        <ul class="scholarship-list">
+            <li>Maintain a strong academic record.</li>
+            <li>Prepare a clear, professional CV or resume.</li>
+            <li>Write a focused Statement of Purpose (SOP).</li>
+            <li>Request recommendation letters well in advance.</li>
+            <li>Check eligibility requirements before applying.</li>
+            <li>Keep track of deadlines and required documents.</li>
+            <li>Highlight relevant projects, leadership, and volunteer work.</li>
+            <li>Use accurate information and submit complete applications.</li>
+        </ul>
+    </section>
+
+    <!-- REQUIRED DOCUMENTS -->
+    <section>
+        <h2>📂 Documents You May Need</h2>
+
+        <div class="scholarship-checklist">
+            <label><input type="checkbox"> Academic transcripts and certificates</label>
+            <label><input type="checkbox"> CNIC or passport, as required</label>
+            <label><input type="checkbox"> Updated CV or resume</label>
+            <label><input type="checkbox"> Statement of Purpose or motivation letter</label>
+            <label><input type="checkbox"> Recommendation letters, if required</label>
+            <label><input type="checkbox"> English proficiency test results, if required</label>
+            <label><input type="checkbox"> Proof of income or financial documents, if required</label>
+            <label><input type="checkbox"> Portfolio or research proposal, if required</label>
         </div>
+    </section>
 
-        <div class="card">
+</main>
 
-            <h3>🌍 International Scholarships</h3>
-
-            <p>
-                Fully funded scholarships for studying abroad in
-                different countries.
-            </p>
-
-            <a href="#">Explore →</a>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= POPULAR SCHOLARSHIPS ================= -->
-
-<section class="projects">
-
-    <h2>Popular Scholarship Programs</h2>
-
-    <ul>
-        <li>HEC Scholarships (Pakistan)</li>
-        <li>Erasmus Mundus Scholarship</li>
-        <li>Chevening Scholarship (UK)</li>
-        <li>Fulbright Scholarship (USA)</li>
-        <li>DAAD Scholarship (Germany)</li>
-        <li>MEXT Scholarship (Japan)</li>
-    </ul>
-
-</section>
-
-<!-- ================= APPLICATION TIPS ================= -->
-
-<section class="projects">
-
-    <h2>Application Tips</h2>
-
-    <ul>
-        <li>Maintain a strong academic record.</li>
-        <li>Prepare a professional CV/Resume.</li>
-        <li>Write an effective Statement of Purpose (SOP).</li>
-        <li>Collect recommendation letters in advance.</li>
-        <li>Apply before the deadline.</li>
-        <li>Read all eligibility requirements carefully.</li>
-    </ul>
-
-</section>
-
-<!-- ================= DOCUMENTS ================= -->
-
-<section class="projects">
-
-    <h2>Documents You'll Need</h2>
-
-    <ul>
-        <li>Academic Transcripts</li>
-        <li>CNIC / Passport</li>
-        <li>Curriculum Vitae (CV)</li>
-        <li>Statement of Purpose (SOP)</li>
-        <li>Recommendation Letters</li>
-        <li>English Proficiency Certificate (if required)</li>
-    </ul>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
+<!-- FOOTER -->
+<footer class="scholarship-footer">
     <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
-
 </footer>
 
 </body>
