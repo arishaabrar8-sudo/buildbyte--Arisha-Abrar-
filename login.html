@@ -3,19 +3,484 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Student Login | EmpowerTech</title>
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+/* ===== GLOBAL ===== */
+.auth-page {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #06101e !important;
+    color: #eaf4ff !important;
+    overflow-x: hidden;
+}
+
+/* ===== NAVBAR ===== */
+.auth-page .auth-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 18px 7%;
+    background: #081630 !important;
+    border-bottom: 1px solid #1e4165;
+    box-shadow: 0 4px 25px rgba(0, 132, 255, 0.12);
+}
+
+.auth-page .logo {
+    color: #ffffff !important;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.auth-page .logo i {
+    color: #38bdf8 !important;
+    margin-right: 8px;
+    text-shadow: 0 0 15px #0284c7;
+}
+
+.auth-page .auth-navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.auth-page .auth-navbar ul a {
+    color: #cbd5e1 !important;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.auth-page .auth-navbar ul a:hover {
+    color: #38bdf8 !important;
+    text-shadow: 0 0 12px #0284c7;
+}
+
+/* ===== HERO ===== */
+.auth-page .auth-hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 40px;
+    padding: 75px 9%;
+    background:
+        radial-gradient(ellipse at 15% 20%, rgba(0,119,255,.17), transparent 45%),
+        radial-gradient(ellipse at 85% 80%, rgba(14,165,233,.13), transparent 40%),
+        linear-gradient(135deg, #071426, #0a1d35, #06101e) !important;
+}
+
+.auth-page .auth-badge {
+    display: inline-block;
+    padding: 10px 17px;
+    border: 1px solid #17618a;
+    border-radius: 30px;
+    background: rgba(14,165,233,.12);
+    color: #7dd3fc !important;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.auth-page .auth-hero h1 {
+    margin: 25px 0 18px;
+    color: #ffffff !important;
+    font-size: clamp(32px, 4.5vw, 55px);
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.auth-page .auth-hero h1 span {
+    color: #38bdf8 !important;
+    text-shadow: 0 0 8px #0284c7, 0 0 25px rgba(14,165,233,.55);
+}
+
+.auth-page .auth-hero-content > p {
+    color: #bdcde0 !important;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.auth-page .auth-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 28px;
+}
+
+.auth-page .auth-benefits > div {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #dcecff !important;
+    font-size: 13px;
+}
+
+.auth-page .auth-benefits i {
+    color: #38bdf8 !important;
+    font-size: 18px;
+}
+
+/* ===== HERO ILLUSTRATION ===== */
+.auth-page .auth-hero-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.auth-page .auth-illustration {
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(56,189,248,.5);
+    border-radius: 50%;
+    background: radial-gradient(circle, #123d65, #081630 70%);
+    box-shadow: 0 0 35px rgba(14,165,233,.22),
+                inset 0 0 30px rgba(56,189,248,.1);
+}
+
+.auth-page .auth-illustration i {
+    font-size: 100px;
+    color: #38bdf8 !important;
+    text-shadow: 0 0 25px rgba(56,189,248,.75);
+}
+
+.auth-page .auth-floating-card {
+    padding: 15px 25px;
+    border: 1px solid #245278;
+    border-radius: 12px;
+    background: #0d2038 !important;
+    color: #eaf4ff !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,.25);
+}
+
+.auth-page .auth-floating-card i {
+    color: #38bdf8 !important;
+    margin-right: 8px;
+}
+
+/* ===== AUTHENTICATION SECTION ===== */
+.auth-page .auth-section {
+    padding: 65px 7%;
+    background: #06101e !important;
+}
+
+.auth-page .auth-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.auth-page .auth-heading > span {
+    color: #38bdf8 !important;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px rgba(56,189,248,.7);
+}
+
+.auth-page .auth-heading h2 {
+    margin: 15px 0;
+    color: #38bdf8 !important;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    text-shadow: 0 0 10px rgba(14,165,233,.5),
+                 0 0 25px rgba(14,165,233,.2);
+}
+
+.auth-page .auth-heading p {
+    color: #bdcde0 !important;
+    font-size: 15px;
+}
+
+/* ===== LOGIN AND REGISTER GRID ===== */
+.auth-page .auth-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===== FORM CARDS ===== */
+.auth-page .auth-form {
+    padding: 35px;
+    background: linear-gradient(145deg, #0c1e33, #091729) !important;
+    border: 1px solid #1e4165;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0,0,0,.25);
+    transition: .3s;
+}
+
+.auth-page .auth-form:hover {
+    border-color: #168bc4;
+    box-shadow: 0 12px 35px rgba(14,165,233,.1);
+    transform: translateY(-3px);
+}
+
+.auth-page .auth-form-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background: rgba(14,165,233,.15) !important;
+    color: #38bdf8 !important;
+    font-size: 24px;
+}
+
+.auth-page .auth-form h2 {
+    color: #ffffff !important;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.auth-page .auth-form-subtitle {
+    color: #9fb4cc !important;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.auth-page .auth-form label {
+    display: block;
+    color: #dcecff !important;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 18px 0 9px;
+}
+
+/* ===== INPUT FIELDS ===== */
+.auth-page .auth-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 14px;
+    background: #06101e !important;
+    border: 1px solid #294766;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.auth-page .auth-input-wrapper:focus-within {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56,189,248,.12),
+                0 0 15px rgba(14,165,233,.1);
+}
+
+.auth-page .auth-input-wrapper > i {
+    color: #38bdf8 !important;
+    font-size: 16px;
+}
+
+.auth-page .auth-input-wrapper input {
+    width: 100%;
+    min-width: 0;
+    padding: 15px 0;
+    border: none !important;
+    outline: none !important;
+    background: transparent !important;
+    color: #ffffff !important;
+    font-size: 14px;
+    box-shadow: none !important;
+}
+
+.auth-page .auth-input-wrapper input::placeholder {
+    color: #7189a5 !important;
+}
+
+.auth-page .auth-input-wrapper input:-webkit-autofill,
+.auth-page .auth-input-wrapper input:-webkit-autofill:hover,
+.auth-page .auth-input-wrapper input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #ffffff !important;
+    -webkit-box-shadow: 0 0 0 1000px #06101e inset !important;
+}
+
+/* ===== SHOW PASSWORD BUTTON ===== */
+.auth-page .auth-toggle-password {
+    flex-shrink: 0;
+    padding: 8px;
+    border: none !important;
+    background: transparent !important;
+    color: #8eb5d9 !important;
+    cursor: pointer;
+}
+
+.auth-page .auth-toggle-password:hover {
+    color: #38bdf8 !important;
+}
+
+/* ===== SUBMIT BUTTONS ===== */
+.auth-page .auth-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px 20px;
+    border: 1px solid #38bdf8 !important;
+    border-radius: 10px;
+    background: linear-gradient(100deg, #0369a1, #0284c7, #2563eb) !important;
+    color: #ffffff !important;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 18px rgba(2,132,199,.2);
+    transition: .3s;
+}
+
+.auth-page .auth-submit:hover {
+    background: linear-gradient(100deg, #0284c7, #2563eb) !important;
+    box-shadow: 0 0 22px rgba(56,189,248,.35);
+    transform: translateY(-2px);
+}
+
+/* ===== FORM LINKS AND HINTS ===== */
+.auth-page .auth-bottom-text {
+    margin-top: 24px;
+    text-align: center;
+    color: #a9bdd4 !important;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.auth-page .auth-bottom-text a {
+    color: #38bdf8 !important;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.auth-page .auth-bottom-text a:hover {
+    color: #7dd3fc !important;
+    text-decoration: underline;
+}
+
+.auth-page .auth-password-hint {
+    color: #8fa6c2 !important;
+    font-size: 12px;
+    margin-top: 9px;
+}
+
+/* ===== STATUS MESSAGES ===== */
+.auth-page .auth-message {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    text-align: center;
+    color: #7dd3fc !important;
+}
+
+/* ===== FOOTER ===== */
+.auth-page .auth-footer {
+    padding: 25px 15px;
+    text-align: center;
+    background: #040b15 !important;
+    border-top: 1px solid #1e3550;
+}
+
+.auth-page .auth-footer p {
+    color: #8fa6c2 !important;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 5px 0;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 800px) {
+    .auth-page .auth-hero {
+        grid-template-columns: 1fr;
+        padding: 55px 7%;
+        text-align: center;
+    }
+
+    .auth-page .auth-hero-content {
+        margin: auto;
+    }
+
+    .auth-page .auth-benefits {
+        justify-content: center;
+    }
+
+    .auth-page .auth-hero-visual {
+        margin-top: 15px;
+    }
+
+    .auth-page .auth-illustration {
+        width: 170px;
+        height: 170px;
+    }
+
+    .auth-page .auth-illustration i {
+        font-size: 75px;
+    }
+
+    .auth-page .auth-grid {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 500px) {
+    .auth-page .auth-navbar {
+        justify-content: center;
+        padding: 17px 5%;
+    }
+
+    .auth-page .auth-navbar ul {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .auth-page .auth-navbar ul a {
+        font-size: 12px;
+    }
+
+    .auth-page .logo {
+        font-size: 22px;
+    }
+
+    .auth-page .auth-hero {
+        padding: 45px 6%;
+    }
+
+    .auth-page .auth-hero h1 {
+        font-size: 34px;
+    }
+
+    .auth-page .auth-benefits {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .auth-page .auth-section {
+        padding: 45px 5%;
+    }
+
+    .auth-page .auth-form {
+        padding: 24px 20px;
+    }
+}
+</style>
 </head>
-<body>
 
-<!-- ================= NAVBAR ================= -->
+<body class="auth-page">
 
-<nav>
-
+<!-- NAVBAR -->
+<nav class="auth-navbar">
     <div class="logo">
         <i class="fa-solid fa-laptop-code"></i>
         EmpowerTech
@@ -24,82 +489,220 @@
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#learning">Learning Hub</a></li>
+        <li><a href="index.html#career">Career Center</a></li>
     </ul>
-
 </nav>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
+<section class="auth-hero">
+    <div class="auth-hero-content">
+        <span class="auth-badge">
+            <i class="fa-solid fa-graduation-cap"></i>
+            YOUR LEARNING JOURNEY
+        </span>
 
-<section class="page-hero">
+        <h1>Welcome to Your <span>Learning Space</span></h1>
 
-    <h1>🔐 Student Login</h1>
+        <p>
+            Sign in to continue your journey, explore learning resources,
+            track your progress, and work toward your career goals.
+        </p>
 
-    <p>
-        Log in to see your dashboard, track your course progress,
-        and keep your favorite resources in one place.
-    </p>
+        <div class="auth-benefits">
+            <div>
+                <i class="fa-solid fa-book-open"></i>
+                <span>Learning Resources</span>
+            </div>
 
+            <div>
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Track Your Progress</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-bullseye"></i>
+                <span>Career Development</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="auth-hero-visual">
+        <div class="auth-illustration">
+            <i class="fa-solid fa-user-graduate"></i>
+        </div>
+
+        <div class="auth-floating-card">
+            <i class="fa-solid fa-circle-check"></i>
+            Learn. Grow. Succeed.
+        </div>
+    </div>
 </section>
 
-<!-- ================= LOGIN + REGISTER ================= -->
+<!-- AUTHENTICATION SECTION -->
+<section class="auth-section">
 
-<section class="resources">
+    <div class="auth-heading">
+        <span>STUDENT PORTAL</span>
+        <h2>Your Future Starts Here</h2>
+        <p>Log in to your account or create a new one.</p>
+    </div>
 
-    <p id="auth-message" role="status"></p>
+    <p id="auth-message" class="auth-message" role="status"
+       aria-live="polite"></p>
 
     <div class="auth-grid">
 
-        <!-- Login -->
+        <!-- LOGIN FORM -->
         <form id="login-form" class="auth-form">
 
-            <h2>Log in</h2>
+            <div class="auth-form-icon">
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </div>
 
-            <label for="login-email">Email</label>
-            <input type="email" id="login-email" name="email"
-                   placeholder="you@example.com" autocomplete="username" required>
+            <h2>Welcome Back!</h2>
+
+            <p class="auth-form-subtitle">
+                Enter your details to access your account.
+            </p>
+
+            <label for="login-email">Email Address</label>
+
+            <div class="auth-input-wrapper">
+                <i class="fa-regular fa-envelope"></i>
+
+                <input
+                    type="email"
+                    id="login-email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="username"
+                    required>
+            </div>
 
             <label for="login-password">Password</label>
-            <input type="password" id="login-password" name="password"
-                   placeholder="Your password" autocomplete="current-password" required>
 
-            <button type="submit" class="primary">Log in</button>
+            <div class="auth-input-wrapper">
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    id="login-password"
+                    name="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required>
+
+                <button type="button"
+                        class="auth-toggle-password"
+                        data-target="login-password"
+                        aria-label="Show password">
+                    <i class="fa-regular fa-eye"></i>
+                </button>
+            </div>
+
+            <button type="submit" class="auth-submit">
+                Log In
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <p class="auth-bottom-text">
+                New to EmpowerTech?
+                <a href="#register-form">Create an account</a>
+            </p>
 
         </form>
 
-        <!-- Register -->
+        <!-- REGISTRATION FORM -->
         <form id="register-form" class="auth-form">
 
-            <h2>Create an account</h2>
+            <div class="auth-form-icon">
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
 
-            <label for="register-name">Full name</label>
-            <input type="text" id="register-name" name="name"
-                   placeholder="Your name" maxlength="60" autocomplete="name" required>
+            <h2>Create Your Account</h2>
 
-            <label for="register-email">Email</label>
-            <input type="email" id="register-email" name="email"
-                   placeholder="you@example.com" autocomplete="email" required>
+            <p class="auth-form-subtitle">
+                Join EmpowerTech and start exploring.
+            </p>
 
-            <label for="register-password">Password (at least 6 characters)</label>
-            <input type="password" id="register-password" name="password"
-                   placeholder="Choose a password" minlength="6" maxlength="100"
-                   autocomplete="new-password" required>
+            <label for="register-name">Full Name</label>
 
-            <button type="submit" class="primary">Create account</button>
+            <div class="auth-input-wrapper">
+                <i class="fa-regular fa-user"></i>
+
+                <input
+                    type="text"
+                    id="register-name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    maxlength="60"
+                    autocomplete="name"
+                    required>
+            </div>
+
+            <label for="register-email">Email Address</label>
+
+            <div class="auth-input-wrapper">
+                <i class="fa-regular fa-envelope"></i>
+
+                <input
+                    type="email"
+                    id="register-email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required>
+            </div>
+
+            <label for="register-password">Create Password</label>
+
+            <div class="auth-input-wrapper">
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    id="register-password"
+                    name="password"
+                    placeholder="At least 8 characters"
+                    minlength="8"
+                    maxlength="100"
+                    autocomplete="new-password"
+                    required>
+
+                <button type="button"
+                        class="auth-toggle-password"
+                        data-target="register-password"
+                        aria-label="Show password">
+                    <i class="fa-regular fa-eye"></i>
+                </button>
+            </div>
+
+            <p class="auth-password-hint">
+                Use at least 8 characters for your password.
+            </p>
+
+            <button type="submit" class="auth-submit">
+                Create Account
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <p class="auth-bottom-text">
+                Already registered?
+                <a href="#login-form">Log in instead</a>
+            </p>
 
         </form>
 
     </div>
-
 </section>
 
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
+<!-- FOOTER -->
+<footer class="auth-footer">
     <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
-
+    <p>Empowering Students Through Technology and Learning.</p>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
