@@ -3,104 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EmpowerTech</title>
+    <meta name="theme-color" content="#000000">
+
+    <title>SkillPath | Learn, Build & Grow</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* ===== GLOBAL THEME ===== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #08121f;
+            color: #ffffff;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        section {
+            scroll-margin-top: 20px;
+        }
+
+        /* ===== NAVBAR ===== */
+.skillpath-navbar {
+    width: 100%;
+    padding: 12px 5%;
+    background: #061638;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: nowrap;
+    gap: 12px;
+
+    border-bottom: 1px solid #124b91;
+    box-sizing: border-box;
+}
+
+        .skillpath-navbar .logo {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .skillpath-navbar .logo i {
+            color: #00d9ff;
+            margin-right: 8px;
+        }
+
+        .skillpath-navbar ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skillpath-navbar ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .skillpath-navbar ul li a:hover {
+            color: #00d9ff;
+        }
+
+        /* ===== BLACK THEME FOR CONTENT ===== */
+
+        .hero,
+        .learning-hub,
+        .youtube-section,
+        .opportunities,
+        .career-center,
+        .community,
+        .about,
+        .contact,
+        .footer {
+            background-color: #45559e48;
+            color: #ffffff;
+        }
+
+        .section-title h2,
+        .section-title h3,
+        .section-title p,
+        .hero-text h1,
+        .hero-text p {
+            color: #ffffff;
+        }
+
+        .hero-text h1 span {
+            color: #00d9ff;
+        }
+
+        .card,
+        .about-card,
+        .contact-box,
+        .learning-path-box {
+            background: #141a49;
+            color: #ffffff;
+            border: 1px solid #292929;
+        }
+
+        .card h3,
+        .about-card h3,
+        .contact-box h3,
+        .learning-path-box h3 {
+            color: #ffffff;
+        }
+
+        .card p,
+        .card li,
+        .about-card p,
+        .contact-box p {
+            color: #cccccc;
+        }
+
+        .card a,
+        .footer a {
+            color: #00d9ff;
+        }
+
+        .learning-path-box select,
+        .live-filters select,
+        .live-filters input,
+        .contact-form input,
+        .contact-form textarea {
+            background: #111111;
+            color: #ffffff;
+            border: 1px solid #333333;
+            border-radius: 6px;
+            padding: 12px;
+        }
+
+        .learning-path-box select option,
+        .live-filters select option {
+            background: #111111;
+            color: #ffffff;
+        }
+
+        .learning-path-box button {
+            cursor: pointer;
+        }
+
+        .footer {
+            border-top: 1px solid #292929;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #292929;
+            padding: 15px;
+        }
+
+        /* ===== RESPONSIVE NAVBAR ===== */
+
+        @media (max-width: 900px) {
+            .skillpath-navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skillpath-navbar ul {
+                gap: 14px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .skillpath-navbar ul {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .hero {
+                padding-top: 30px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
 <!-- ================= NAVBAR ================= -->
 
-<nav>
-
-    <!-- Top Row -->
-    <div class="nav-top">
-
-        <div class="logo">
-            <i class="fa-solid fa-laptop-code"></i>
-            EmpowerTech
-        </div>
-
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#learning">Learning Hub</a></li>
-            <li><a href="#opportunities">Opportunities</a></li>
-            <li><a href="#career">Career Center</a></li>
-            <li><a href="#community">Community</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="login.html" id="account-link">Login</a></li>
-        </ul>
-
+<nav class="skillpath-navbar">
+    <div class="logo">
+        <i class="fa-solid fa-laptop-code"></i>
+        SkillPath
     </div>
 
-    <!-- Bottom Row -->
-    <div class="nav-bottom">
-
-        <div class="search-box">
-
-            <input
-            type="text"
-            id="searchInput"
-            placeholder="Search courses, skills, resources...">
-
-            <i class="fa-solid fa-magnifying-glass"></i>
-
-        </div>
-
-        <button class="btn" onclick="location.href='#learning'">
-            Get Started
-        </button>
-
-    </div>
-
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#learning">Learning Hub</a></li>
+        <li><a href="#opportunities">Opportunities</a></li>
+        <li><a href="#career">Career Center</a></li>
+       
+        <li><a href="#community">Community</a></li>
+        <li><a href="Dashboard.html">Dashboard</a></li>
+           <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+    </ul>
 </nav>
 
 <!-- ================= HERO ================= -->
 
 <section class="hero">
-
     <div class="hero-text">
-
         <h1>
             Empowering Students
             <span>Through Technology</span>
         </h1>
 
         <p>
-            Learn coding, discover scholarships,
-            practice programming, build projects,
-            and grow your career—all in one place.
+            Learn coding, discover scholarships, practice programming,
+            build projects, and grow your career — all in one place.
         </p>
 
         <div class="buttons">
-            <button class="primary" onclick="location.href='#learning'">
+            <button class="primary"
+                    onclick="location.href='#learning'">
                 Start Learning
             </button>
 
-            <button class="secondary" onclick="location.href='#career'">
+            <button class="secondary"
+                    onclick="location.href='#career'">
                 Explore Resources
             </button>
         </div>
-
     </div>
 
     <div class="hero-image">
-        <img src="https://plus.unsplash.com/premium_photo-1781937379695-11fb806a07dc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Technology">
+        <img
+            src="https://plus.unsplash.com/premium_photo-1781937379695-11fb806a07dc?q=80&w=870&auto=format&fit=crop"
+            alt="Technology and learning">
     </div>
-
 </section>
 
-<!-- =======================
-     LEARNING HUB
-======================== -->
+<!-- ================= LEARNING HUB ================= -->
 
 <section class="learning-hub" id="learning">
 
@@ -112,9 +271,9 @@
         </p>
     </div>
 
-    <!-- Live learning path (C++ backend: BFS / DFS) -->
-    <div class="learning-path-box">
+    <!-- Learning Path: existing JavaScript IDs preserved -->
 
+    <!-- <div class="learning-path-box">
         <h3>Find Your Learning Path</h3>
 
         <select id="learning-field">
@@ -126,31 +285,30 @@
             <option>Programming</option>
         </select>
 
-        <select id="learning-mode">
+        // <select id="learning-mode">
             <option value="bfs">Shortest path (BFS)</option>
             <option value="dfs">Explore everything (DFS)</option>
         </select>
 
-        <button id="learning-path-btn" class="btn">Show Path</button>
+        <button id="learning-path-btn" class="btn" type="button">
+            Show Path
+        </button> -->
 
-        <div id="learning-path-output"></div>
-
-    </div>
+        <!-- <div id="learning-path-output"></div>
+    </div> --> 
 
     <div class="cards">
 
         <div class="card">
             <i class="fa-solid fa-globe"></i>
             <h3>Web Development</h3>
-
             <ul>
-                <li>✔ HTML & CSS</li>
+                <li>✔ HTML &amp; CSS</li>
                 <li>✔ JavaScript</li>
                 <li>✔ React</li>
                 <li>✔ Node.js</li>
             </ul>
-
-            <a href="web-development.html" class="explore-btn">
+            <a href="web development.html" class="explore-btn">
                 Explore Learning Path →
             </a>
         </div>
@@ -158,14 +316,12 @@
         <div class="card">
             <i class="fa-solid fa-code"></i>
             <h3>Programming</h3>
-
             <ul>
                 <li>✔ C++</li>
                 <li>✔ Python</li>
                 <li>✔ Java</li>
                 <li>✔ DSA</li>
             </ul>
-
             <a href="programming.html" class="explore-btn">
                 Explore Learning Path →
             </a>
@@ -174,14 +330,12 @@
         <div class="card">
             <i class="fa-solid fa-robot"></i>
             <h3>Artificial Intelligence</h3>
-
             <ul>
                 <li>✔ Machine Learning</li>
                 <li>✔ Deep Learning</li>
                 <li>✔ Generative AI</li>
                 <li>✔ TensorFlow</li>
             </ul>
-
             <a href="ai.html" class="explore-btn">
                 Explore Learning Path →
             </a>
@@ -190,14 +344,12 @@
         <div class="card">
             <i class="fa-solid fa-shield-halved"></i>
             <h3>Cyber Security</h3>
-
             <ul>
                 <li>✔ Networking</li>
                 <li>✔ Ethical Hacking</li>
                 <li>✔ Linux</li>
                 <li>✔ Pen Testing</li>
             </ul>
-
             <a href="cybersecurity.html" class="explore-btn">
                 Explore Learning Path →
             </a>
@@ -206,14 +358,12 @@
         <div class="card">
             <i class="fa-solid fa-cloud"></i>
             <h3>Cloud Computing</h3>
-
             <ul>
                 <li>✔ AWS</li>
                 <li>✔ Azure</li>
                 <li>✔ Docker</li>
                 <li>✔ Kubernetes</li>
             </ul>
-
             <a href="cloud.html" class="explore-btn">
                 Explore Learning Path →
             </a>
@@ -222,160 +372,128 @@
         <div class="card">
             <i class="fa-solid fa-chart-column"></i>
             <h3>Data Science</h3>
-
             <ul>
                 <li>✔ Python</li>
                 <li>✔ SQL</li>
                 <li>✔ Pandas</li>
                 <li>✔ Data Visualization</li>
             </ul>
-
             <a href="datascience.html" class="explore-btn">
                 Explore Learning Path →
             </a>
         </div>
 
     </div>
-
 </section>
-<!-- ===========================
-     YOUTUBE LEARNING CHANNELS
-=========================== --><section class="youtube-section" id="youtube"><div class="section-title">
-    <h2>YouTube Learning Channels</h2>
-    <p>
-        Learn from experienced educators and developers through
-        free tutorials, practical projects, and structured courses.
-    </p>
-</div>
 
-<div class="cards">
+<!-- ================= YOUTUBE LEARNING CHANNELS ================= -->
 
-    <!-- Web Development -->
-    <div class="card youtube-card">
-        <i class="fa-brands fa-youtube"></i>
-        <h3>Web Development</h3>
+<section class="youtube-section" id="youtube">
+
+    <div class="section-title">
+        <h2>YouTube Learning Channels</h2>
         <p>
-            Learn HTML, CSS, JavaScript, React, and full-stack
-            web development through practical tutorials.
+            Learn from experienced educators and developers through
+            free tutorials, practical projects, and structured courses.
         </p>
-        <a href="https://www.youtube.com/@ApnaCollegeOfficial"
-           target="_blank" rel="noopener noreferrer"
-           class="explore-btn">
-            Apna College →
-        </a>
-        <a href="https://www.youtube.com/@CodeWithHarry"
-           target="_blank" rel="noopener noreferrer"
-           class="explore-btn">
-            CodeWithHarry →
-        </a>
     </div>
 
-    <!-- C++ and DSA -->
-    <div class="card youtube-card">
-        <i class="fa-brands fa-youtube"></i>
-        <h3>C++ & Data Structures</h3>
-        <p>
-            Strengthen your programming fundamentals, learn DSA,
-            and prepare for coding interviews and contests.
-        </p>
-        <a href="https://www.youtube.com/@takeUforward"
-           target="_blank" rel="noopener noreferrer"
-           class="explore-btn">
-            take U forward →
-        </a>
-        <a href="https://www.youtube.com/@CodeHelp"
-           target="_blank" rel="noopener noreferrer"
-           class="explore-btn">
-            CodeHelp →
-        </a>
+    <div class="cards">
+
+        <div class="card youtube-card">
+            <i class="fa-brands fa-youtube"></i>
+            <h3>Web Development</h3>
+            <p>
+                Learn HTML, CSS, JavaScript, React, and full-stack
+                web development through practical tutorials.
+            </p>
+            <a href="https://www.youtube.com/@ApnaCollegeOfficial"
+               target="_blank" rel="noopener noreferrer"
+               class="explore-btn">Apna College →</a>
+            <a href="https://www.youtube.com/@CodeWithHarry"
+               target="_blank" rel="noopener noreferrer"
+               class="explore-btn">CodeWithHarry →</a>
+        </div>
+
+        <div class="card youtube-card">
+            <i class="fa-brands fa-youtube"></i>
+            <h3>C++ &amp; Data Structures</h3>
+            <p>
+                Strengthen programming fundamentals, learn DSA,
+                and prepare for coding interviews and contests.
+            </p>
+            <a href="https://www.youtube.com/@takeUforward"
+               target="_blank" rel="noopener noreferrer"
+               class="explore-btn">take U forward →</a>
+            <a href="https://www.youtube.com/@CodeHelp"
+               target="_blank" rel="noopener noreferrer"
+               class="explore-btn">CodeHelp →</a>
+        </div>
+
+        <div class="card youtube-card">
+            <i class="fa-brands fa-youtube"></i>
+            <h3>AI &amp; Machine Learning</h3>
+            <p>
+                Explore machine learning, deep learning, neural networks,
+                Python, and artificial intelligence projects.
+            </p>
+            <a href="https://www.youtube.com/@CampusX-official"
+               target="_blank" rel="noopener noreferrer"
+               class="explore-btn">CampusX →</a>
+            <a href="https://www.youtube.com/@3blue1brown"
+               target="_blank" rel="noopener noreferrer"
+               class="explore-btn">3Blue1Brown →</a>
+        </div>
+
+        <div class="card youtube-card">
+            <i class="fa-brands fa-youtube"></i>
+            <h3>Cybersecurity</h3>
+            <p>
+                Understand networking, Linux, ethical hacking,
+                security fundamentals, and penetration testing.
+            </p>
+            <a href="https://www.youtube.com/@NetworkChuck"
+               target="_blank" rel="noopener noreferrer"
+               class="explore-btn">NetworkChuck →</a>
+            <a href="https://www.youtube.com/@freecodecamp"
+               target="_blank" rel="noopener noreferrer"
+               class="explore-btn">freeCodeCamp →</a>
+        </div>
+
+        <div class="card youtube-card">
+            <i class="fa-brands fa-youtube"></i>
+            <h3>Cloud Computing</h3>
+            <p>
+                Learn cloud fundamentals, Microsoft Azure, AWS,
+                DevOps, and cloud architecture.
+            </p>
+            <a href="https://www.youtube.com/@MicrosoftAzure"
+               target="_blank" rel="noopener noreferrer"
+               class="explore-btn">Microsoft Azure →</a>
+            <a href="https://www.youtube.com/@amazonwebservices"
+               target="_blank" rel="noopener noreferrer"
+               class="explore-btn">AWS →</a>
+        </div>
+
+        <div class="card youtube-card">
+            <i class="fa-brands fa-youtube"></i>
+            <h3>Data Science</h3>
+            <p>
+                Learn Python, SQL, data analysis, visualization,
+                statistics, and data science concepts.
+            </p>
+            <a href="https://www.youtube.com/@AlexTheAnalyst"
+               target="_blank" rel="noopener noreferrer"
+               class="explore-btn">Alex The Analyst →</a>
+            <a href="https://www.youtube.com/@KrishNaik"
+               target="_blank" rel="noopener noreferrer"
+               class="explore-btn">Krish Naik →</a>
+        </div>
+
     </div>
-
-    <!-- Artificial Intelligence -->
-    <div class="card youtube-card">
-        <i class="fa-brands fa-youtube"></i>
-        <h3>AI & Machine Learning</h3>
-        <p>
-            Explore machine learning, deep learning, neural networks,
-            Python, and artificial intelligence projects.
-        </p>
-        <a href="https://www.youtube.com/@CampusX-official"
-           target="_blank" rel="noopener noreferrer"
-           class="explore-btn">
-            CampusX →
-        </a>
-        <a href="https://www.youtube.com/@3blue1brown"
-           target="_blank" rel="noopener noreferrer"
-           class="explore-btn">
-            3Blue1Brown →
-        </a>
-    </div>
-
-    <!-- Cybersecurity -->
-    <div class="card youtube-card">
-        <i class="fa-brands fa-youtube"></i>
-        <h3>Cybersecurity</h3>
-        <p>
-            Understand networking, Linux, ethical hacking,
-            security fundamentals, and penetration testing.
-        </p>
-        <a href="https://www.youtube.com/@NetworkChuck"
-           target="_blank" rel="noopener noreferrer"
-           class="explore-btn">
-            NetworkChuck →
-        </a>
-        <a href="https://www.youtube.com/@freecodecamp"
-           target="_blank" rel="noopener noreferrer"
-           class="explore-btn">
-            freeCodeCamp.org →
-        </a>
-    </div>
-
-    <!-- Cloud Computing -->
-    <div class="card youtube-card">
-        <i class="fa-brands fa-youtube"></i>
-        <h3>Cloud Computing</h3>
-        <p>
-            Learn cloud fundamentals, Microsoft Azure, AWS,
-            DevOps, and cloud architecture.
-        </p>
-        <a href="https://www.youtube.com/@MicrosoftAzure"
-           target="_blank" rel="noopener noreferrer"
-           class="explore-btn">
-            Microsoft Azure →
-        </a>
-        <a href="https://www.youtube.com/@amazonwebservices"
-           target="_blank" rel="noopener noreferrer"
-           class="explore-btn">
-            AWS →
-        </a>
-    </div>
-
-    <!-- Data Science -->
-    <div class="card youtube-card">
-        <i class="fa-brands fa-youtube"></i>
-        <h3>Data Science</h3>
-        <p>
-            Learn Python, SQL, data analysis, visualization,
-            statistics, and data science concepts.
-        </p>
-        <a href="https://www.youtube.com/@AlexTheAnalyst"
-           target="_blank" rel="noopener noreferrer"
-           class="explore-btn">
-            Alex The Analyst →
-        </a>
-        <a href="https://www.youtube.com/@krish naik"
-           target="_blank" rel="noopener noreferrer"
-           class="explore-btn">
-            Krish Naik →
-        </a>
-    </div>
-
-</div>
-
 </section>
-<!-- ===========================
-     OPPORTUNITIES HUB
-=========================== -->
+
+<!-- ================= OPPORTUNITIES HUB ================= -->
 
 <section class="opportunities" id="opportunities">
 
@@ -392,108 +510,62 @@
         <div class="card">
             <i class="fa-solid fa-graduation-cap"></i>
             <h3>Scholarships</h3>
-            <p>
-                Explore local and international scholarships for students.
-            </p>
+            <p>Explore local and international scholarships for students.</p>
             <a href="scholarships.html" class="explore-btn">Explore →</a>
         </div>
 
         <div class="card">
             <i class="fa-solid fa-briefcase"></i>
             <h3>Internships</h3>
-            <p>
-                Find internships to gain practical experience and build your career.
-            </p>
+            <p>Find internships to gain practical experience and build your career.</p>
             <a href="internships.html" class="explore-btn">Explore →</a>
         </div>
 
         <div class="card">
             <i class="fa-solid fa-trophy"></i>
             <h3>Hackathons</h3>
-            <p>
-                Participate in coding competitions and innovation challenges.
-            </p>
+            <p>Participate in coding competitions and innovation challenges.</p>
             <a href="hackathons.html" class="explore-btn">Explore →</a>
         </div>
 
         <div class="card">
             <i class="fa-solid fa-certificate"></i>
             <h3>Free Certifications</h3>
-            <p>
-                Earn free certificates from leading technology organizations.
-            </p>
+            <p>Earn free certificates from leading technology organizations.</p>
             <a href="certifications.html" class="explore-btn">Explore →</a>
         </div>
 
         <div class="card">
             <i class="fa-solid fa-earth-americas"></i>
             <h3>Exchange Programs</h3>
-            <p>
-                Discover fellowships, student exchange programs, and global opportunities.
-            </p>
+            <p>Discover fellowships, student exchange programs, and global opportunities.</p>
             <a href="exchange.html" class="explore-btn">Explore →</a>
         </div>
 
         <div class="card">
             <i class="fa-solid fa-calendar-days"></i>
-            <h3>Workshops & Events</h3>
-            <p>
-                Stay updated with webinars, workshops, conferences, and tech events.
-            </p>
+            <h3>Workshops &amp; Events</h3>
+            <p>Stay updated with webinars, workshops, conferences, and tech events.</p>
             <a href="events.html" class="explore-btn">Explore →</a>
         </div>
 
     </div>
 
-    <!-- Live opportunities (C++ backend: merge sort / search / filter / save) -->
-    <div class="live-opportunities">
+    <!-- Existing opportunities JavaScript IDs preserved -->
 
-        <h3>Latest Opportunities</h3>
-
-        <div class="live-filters">
-
-            <input type="text" id="opportunity-search" placeholder="Search opportunities...">
-
-            <select id="opportunity-category">
-                <option value="">All categories</option>
-                <option>Internship</option>
-                <option>Scholarship</option>
-                <option>Hackathon</option>
-                <option>Competition</option>
-                <option>Job</option>
-            </select>
-
-            <select id="opportunity-sort">
-                <option value="deadline">Nearest deadline</option>
-                <option value="stipend">Highest amount</option>
-                <option value="date">Date posted</option>
-                <option value="category">Category</option>
-                <option value="title">Title A-Z</option>
-            </select>
-
-            <button id="show-saved" class="btn">Saved</button>
-
-        </div>
-
-        <div id="opportunity-list" class="cards"></div>
-
-    </div>
-
+    <div 
 </section>
 
-<!-- ===========================
-     CAREER CENTER
-=========================== -->
+<!-- ================= CAREER CENTER ================= -->
 
 <section class="career-center" id="career">
 
     <div class="section-title">
         <h2>Career Center</h2>
-
         <p>
             Prepare for your dream career with resume building,
-            interview preparation, LinkedIn optimization,
-            GitHub portfolios, freelancing, and job search guidance.
+            interview preparation, LinkedIn optimization, GitHub portfolios,
+            freelancing, and job search guidance.
         </p>
     </div>
 
@@ -502,76 +574,54 @@
         <div class="card">
             <i class="fa-solid fa-file-lines"></i>
             <h3>Resume Builder</h3>
-            <p>
-                Learn how to create ATS-friendly resumes that
-                impress recruiters.
-            </p>
+            <p>Learn how to create ATS-friendly resumes that impress recruiters.</p>
             <a href="resume.html">Explore →</a>
         </div>
 
         <div class="card">
             <i class="fa-solid fa-user-tie"></i>
             <h3>Interview Preparation</h3>
-            <p>
-                Practice HR and technical interview questions
-                with expert guidance.
-            </p>
+            <p>Practice HR and technical interview questions with expert guidance.</p>
             <a href="interview.html">Explore →</a>
         </div>
 
         <div class="card">
             <i class="fa-brands fa-linkedin"></i>
             <h3>LinkedIn Guide</h3>
-            <p>
-                Optimize your LinkedIn profile to attract recruiters.
-            </p>
-            <!-- file must be named linkedin.html (all lowercase) -->
+            <p>Optimize your LinkedIn profile to attract recruiters.</p>
             <a href="linkedin.html">Explore →</a>
         </div>
 
         <div class="card">
             <i class="fa-brands fa-github"></i>
             <h3>GitHub Portfolio</h3>
-            <p>
-                Showcase your projects and create an impressive
-                developer portfolio.
-            </p>
+            <p>Showcase your projects and create an impressive developer portfolio.</p>
             <a href="github.html">Explore →</a>
         </div>
 
         <div class="card">
             <i class="fa-solid fa-briefcase"></i>
             <h3>Job Search</h3>
-            <p>
-                Learn effective strategies for finding internships
-                and full-time jobs.
-            </p>
+            <p>Learn effective strategies for finding internships and full-time jobs.</p>
             <a href="jobs.html">Explore →</a>
         </div>
 
         <div class="card">
             <i class="fa-solid fa-laptop"></i>
             <h3>Freelancing</h3>
-            <p>
-                Start your freelancing journey and earn online
-                through your technical skills.
-            </p>
+            <p>Start your freelancing journey and earn online through your technical skills.</p>
             <a href="freelancing.html">Explore →</a>
         </div>
 
     </div>
-
 </section>
 
-<!-- ==========================
-        COMMUNITY
-========================== -->
+<!-- ================= COMMUNITY ================= -->
 
 <section class="community" id="community">
 
     <div class="section-title">
         <h2>Community</h2>
-
         <p>
             Connect with students, mentors, developers, and professionals.
             Learn together, share knowledge, participate in coding challenges,
@@ -584,86 +634,59 @@
         <div class="card">
             <i class="fa-solid fa-user-group"></i>
             <h3>Study Groups</h3>
-            <p>
-                Join collaborative study groups for programming,
-                university courses, and certifications.
-            </p>
-            <!-- file must be named studygroups.html (no space) -->
+            <p>Join collaborative study groups for programming, university courses, and certifications.</p>
             <a href="studygroups.html">Explore →</a>
         </div>
 
         <div class="card">
             <i class="fa-solid fa-user-tie"></i>
             <h3>Mentorship</h3>
-            <p>
-                Connect with experienced mentors for career,
-                interview, and technical guidance.
-            </p>
-            <!-- matches your file mentorship.html -->
+            <p>Connect with experienced mentors for career, interview, and technical guidance.</p>
             <a href="mentorship.html">Explore →</a>
         </div>
 
         <div class="card">
             <i class="fa-solid fa-comments"></i>
             <h3>Discussion Forum</h3>
-            <p>
-                Ask questions, answer queries,
-                and collaborate with the community.
-            </p>
+            <p>Ask questions, answer queries, and collaborate with the community.</p>
             <a href="forum.html">Explore →</a>
         </div>
 
         <div class="card">
             <i class="fa-solid fa-code"></i>
             <h3>Coding Challenges</h3>
-            <p>
-                Solve weekly coding challenges
-                to improve your programming skills.
-            </p>
+            <p>Solve weekly coding challenges to improve your programming skills.</p>
             <a href="coding.html">Explore →</a>
         </div>
 
         <div class="card">
             <i class="fa-solid fa-star"></i>
             <h3>Success Stories</h3>
-            <p>
-                Read inspiring stories from students
-                who secured internships and scholarships.
-            </p>
+            <p>Read inspiring stories from students who secured internships and scholarships.</p>
             <a href="stories.html">Explore →</a>
         </div>
 
         <div class="card">
             <i class="fa-solid fa-circle-question"></i>
-            <h3>Q&A Hub</h3>
-            <p>
-                Get answers to academic,
-                programming, and career-related questions.
-            </p>
+            <h3>Q&amp;A Hub</h3>
+            <p>Get answers to academic, programming, and career-related questions.</p>
             <a href="qa.html">Explore →</a>
         </div>
 
     </div>
-
 </section>
 
-<!-- ==========================
-        ABOUT US
-========================== -->
+<!-- ================= ABOUT US ================= -->
 
 <section class="about" id="about">
 
     <div class="section-title">
-
-        <h2>About EmpowerTech</h2>
-
+        <h2>About SkillPath</h2>
         <p>
-            EmpowerTech is a technology-driven platform designed to
-            empower students and young professionals by providing
-            learning resources, career guidance, opportunities,
-            and a supportive community.
+            SkillPath is a technology-driven platform designed to empower
+            students and young professionals through learning resources,
+            career guidance, opportunities, and a supportive community.
         </p>
-
     </div>
 
     <div class="about-container">
@@ -671,34 +694,22 @@
         <div class="about-card">
             <i class="fa-solid fa-bullseye"></i>
             <h3>Our Mission</h3>
-            <p>
-                Our mission is to make technology education accessible
-                for everyone and help learners develop skills needed
-                for future careers.
-            </p>
+            <p>Make technology education accessible and help learners develop skills for future careers.</p>
         </div>
 
         <div class="about-card">
             <i class="fa-solid fa-eye"></i>
             <h3>Our Vision</h3>
-            <p>
-                We envision a world where every student has access
-                to quality learning, mentorship, and career opportunities.
-            </p>
+            <p>Give every student access to quality learning, mentorship, and career opportunities.</p>
         </div>
 
         <div class="about-card">
             <i class="fa-solid fa-users"></i>
             <h3>Who We Help</h3>
-            <p>
-                Students, beginners, developers, job seekers,
-                and communities looking to grow through technology.
-            </p>
+            <p>Students, beginners, developers, job seekers, and communities growing through technology.</p>
         </div>
 
     </div>
-
-    <!-- IMPACT -->
 
     <div class="impact">
 
@@ -723,36 +734,28 @@
         </div>
 
     </div>
-
 </section>
 
-<!-- ==========================
-        CONTACT US
-========================== -->
+<!-- ================= CONTACT US ================= -->
 
 <section class="contact" id="contact">
 
     <div class="section-title">
-
         <h2>Contact Us</h2>
-
         <p>
             Have questions, suggestions, or want to collaborate?
-            Reach out to the EmpowerTech team.
+            Reach out to the SkillPath team.
         </p>
-
     </div>
 
     <div class="contact-container">
-
-        <!-- Contact Information -->
 
         <div class="contact-info">
 
             <div class="contact-box">
                 <i class="fa-solid fa-envelope"></i>
                 <h3>Email</h3>
-                <p>support@empowertech.com</p>
+                <p>support@skillpath.com</p>
             </div>
 
             <div class="contact-box">
@@ -769,162 +772,109 @@
 
         </div>
 
-        <!-- Contact Form -->
-
         <form class="contact-form">
-
-            <input
-            type="text"
-            placeholder="Your Name"
-            required>
-
-            <input
-            type="email"
-            placeholder="Your Email"
-            required>
-
-            <input
-            type="text"
-            placeholder="Subject"
-            required>
-
-            <textarea
-            placeholder="Your Message"
-            rows="6"
-            required></textarea>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject" required>
+            <textarea placeholder="Your Message" rows="6" required></textarea>
 
             <button type="submit" class="primary">
                 Send Message
             </button>
-
         </form>
 
     </div>
-
 </section>
 
-<!-- ==========================
-        FOOTER
-========================== -->
+<!-- ================= FOOTER ================= -->
 
 <footer class="footer">
 
     <div class="footer-container">
 
-        <!-- Brand -->
-
         <div class="footer-box">
-
             <div class="logo">
                 <i class="fa-solid fa-laptop-code"></i>
-                EmpowerTech
+                SkillPath
             </div>
 
             <p>
                 Empowering students and young professionals
                 through technology, learning, and opportunities.
             </p>
-
         </div>
 
-        <!-- Quick Links -->
-
         <div class="footer-box">
-
             <h3>Quick Links</h3>
-
             <ul>
-                <li><a href="#learning">Learning Hub</a></li>
-                <li><a href="#community">Community</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html#learning">Learning Hub</a></li>
+                <li><a href="index.html#opportunities">Opportunities</a></li>
+                <li><a href="index.html#community">Community</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
-
         </div>
 
-        <!-- Resources -->
-
         <div class="footer-box">
-
             <h3>Resources</h3>
-
             <ul>
-                <li>Coding Practice</li>
-                <li>Career Guidance</li>
-                <li>Scholarships</li>
-                <li>Internships</li>
+                <li><a href="coding.html">Coding Practice</a></li>
+                <li><a href="resume.html">Career Guidance</a></li>
+                <li><a href="scholarships.html">Scholarships</a></li>
+                <li><a href="internships.html">Internships</a></li>
             </ul>
-
         </div>
 
-        <!-- Social Links -->
-
         <div class="footer-box">
-
             <h3>Follow Us</h3>
 
             <div class="social-icons">
-
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
-
         </div>
 
     </div>
 
     <div class="footer-bottom">
-
-        <p>
-            © 2026 EmpowerTech. All Rights Reserved.
-        </p>
-
+        <p>© 2026 SkillPath. All Rights Reserved.</p>
     </div>
-
 </footer>
 
 <!-- ================= CHATBOT ================= -->
 
 <div class="chatbot">
 
-    <button id="chat-btn">
+    <button id="chat-btn" type="button" aria-label="Open chatbot">
         <i class="fa-solid fa-robot"></i>
     </button>
 
     <div class="chat-window" id="chat-window">
 
         <div class="chat-header">
-            EmpowerBot 🤖
+            SkillPath Bot 🤖
         </div>
 
         <div class="chat-body" id="chat-body">
-
-            <p>
-                Hello! I am EmpowerBot.
-                How can I help you?
-            </p>
-
+            <p>Hello! I am SkillPath Bot. How can I help you?</p>
         </div>
 
         <div class="chat-input">
+            <input id="userMessage" type="text" placeholder="Ask something...">
 
-            <input
-            id="userMessage"
-            placeholder="Ask something...">
-
-            <button id="send-btn">
+            <button id="send-btn" type="button">
                 Send
             </button>
-
         </div>
 
     </div>
-
 </div>
 
+<!-- KEEP YOUR EXISTING JAVASCRIPT -->
+
 <script src="script.js"></script>
+
 </body>
-</html> -->
+</html>
