@@ -6,16 +6,14 @@
     <title>Discussion Forum | EmpowerTech</title>
 
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
 
-<!-- ================= NAVBAR ================= -->
+<body class="forum-page">
 
+<!-- NAVBAR -->
 <nav>
-
     <div class="logo">
         <i class="fa-solid fa-laptop-code"></i>
         EmpowerTech
@@ -25,156 +23,313 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#community">Community</a></li>
     </ul>
-
 </nav>
 
-<!-- ================= HERO ================= -->
+<!-- HERO SECTION -->
+<section class="forum-hero">
+    <div class="forum-hero-content">
+        <span class="forum-label">
+            <i class="fa-solid fa-users"></i> LEARN TOGETHER
+        </span>
 
-<section class="page-hero">
+        <h1>
+            Discussion <span>Forum</span>
+        </h1>
 
-    <h1>💬 Discussion Forum</h1>
+        <p>
+            Ask questions, share ideas, collaborate with learners,
+            and become part of a supportive technology community.
+            Every great idea starts with a conversation.
+        </p>
 
-    <p>
-        Ask questions, share ideas, collaborate with learners,
-        and become part of a supportive technology community.
-    </p>
+        <a href="#forum-categories" class="forum-btn">
+            Explore Discussions
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
 
+    <div class="forum-hero-icon">
+        <i class="fa-solid fa-comments"></i>
+        <span class="forum-floating-icon forum-float-one">
+            <i class="fa-solid fa-code"></i>
+        </span>
+        <span class="forum-floating-icon forum-float-two">
+            <i class="fa-solid fa-lightbulb"></i>
+        </span>
+        <span class="forum-floating-icon forum-float-three">
+            <i class="fa-solid fa-users"></i>
+        </span>
+    </div>
 </section>
 
-<!-- ================= DISCUSSION CATEGORIES ================= -->
+<!-- DISCUSSION CATEGORIES -->
+<section class="forum-section" id="forum-categories">
+    <div class="forum-section-heading">
+        <span>EXPLORE YOUR INTERESTS</span>
+        <h2>Discussion Categories</h2>
+        <p>Choose a topic, exchange knowledge, and grow your skills.</p>
+    </div>
 
-<section class="resources">
+    <div class="forum-category-grid">
 
-    <h2>Discussion Categories</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>💻 Programming</h3>
-
+        <div class="forum-category-card">
+            <div class="forum-category-icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
+            <h3>Programming</h3>
             <p>
                 Discuss C++, Python, Java, JavaScript, algorithms,
-                and competitive programming.
+                data structures, and competitive programming.
             </p>
-
+            <a href="#popular-topics">Explore Topics <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
-        <div class="card">
-
-            <h3>🌐 Web Development</h3>
-
+        <div class="forum-category-card">
+            <div class="forum-category-icon">
+                <i class="fa-solid fa-globe"></i>
+            </div>
+            <h3>Web Development</h3>
             <p>
-                Ask questions about HTML, CSS, JavaScript,
-                React, Node.js, and responsive design.
+                Ask questions about HTML, CSS, JavaScript, React,
+                Node.js, and responsive web design.
             </p>
-
+            <a href="#popular-topics">Explore Topics <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
-        <div class="card">
-
-            <h3>🤖 Artificial Intelligence</h3>
-
+        <div class="forum-category-card">
+            <div class="forum-category-icon">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3>Artificial Intelligence</h3>
             <p>
                 Explore Machine Learning, Deep Learning,
-                Generative AI, and AI projects.
+                Generative AI, and practical AI projects.
             </p>
-
+            <a href="#popular-topics">Explore Topics <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
-        <div class="card">
-
-            <h3>🔐 Cyber Security</h3>
-
+        <div class="forum-category-card">
+            <div class="forum-category-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Cyber Security</h3>
             <p>
                 Learn about ethical hacking, networking,
-                Linux, and cyber defense.
+                Linux, online safety, and cyber defense.
             </p>
-
+            <a href="#popular-topics">Explore Topics <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
-        <div class="card">
-
-            <h3>💼 Career Advice</h3>
-
+        <div class="forum-category-card">
+            <div class="forum-category-icon">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h3>Career Advice</h3>
             <p>
                 Discuss internships, resumes, interviews,
-                freelancing, and job opportunities.
+                freelancing, and career opportunities.
             </p>
-
+            <a href="#popular-topics">Explore Topics <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
-        <div class="card">
-
-            <h3>🎓 University Help</h3>
-
+        <div class="forum-category-card">
+            <div class="forum-category-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3>University Help</h3>
             <p>
-                Share study resources, assignments,
-                and exam preparation tips.
+                Share study resources, assignment guidance,
+                university experiences, and exam preparation tips.
             </p>
-
+            <a href="#popular-topics">Explore Topics <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
     </div>
-
 </section>
 
-<!-- ================= COMMUNITY RULES ================= -->
+<!-- COMMUNITY GUIDELINES -->
+<section class="forum-guidelines">
+    <div class="forum-guidelines-content">
+        <span class="forum-label">OUR COMMUNITY</span>
+        <h2>Community Guidelines</h2>
+        <p>
+            Help us maintain a friendly, respectful, and useful
+            learning environment for everyone.
+        </p>
 
-<section class="projects">
+        <ul>
+            <li>
+                <i class="fa-solid fa-handshake"></i>
+                <span><strong>Respect everyone.</strong> Treat every community member with kindness.</span>
+            </li>
 
-    <h2>Community Guidelines</h2>
+            <li>
+                <i class="fa-solid fa-comment-dots"></i>
+                <span><strong>Communicate politely.</strong> Keep discussions professional and constructive.</span>
+            </li>
 
-    <ul>
-        <li>🤝 Respect every community member.</li>
-        <li>💬 Use polite and professional language.</li>
-        <li>📚 Search before asking duplicate questions.</li>
-        <li>🚫 Do not share spam or misleading information.</li>
-        <li>🎯 Keep discussions relevant to the topic.</li>
-        <li>❤️ Help others by sharing your knowledge.</li>
-    </ul>
+            <li>
+                <i class="fa-solid fa-book-open"></i>
+                <span><strong>Search before asking.</strong> Check whether your question has already been answered.</span>
+            </li>
 
+            <li>
+                <i class="fa-solid fa-ban"></i>
+                <span><strong>Avoid spam.</strong> Do not post misleading information or irrelevant promotions.</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-bullseye"></i>
+                <span><strong>Stay on topic.</strong> Keep conversations relevant to the discussion.</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-heart"></i>
+                <span><strong>Help others.</strong> Share your knowledge and support fellow learners.</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="forum-guidelines-visual">
+        <i class="fa-solid fa-people-group"></i>
+        <h3>Better Together</h3>
+        <p>Share knowledge. Support others. Grow together.</p>
+    </div>
 </section>
 
-<!-- ================= DISCUSSION IDEAS ================= -->
+<!-- POPULAR DISCUSSION TOPICS -->
+<section class="forum-section" id="popular-topics">
+    <div class="forum-section-heading">
+        <span>START A CONVERSATION</span>
+        <h2>Popular Discussion Topics</h2>
+        <p>Here are some ideas to help you get started.</p>
+    </div>
 
-<section class="projects">
+    <div class="forum-topic-list">
 
-    <h2>Popular Discussion Topics</h2>
+        <div class="forum-topic">
+            <div class="forum-topic-icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="forum-topic-content">
+                <h3>Best Programming Language for Beginners</h3>
+                <p>Compare beginner-friendly languages and find the right starting point.</p>
+            </div>
+            <span class="forum-topic-tag">Programming</span>
+        </div>
 
-    <ul>
-        <li>Best programming language for beginners</li>
-        <li>How to start competitive programming</li>
-        <li>Free AI learning resources</li>
-        <li>Resume review and interview tips</li>
-        <li>Open-source project recommendations</li>
-        <li>Internship experiences and advice</li>
-    </ul>
+        <div class="forum-topic">
+            <div class="forum-topic-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="forum-topic-content">
+                <h3>How to Start Competitive Programming</h3>
+                <p>Discuss practice strategies, problem-solving platforms, and DSA roadmaps.</p>
+            </div>
+            <span class="forum-topic-tag">DSA</span>
+        </div>
 
+        <div class="forum-topic">
+            <div class="forum-topic-icon">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+            <div class="forum-topic-content">
+                <h3>Free AI Learning Resources</h3>
+                <p>Recommend courses, tutorials, documentation, and hands-on projects.</p>
+            </div>
+            <span class="forum-topic-tag">Artificial Intelligence</span>
+        </div>
+
+        <div class="forum-topic">
+            <div class="forum-topic-icon">
+                <i class="fa-solid fa-file-lines"></i>
+            </div>
+            <div class="forum-topic-content">
+                <h3>Resume Reviews and Interview Tips</h3>
+                <p>Share suggestions for improving resumes and preparing for interviews.</p>
+            </div>
+            <span class="forum-topic-tag">Careers</span>
+        </div>
+
+        <div class="forum-topic">
+            <div class="forum-topic-icon">
+                <i class="fa-solid fa-code-branch"></i>
+            </div>
+            <div class="forum-topic-content">
+                <h3>Open-Source Project Recommendations</h3>
+                <p>Find beginner-friendly projects and learn how to contribute to GitHub.</p>
+            </div>
+            <span class="forum-topic-tag">Projects</span>
+        </div>
+
+        <div class="forum-topic">
+            <div class="forum-topic-icon">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="forum-topic-content">
+                <h3>Internship Experiences and Advice</h3>
+                <p>Exchange application tips, preparation strategies, and lessons learned.</p>
+            </div>
+            <span class="forum-topic-tag">Internships</span>
+        </div>
+
+    </div>
 </section>
 
-<!-- ================= BENEFITS ================= -->
+<!-- WHY JOIN -->
+<section class="forum-benefits">
+    <div class="forum-section-heading">
+        <span>GROW WITH EMPOWERTECH</span>
+        <h2>Why Join the Forum?</h2>
+        <p>Your learning journey becomes better when you learn with others.</p>
+    </div>
 
-<section class="projects">
+    <div class="forum-benefit-grid">
 
-    <h2>Why Join the Forum?</h2>
+        <div class="forum-benefit">
+            <i class="fa-solid fa-circle-question"></i>
+            <h3>Ask Questions</h3>
+            <p>Discuss challenges and learn from different perspectives.</p>
+        </div>
 
-    <ul>
-        <li>Ask questions anytime.</li>
-        <li>Learn from experienced developers.</li>
-        <li>Share your own knowledge.</li>
-        <li>Build your professional network.</li>
-        <li>Discover new learning resources.</li>
-        <li>Stay motivated with the community.</li>
-    </ul>
+        <div class="forum-benefit">
+            <i class="fa-solid fa-lightbulb"></i>
+            <h3>Share Knowledge</h3>
+            <p>Help other learners by sharing your ideas and experience.</p>
+        </div>
 
+        <div class="forum-benefit">
+            <i class="fa-solid fa-network-wired"></i>
+            <h3>Build Connections</h3>
+            <p>Connect with people who share your interests and goals.</p>
+        </div>
+
+        <div class="forum-benefit">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Keep Improving</h3>
+            <p>Discover resources, exchange feedback, and stay motivated.</p>
+        </div>
+
+    </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- CALL TO ACTION -->
+<section class="forum-cta">
+    <i class="fa-solid fa-comments"></i>
+    <h2>Your Ideas Matter!</h2>
+    <p>
+        Every question is an opportunity to learn, and every answer
+        can help someone move forward.
+    </p>
+    <a href="index.html#community" class="forum-btn">
+        Explore Our Community
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
+</section>
 
+<!-- FOOTER -->
 <footer>
-
-<p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
-
+    <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
 </footer>
 
 </body>
