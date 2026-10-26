@@ -3,81 +3,597 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Search | EmpowerTech</title>
+
+    <title>Job Search Guide | EmpowerTech</title>
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
 
-<!-- ================= NAVBAR ================= -->
+<body class="jobsearch-page">
 
-<nav>
-
-    <div class="logo">
+<!-- NAVBAR -->
+<nav class="js-nav">
+    <a href="index.html" class="js-logo">
         <i class="fa-solid fa-laptop-code"></i>
         EmpowerTech
-    </div>
+    </a>
 
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#career">Career Center</a></li>
+        <li><a href="#job-platforms">Job Platforms</a></li>
+        <li><a href="#job-checklist">Checklist</a></li>
     </ul>
-
 </nav>
 
-<!-- ================= HERO ================= -->
 
-<section class="page-hero">
+<!-- HERO SECTION -->
+<header class="js-hero">
 
-    <h1>💼 Job Search Guide</h1>
+    <div class="js-hero-content">
 
-    <p>
-        Discover effective strategies to find internships and full-time jobs,
-        prepare successful applications, and start your professional career.
+        <span class="js-badge">
+            <i class="fa-solid fa-rocket"></i>
+            YOUR CAREER JOURNEY STARTS HERE
+        </span>
+
+        <h1>
+            Find the Right Job.
+            <span>Build Your Future.</span>
+        </h1>
+
+        <p>
+            Discover career opportunities, explore trusted job platforms,
+            improve your applications, and take the next step toward
+            your professional goals.
+        </p>
+
+        <div class="js-hero-buttons">
+            <a href="#job-platforms" class="js-btn js-btn-primary">
+                Explore Job Platforms
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="#job-tips" class="js-btn js-btn-outline">
+                Improve Your Job Search
+            </a>
+        </div>
+
+        <div class="js-hero-points">
+            <span><i class="fa-solid fa-circle-check"></i> Internships</span>
+            <span><i class="fa-solid fa-circle-check"></i> Graduate Roles</span>
+            <span><i class="fa-solid fa-circle-check"></i> Full-Time Jobs</span>
+        </div>
+
+    </div>
+
+    <div class="js-hero-visual">
+
+        <div class="js-main-icon">
+            <i class="fa-solid fa-briefcase"></i>
+        </div>
+
+        <div class="js-floating-card js-float-one">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Discover Opportunities
+        </div>
+
+        <div class="js-floating-card js-float-two">
+            <i class="fa-solid fa-file-lines"></i>
+            Strong Applications
+        </div>
+
+        <div class="js-floating-card js-float-three">
+            <i class="fa-solid fa-chart-line"></i>
+            Career Growth
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- JOB SEARCH INTRODUCTION -->
+<section class="js-intro">
+
+    <div class="js-heading">
+        <span>EXPLORE YOUR OPTIONS</span>
+        <h2>Where Can You Find Your Next Opportunity?</h2>
+        <p>
+            Use established job platforms and official company career pages
+            to discover roles that match your interests and skills.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- JOB PLATFORMS -->
+<section class="js-platforms" id="job-platforms">
+
+    <div class="js-platform-grid">
+
+        <!-- LINKEDIN -->
+        <article class="js-platform-card">
+
+            <div class="js-platform-icon">
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+
+            <h3>LinkedIn Jobs</h3>
+
+            <p>
+                Find internships, graduate positions, and full-time jobs
+                while building your professional network.
+            </p>
+
+            <div class="js-tags">
+                <span>Networking</span>
+                <span>Jobs</span>
+            </div>
+
+            <a href="https://www.linkedin.com/jobs/"
+               target="_blank" rel="noopener noreferrer"
+               class="js-platform-btn">
+                Explore Jobs
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </article>
+
+
+        <!-- INDEED -->
+        <article class="js-platform-card">
+
+            <div class="js-platform-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <h3>Indeed</h3>
+
+            <p>
+                Search for vacancies by job title, location, experience,
+                and employment type.
+            </p>
+
+            <div class="js-tags">
+                <span>Job Search</span>
+                <span>Career</span>
+            </div>
+
+            <a href="https://pk.indeed.com/"
+               target="_blank" rel="noopener noreferrer"
+               class="js-platform-btn">
+                Explore Jobs
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </article>
+
+
+        <!-- GLASSDOOR -->
+        <article class="js-platform-card">
+
+            <div class="js-platform-icon">
+                <i class="fa-solid fa-building"></i>
+            </div>
+
+            <h3>Glassdoor</h3>
+
+            <p>
+                Research employers, read workplace reviews, and explore
+                salary information alongside job listings.
+            </p>
+
+            <div class="js-tags">
+                <span>Company Reviews</span>
+                <span>Salaries</span>
+            </div>
+
+            <a href="https://www.glassdoor.com/"
+               target="_blank" rel="noopener noreferrer"
+               class="js-platform-btn">
+                Explore Glassdoor
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </article>
+
+
+        <!-- MUSTAKBIL -->
+        <article class="js-platform-card">
+
+            <div class="js-platform-icon">
+                <i class="fa-solid fa-earth-asia"></i>
+            </div>
+
+            <h3>Mustakbil</h3>
+
+            <p>
+                Explore job listings across Pakistan and search for
+                opportunities by category and location.
+            </p>
+
+            <div class="js-tags">
+                <span>Pakistan</span>
+                <span>Local Jobs</span>
+            </div>
+
+            <a href="https://www.mustakbil.com/"
+               target="_blank" rel="noopener noreferrer"
+               class="js-platform-btn">
+                Find Opportunities
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </article>
+
+
+        <!-- ROZEE.PK -->
+        <article class="js-platform-card">
+
+            <div class="js-platform-icon">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+
+            <h3>Rozee.pk</h3>
+
+            <p>
+                Browse Pakistan-focused job listings and look for
+                roles that match your qualifications.
+            </p>
+
+            <div class="js-tags">
+                <span>Pakistan</span>
+                <span>Recruitment</span>
+            </div>
+
+            <a href="https://www.rozee.pk/"
+               target="_blank" rel="noopener noreferrer"
+               class="js-platform-btn">
+                Explore Jobs
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </article>
+
+
+        <!-- WELLFOUND -->
+        <article class="js-platform-card">
+
+            <div class="js-platform-icon">
+                <i class="fa-solid fa-lightbulb"></i>
+            </div>
+
+            <h3>Wellfound</h3>
+
+            <p>
+                Discover startup opportunities and explore roles
+                at companies building new products and services.
+            </p>
+
+            <div class="js-tags">
+                <span>Startups</span>
+                <span>Technology</span>
+            </div>
+
+            <a href="https://wellfound.com/jobs"
+               target="_blank" rel="noopener noreferrer"
+               class="js-platform-btn">
+                Explore Startup Jobs
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </article>
+
+    </div>
+
+    <p class="js-platform-note">
+        <i class="fa-solid fa-circle-info"></i>
+        Availability and eligibility vary by platform. Verify each
+        listing and apply through trusted sources.
     </p>
 
 </section>
 
-<!-- ================= JOB PLATFORMS ================= -->
 
-<section class="resources">
+<!-- OFFICIAL COMPANY CAREERS -->
+<section class="js-companies">
 
-    <h2>Popular Job Platforms</h2>
+    <div class="js-heading">
+        <span>GO STRAIGHT TO THE SOURCE</span>
+        <h2>Explore Technology Company Careers</h2>
+        <p>
+            Check official company websites for internships, graduate
+            programs, and software engineering positions.
+        </p>
+    </div>
 
-    <div class="cards">
+    <div class="js-company-grid">
 
-        <div class="card">
-            <h3>🌐 LinkedIn Jobs</h3>
+        <a href="https://careers.microsoft.com/v2/global/en/students"
+           target="_blank" rel="noopener noreferrer"
+           class="js-company-card">
+            <i class="fa-brands fa-microsoft"></i>
+            <span>
+                <strong>Microsoft</strong>
+                <small>Student & Graduate Roles</small>
+            </span>
+            <i class="fa-solid fa-arrow-up-right-from-square js-external-icon"></i>
+        </a>
 
+        <a href="https://www.google.com/about/careers/applications/"
+           target="_blank" rel="noopener noreferrer"
+           class="js-company-card">
+            <i class="fa-brands fa-google"></i>
+            <span>
+                <strong>Google</strong>
+                <small>Careers & Internships</small>
+            </span>
+            <i class="fa-solid fa-arrow-up-right-from-square js-external-icon"></i>
+        </a>
+
+        <a href="https://www.ibm.com/careers"
+           target="_blank" rel="noopener noreferrer"
+           class="js-company-card">
+            <i class="fa-solid fa-building"></i>
+            <span>
+                <strong>IBM</strong>
+                <small>Technology Careers</small>
+            </span>
+            <i class="fa-solid fa-arrow-up-right-from-square js-external-icon"></i>
+        </a>
+
+        <a href="https://www.oracle.com/careers/"
+           target="_blank" rel="noopener noreferrer"
+           class="js-company-card">
+            <i class="fa-solid fa-database"></i>
+            <span>
+                <strong>Oracle</strong>
+                <small>Software & Cloud Roles</small>
+            </span>
+            <i class="fa-solid fa-arrow-up-right-from-square js-external-icon"></i>
+        </a>
+
+        <a href="https://careers.careem.com/"
+           target="_blank" rel="noopener noreferrer"
+           class="js-company-card">
+            <i class="fa-solid fa-car-side"></i>
+            <span>
+                <strong>Careem</strong>
+                <small>Regional Opportunities</small>
+            </span>
+            <i class="fa-solid fa-arrow-up-right-from-square js-external-icon"></i>
+        </a>
+
+        <a href="https://www.systemsltd.com/careers"
+           target="_blank" rel="noopener noreferrer"
+           class="js-company-card">
+            <i class="fa-solid fa-laptop-code"></i>
+            <span>
+                <strong>Systems Limited</strong>
+                <small>Pakistan Technology Careers</small>
+            </span>
+            <i class="fa-solid fa-arrow-up-right-from-square js-external-icon"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- JOB SEARCH TIPS -->
+<section class="js-tips" id="job-tips">
+
+    <div class="js-heading">
+        <span>APPLY SMARTER</span>
+        <h2>Job Search Tips That Make a Difference</h2>
+        <p>
+            A focused job search helps you spend more time on
+            relevant opportunities and strong applications.
+        </p>
+    </div>
+
+    <div class="js-tips-grid">
+
+        <article class="js-tip-card">
+            <div class="js-tip-number">01</div>
+            <h3>Customize Your Resume</h3>
             <p>
-                Search for internships and full-time opportunities while
-                networking with recruiters.
+                Highlight the skills, projects, and experience most
+                relevant to each job description.
             </p>
+        </article>
 
+        <article class="js-tip-card">
+            <div class="js-tip-number">02</div>
+            <h3>Use Relevant Keywords</h3>
+            <p>
+                Include accurate technical skills and role-specific
+                terminology that matches your actual experience.
+            </p>
+        </article>
+
+        <article class="js-tip-card">
+            <div class="js-tip-number">03</div>
+            <h3>Build Your Portfolio</h3>
+            <p>
+                Showcase personal and academic projects with clear
+                README files, screenshots, and working demos where possible.
+            </p>
+        </article>
+
+        <article class="js-tip-card">
+            <div class="js-tip-number">04</div>
+            <h3>Network Professionally</h3>
+            <p>
+                Connect with alumni, attend career events, and contact
+                professionals with thoughtful, personalized messages.
+            </p>
+        </article>
+
+        <article class="js-tip-card">
+            <div class="js-tip-number">05</div>
+            <h3>Set Job Alerts</h3>
+            <p>
+                Use relevant search terms and locations to receive
+                notifications about newly posted opportunities.
+            </p>
+        </article>
+
+        <article class="js-tip-card">
+            <div class="js-tip-number">06</div>
+            <h3>Track Every Application</h3>
+            <p>
+                Record application dates, deadlines, job links,
+                responses, and follow-up reminders.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- IN-DEMAND SKILLS -->
+<section class="js-skills">
+
+    <div class="js-heading">
+        <span>INVEST IN YOURSELF</span>
+        <h2>Skills Employers Often Look For</h2>
+        <p>
+            Requirements differ by role. Start with strong fundamentals
+            and build skills that align with your career goals.
+        </p>
+    </div>
+
+    <div class="js-skill-grid">
+
+        <div class="js-skill-item">
+            <i class="fa-solid fa-code"></i>
+            <h3>Programming</h3>
+            <p>C++, Python, Java, or JavaScript.</p>
         </div>
 
-        <div class="card">
-
-            <h3>💻 Indeed</h3>
-
-            <p>
-                Explore thousands of job openings across different industries
-                and locations.
-            </p>
-
+        <div class="js-skill-item">
+            <i class="fa-solid fa-diagram-project"></i>
+            <h3>Problem Solving</h3>
+            <p>Data structures, algorithms, and debugging.</p>
         </div>
 
-        <div class="card">
+        <div class="js-skill-item">
+            <i class="fa-brands fa-github"></i>
+            <h3>Git & GitHub</h3>
+            <p>Version control and project collaboration.</p>
+        </div>
 
-            <h3>🚀 Glassdoor</h3>
+        <div class="js-skill-item">
+            <i class="fa-solid fa-database"></i>
+            <h3>Databases</h3>
+            <p>SQL, database design, and data handling.</p>
+        </div>
 
+        <div class="js-skill-item">
+            <i class="fa-solid fa-cloud"></i>
+            <h3>Cloud Computing</h3>
+            <p>Cloud fundamentals and deployment concepts.</p>
+        </div>
+
+        <div class="js-skill-item">
+            <i class="fa-solid fa-comments"></i>
+            <h3>Communication</h3>
+            <p>Clear writing, teamwork, and presenting ideas.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- APPLICATION CHECKLIST -->
+<section class="js-checklist" id="job-checklist">
+
+    <div class="js-checklist-content">
+
+        <div class="js-heading js-heading-left">
+            <span>STAY ORGANIZED</span>
+            <h2>Your Job Application Checklist</h2>
             <p>
-                Find jobs, read company reviews, and explore salary insights
-                before applying.
+                Prepare your application materials before applying.
+                Tick off each item as you complete it.
             </p>
+        </div>
+
+        <div class="js-checklist-items">
+
+            <label class="js-check-item">
+                <input type="checkbox">
+                <span class="js-check-box">
+                    <i class="fa-solid fa-check"></i>
+                </span>
+                <span>
+                    <strong>Updated Resume</strong>
+                    <small>Highlight relevant skills, education, and achievements.</small>
+                </span>
+            </label>
+
+            <label class="js-check-item">
+                <input type="checkbox">
+                <span class="js-check-box">
+                    <i class="fa-solid fa-check"></i>
+                </span>
+                <span>
+                    <strong>Customized Cover Letter</strong>
+                    <small>Explain why you are interested in the specific role.</small>
+                </span>
+            </label>
+
+            <label class="js-check-item">
+                <input type="checkbox">
+                <span class="js-check-box">
+                    <i class="fa-solid fa-check"></i>
+                </span>
+                <span>
+                    <strong>Professional LinkedIn Profile</strong>
+                    <small>Keep your headline, education, and projects updated.</small>
+                </span>
+            </label>
+
+            <label class="js-check-item">
+                <input type="checkbox">
+                <span class="js-check-box">
+                    <i class="fa-solid fa-check"></i>
+                </span>
+                <span>
+                    <strong>GitHub Portfolio</strong>
+                    <small>Showcase projects with useful documentation.</small>
+                </span>
+            </label>
+
+            <label class="js-check-item">
+                <input type="checkbox">
+                <span class="js-check-box">
+                    <i class="fa-solid fa-check"></i>
+                </span>
+                <span>
+                    <strong>Relevant Certifications</strong>
+                    <small>Include certifications that support your target role.</small>
+                </span>
+            </label>
+
+            <label class="js-check-item">
+                <input type="checkbox">
+                <span class="js-check-box">
+                    <i class="fa-solid fa-check"></i>
+                </span>
+                <span>
+                    <strong>Interview Preparation</strong>
+                    <small>Review common questions and practice explaining projects.</small>
+                </span>
+            </label>
 
         </div>
 
@@ -85,62 +601,75 @@
 
 </section>
 
-<!-- ================= JOB SEARCH TIPS ================= -->
 
-<section class="projects">
+<!-- SAFETY TIPS -->
+<section class="js-safety">
 
-    <h2>Job Search Tips</h2>
+    <div class="js-safety-icon">
+        <i class="fa-solid fa-shield-halved"></i>
+    </div>
 
-    <ul>
-        <li>Keep your resume updated.</li>
-        <li>Customize your resume for every application.</li>
-        <li>Write a strong cover letter.</li>
-        <li>Build an active LinkedIn profile.</li>
-        <li>Showcase projects on GitHub.</li>
-        <li>Apply consistently and track your applications.</li>
-    </ul>
+    <div class="js-safety-content">
+        <h2>Stay Safe While Job Hunting</h2>
 
-</section>
-
-<!-- ================= IN-DEMAND SKILLS ================= -->
-
-<section class="projects">
-
-    <h2>Top Skills Employers Look For</h2>
-
-    <ul>
-        <li>Programming (Python, Java, C++, JavaScript)</li>
-        <li>Problem Solving</li>
-        <li>Communication Skills</li>
-        <li>Teamwork</li>
-        <li>Cloud Computing</li>
-        <li>Artificial Intelligence & Data Analysis</li>
-    </ul>
+        <p>
+            Be careful with suspicious job offers. Verify the employer
+            and vacancy through official channels. Never pay a recruiter
+            to secure a job, and never share passwords, banking PINs,
+            or verification codes during recruitment.
+        </p>
+    </div>
 
 </section>
 
-<!-- ================= APPLICATION CHECKLIST ================= -->
 
-<section class="projects">
+<!-- FINAL CTA -->
+<section class="js-cta">
 
-    <h2>Application Checklist</h2>
+    <div class="js-cta-icon">
+        <i class="fa-solid fa-rocket"></i>
+    </div>
 
-    <ul>
-        <li>✔ Updated Resume</li>
-        <li>✔ Cover Letter</li>
-        <li>✔ LinkedIn Profile</li>
-        <li>✔ GitHub Portfolio</li>
-        <li>✔ Relevant Certifications</li>
-        <li>✔ Interview Preparation</li>
-    </ul>
+    <h2>Your Next Career Opportunity Starts With One Step</h2>
+
+    <p>
+        Keep learning, improve your applications, and apply to
+        opportunities that match your skills and goals.
+    </p>
+
+    <a href="https://www.linkedin.com/jobs/"
+       target="_blank" rel="noopener noreferrer"
+       class="js-btn js-btn-primary">
+        Start Your Job Search
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
 
 </section>
 
-<!-- ================= FOOTER ================= -->
 
-<footer>
+<!-- FOOTER -->
+<footer class="js-footer">
 
-    <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
+    <div class="js-footer-logo">
+        <i class="fa-solid fa-laptop-code"></i>
+        EmpowerTech
+    </div>
+
+    <p>
+        Empowering students with the skills and opportunities
+        to build their future.
+    </p>
+
+    <div class="js-footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#career">Career Center</a>
+        <a href="#job-platforms">Job Platforms</a>
+        <a href="#job-checklist">Application Checklist</a>
+    </div>
+
+    <p class="js-copyright">
+        &copy; 2026 EmpowerTech. All Rights Reserved.
+    </p>
 
 </footer>
 
