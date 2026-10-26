@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Tech Events | EmpowerTech</title>
 
     <link rel="stylesheet" href="style.css">
@@ -10,10 +11,10 @@
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
+<!-- NAVBAR -->
 <nav>
     <div class="logo">
         <i class="fa-solid fa-laptop-code"></i>
@@ -26,128 +27,450 @@
     </ul>
 </nav>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
+<section class="events-hero">
 
-<section class="page-hero">
+    <div class="events-hero-content">
 
-    <h1>📅 Workshops & Tech Events</h1>
+        <span class="events-badge">
+            <i class="fa-solid fa-calendar-days"></i>
+            Learn • Connect • Innovate
+        </span>
 
-    <p>
-        Stay connected with the latest workshops, webinars,
-        conferences, coding bootcamps, and technology events
-        to grow your skills and expand your professional network.
-    </p>
+        <h1>
+            Workshops & <span>Tech Events</span>
+        </h1>
 
-</section>
+        <p>
+            Discover workshops, webinars, conferences, hackathons,
+            and coding bootcamps. Learn from experts, explore emerging
+            technologies, and build connections that support your career.
+        </p>
 
-<!-- ================= EVENT TYPES ================= -->
+        <div class="events-hero-buttons">
+            <a href="#event-types" class="events-btn events-primary">
+                Explore Events
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
 
-<section class="resources">
-
-    <h2>Explore Events</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>💻 Coding Workshops</h3>
-
-            <p>
-                Learn new programming languages, frameworks,
-                and technologies through hands-on workshops.
-            </p>
-
-            <a href="#">Explore →</a>
-
+            <a href="#event-platforms" class="events-btn events-secondary">
+                Find Event Platforms
+            </a>
         </div>
 
-        <div class="card">
+        <div class="events-highlights">
+            <div>
+                <i class="fa-solid fa-laptop-code"></i>
+                Hands-on Learning
+            </div>
 
-            <h3>🎤 Webinars</h3>
+            <div>
+                <i class="fa-solid fa-users"></i>
+                Networking
+            </div>
 
-            <p>
-                Attend online sessions hosted by industry experts
-                from around the world.
-            </p>
-
-            <a href="#">Explore →</a>
-
-        </div>
-
-        <div class="card">
-
-            <h3>🏢 Tech Conferences</h3>
-
-            <p>
-                Connect with professionals, companies,
-                and innovators at global technology conferences.
-            </p>
-
-            <a href="#">Explore →</a>
-
+            <div>
+                <i class="fa-solid fa-lightbulb"></i>
+                New Opportunities
+            </div>
         </div>
 
     </div>
 
 </section>
 
-<!-- ================= POPULAR EVENTS ================= -->
+<!-- EVENT TYPES -->
+<section class="events-section" id="event-types">
 
-<section class="projects">
+    <div class="events-heading">
+        <span class="events-label">EXPLORE AND LEARN</span>
+        <h2>Discover Event Categories</h2>
+        <p>
+            Choose events that match your interests, learning goals,
+            and professional ambitions.
+        </p>
+    </div>
 
-    <h2>Popular Tech Events</h2>
+    <div class="event-type-grid">
 
-    <ul>
-        <li>Google I/O</li>
-        <li>Microsoft Build</li>
-        <li>AWS re:Invent</li>
-        <li>Apple WWDC</li>
-        <li>TEDx Technology Events</li>
-        <li>IEEE Conferences</li>
-    </ul>
+        <div class="event-type-card">
+            <div class="event-icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
+
+            <h3>Coding Workshops</h3>
+
+            <p>
+                Practise programming, explore new frameworks,
+                and strengthen your problem-solving skills
+                through hands-on activities.
+            </p>
+
+            <a href="https://devpost.com/"
+               target="_blank" rel="noopener noreferrer">
+                Explore Projects & Events
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="event-type-card">
+            <div class="event-icon">
+                <i class="fa-solid fa-video"></i>
+            </div>
+
+            <h3>Webinars</h3>
+
+            <p>
+                Attend online talks, demonstrations, and learning
+                sessions led by professionals and educators.
+            </p>
+
+            <a href="https://www.meetup.com/"
+               target="_blank" rel="noopener noreferrer">
+                Discover Meetups
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="event-type-card">
+            <div class="event-icon">
+                <i class="fa-solid fa-building"></i>
+            </div>
+
+            <h3>Tech Conferences</h3>
+
+            <p>
+                Explore industry developments, meet technology
+                professionals, and learn about emerging innovations.
+            </p>
+
+            <a href="https://events.ieee.org/"
+               target="_blank" rel="noopener noreferrer">
+                Explore IEEE Events
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="event-type-card">
+            <div class="event-icon">
+                <i class="fa-solid fa-trophy"></i>
+            </div>
+
+            <h3>Hackathons</h3>
+
+            <p>
+                Collaborate with teams, develop creative solutions,
+                and turn ideas into working software projects.
+            </p>
+
+            <a href="https://devpost.com/hackathons"
+               target="_blank" rel="noopener noreferrer">
+                Find Hackathons
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="event-type-card">
+            <div class="event-icon">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+
+            <h3>AI & Innovation Events</h3>
+
+            <p>
+                Explore artificial intelligence, data science,
+                cloud computing, and other emerging technologies.
+            </p>
+
+            <a href="https://www.meetup.com/"
+               target="_blank" rel="noopener noreferrer">
+                Find Tech Communities
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="event-type-card">
+            <div class="event-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <h3>Student Tech Events</h3>
+
+            <p>
+                Discover student competitions, university events,
+                technical societies, and career development sessions.
+            </p>
+
+            <a href="https://students.ieee.org/"
+               target="_blank" rel="noopener noreferrer">
+                Explore IEEE Student Activities
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+    </div>
 
 </section>
 
-<!-- ================= BENEFITS ================= -->
+<!-- EVENT PLATFORMS -->
+<section class="events-section events-platform-section" id="event-platforms">
 
-<section class="projects">
+    <div class="events-heading">
+        <span class="events-label">STAY CONNECTED</span>
+        <h2>Where to Find Tech Events</h2>
+        <p>
+            Visit these official websites to explore event announcements,
+            registration details, and learning opportunities.
+        </p>
+    </div>
 
-    <h2>Benefits of Attending</h2>
+    <div class="event-platform-grid">
 
-    <ul>
-        <li>Learn from industry experts.</li>
-        <li>Stay updated with new technologies.</li>
-        <li>Build professional connections.</li>
-        <li>Discover internships and job opportunities.</li>
-        <li>Earn participation certificates.</li>
-        <li>Improve communication and networking skills.</li>
-    </ul>
+        <a class="event-platform-card"
+           href="https://io.google/"
+           target="_blank" rel="noopener noreferrer">
+
+            <div class="platform-icon">
+                <i class="fa-brands fa-google"></i>
+            </div>
+
+            <div>
+                <h3>Google I/O</h3>
+                <p>Google's developer event and technology updates.</p>
+            </div>
+
+            <i class="fa-solid fa-arrow-up-right-from-square platform-arrow"></i>
+        </a>
+
+        <a class="event-platform-card"
+           href="https://build.microsoft.com/"
+           target="_blank" rel="noopener noreferrer">
+
+            <div class="platform-icon">
+                <i class="fa-brands fa-microsoft"></i>
+            </div>
+
+            <div>
+                <h3>Microsoft Events</h3>
+                <p>Developer sessions, cloud, AI, and product learning.</p>
+            </div>
+
+            <i class="fa-solid fa-arrow-up-right-from-square platform-arrow"></i>
+        </a>
+
+        <a class="event-platform-card"
+           href="https://reinvent.awsevents.com/"
+           target="_blank" rel="noopener noreferrer">
+
+            <div class="platform-icon">
+                <i class="fa-brands fa-aws"></i>
+            </div>
+
+            <div>
+                <h3>AWS re:Invent</h3>
+                <p>Cloud computing, architecture, and AWS technologies.</p>
+            </div>
+
+            <i class="fa-solid fa-arrow-up-right-from-square platform-arrow"></i>
+        </a>
+
+        <a class="event-platform-card"
+           href="https://developer.apple.com/wwdc/"
+           target="_blank" rel="noopener noreferrer">
+
+            <div class="platform-icon">
+                <i class="fa-brands fa-apple"></i>
+            </div>
+
+            <div>
+                <h3>Apple WWDC</h3>
+                <p>Apple development tools, platforms, and sessions.</p>
+            </div>
+
+            <i class="fa-solid fa-arrow-up-right-from-square platform-arrow"></i>
+        </a>
+
+        <a class="event-platform-card"
+           href="https://events.ieee.org/"
+           target="_blank" rel="noopener noreferrer">
+
+            <div class="platform-icon">
+                <i class="fa-solid fa-microchip"></i>
+            </div>
+
+            <div>
+                <h3>IEEE Events</h3>
+                <p>Technical conferences, workshops, and professional events.</p>
+            </div>
+
+            <i class="fa-solid fa-arrow-up-right-from-square platform-arrow"></i>
+        </a>
+
+        <a class="event-platform-card"
+           href="https://devpost.com/hackathons"
+           target="_blank" rel="noopener noreferrer">
+
+            <div class="platform-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+            </div>
+
+            <div>
+                <h3>Devpost</h3>
+                <p>Discover hackathons and showcase software projects.</p>
+            </div>
+
+            <i class="fa-solid fa-arrow-up-right-from-square platform-arrow"></i>
+        </a>
+
+    </div>
+
+    <p class="events-note">
+        <i class="fa-solid fa-circle-info"></i>
+        Event dates, eligibility, availability, and fees vary.
+        Check each organizer's official website before registering.
+    </p>
 
 </section>
 
-<!-- ================= PREPARATION ================= -->
+<!-- BENEFITS -->
+<section class="events-section">
 
-<section class="projects">
+    <div class="events-heading">
+        <span class="events-label">WHY PARTICIPATE?</span>
+        <h2>Benefits of Attending</h2>
+        <p>
+            Tech events can help you develop skills beyond
+            classroom learning.
+        </p>
+    </div>
 
-    <h2>Event Preparation Tips</h2>
+    <div class="event-benefits-grid">
 
-    <ul>
-        <li>Register before the deadline.</li>
-        <li>Update your resume and LinkedIn profile.</li>
-        <li>Prepare thoughtful questions for speakers.</li>
-        <li>Carry a notebook or digital note-taking app.</li>
-        <li>Network with other participants.</li>
-        <li>Follow up with new connections after the event.</li>
-    </ul>
+        <div class="event-benefit-card">
+            <i class="fa-solid fa-brain"></i>
+            <h3>Learn New Skills</h3>
+            <p>Discover tools, techniques, and industry practices.</p>
+        </div>
+
+        <div class="event-benefit-card">
+            <i class="fa-solid fa-handshake"></i>
+            <h3>Build Connections</h3>
+            <p>Meet students, mentors, developers, and professionals.</p>
+        </div>
+
+        <div class="event-benefit-card">
+            <i class="fa-solid fa-folder-open"></i>
+            <h3>Strengthen Your Portfolio</h3>
+            <p>Turn workshops and hackathons into practical projects.</p>
+        </div>
+
+        <div class="event-benefit-card">
+            <i class="fa-solid fa-briefcase"></i>
+            <h3>Explore Careers</h3>
+            <p>Learn about career paths, internships, and industry roles.</p>
+        </div>
+
+        <div class="event-benefit-card">
+            <i class="fa-solid fa-certificate"></i>
+            <h3>Earn Recognition</h3>
+            <p>Some events offer certificates, prizes, or other awards.</p>
+        </div>
+
+        <div class="event-benefit-card">
+            <i class="fa-solid fa-comments"></i>
+            <h3>Improve Communication</h3>
+            <p>Practise presenting ideas and collaborating with others.</p>
+        </div>
+
+    </div>
 
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- PREPARATION TIPS -->
+<section class="events-section events-tips-section">
 
+    <div class="events-heading">
+        <span class="events-label">BE PREPARED</span>
+        <h2>Tips for Making the Most of an Event</h2>
+        <p>
+            A little preparation can help you get more value
+            from every workshop, webinar, or conference.
+        </p>
+    </div>
+
+    <div class="event-tips-list">
+
+        <div class="event-tip">
+            <span>01</span>
+            <div>
+                <h3>Register Early</h3>
+                <p>Check the deadline, eligibility, schedule, and fees.</p>
+            </div>
+        </div>
+
+        <div class="event-tip">
+            <span>02</span>
+            <div>
+                <h3>Update Your Professional Profile</h3>
+                <p>Prepare your resume, LinkedIn profile, and project portfolio.</p>
+            </div>
+        </div>
+
+        <div class="event-tip">
+            <span>03</span>
+            <div>
+                <h3>Set a Learning Goal</h3>
+                <p>Choose a topic or skill you want to learn during the event.</p>
+            </div>
+        </div>
+
+        <div class="event-tip">
+            <span>04</span>
+            <div>
+                <h3>Participate Actively</h3>
+                <p>Ask relevant questions, join discussions, and take notes.</p>
+            </div>
+        </div>
+
+        <div class="event-tip">
+            <span>05</span>
+            <div>
+                <h3>Follow Up</h3>
+                <p>Connect professionally and apply what you learned.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FINAL CALLOUT -->
+<section class="events-callout">
+
+    <div class="events-callout-icon">
+        <i class="fa-solid fa-rocket"></i>
+    </div>
+
+    <div>
+        <h2>Your Next Opportunity Starts Here</h2>
+        <p>
+            Explore an event, learn something new, and take
+            another step toward your technology career.
+        </p>
+    </div>
+
+    <a href="#event-platforms">
+        Explore Platforms
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
+
+</section>
+
+<!-- FOOTER -->
 <footer>
-
     <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
-
+    <p>Learn Today. Build Tomorrow.</p>
 </footer>
 
 </body>
-</html>v
+</html>
