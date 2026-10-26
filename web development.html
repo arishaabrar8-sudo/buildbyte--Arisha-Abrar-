@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07111f">
+
+    <title>Web Development | EmpowerTech</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        :root {
+            --wd-bg: #07111f;
+            --wd-card: #101e30;
+            --wd-cyan: #00d4ff;
+            --wd-text: #eaf2ff;
+            --wd-muted: #aab9ce;
+            --wd-border: rgba(0, 212, 255, 0.18);
+        }
+
+        body {
+            background: #08121f;
+            color: var(--wd-text);
+        }
+
+        .wd-hero {
+            text-align: center;
+            padding: 85px 20px 70px;
+            background:
+                radial-gradient(ellipse at top, #12344e 0%, transparent 68%),
+                var(--wd-bg);
+        }
+
+        .wd-badge {
+            display: inline-block;
+            padding: 9px 16px;
+            border: 1px solid var(--wd-border);
+            border-radius: 30px;
+            background: rgba(0, 212, 255, 0.07);
+            color: var(--wd-cyan);
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        .wd-hero h1 {
+            font-size: clamp(34px, 5vw, 58px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .wd-hero h1 span {
+            color: var(--wd-cyan);
+        }
+
+        .wd-hero p {
+            max-width: 720px;
+            margin: 0 auto;
+            color: var(--wd-muted);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .wd-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 12px 19px;
+            border: none;
+            border-radius: 9px;
+            background: var(--wd-cyan);
+            color: #07111f;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .wd-button:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .wd-section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 55px 22px;
+        }
+
+        .wd-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .wd-heading h2 {
+            font-size: clamp(25px, 4vw, 35px);
+            margin-bottom: 12px;
+        }
+
+        .wd-heading p {
+            color: var(--wd-muted);
+            line-height: 1.7;
+        }
+
+        /* ROADMAP */
+
+        .wd-roadmap {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .wd-step {
+            position: relative;
+            padding: 25px;
+            border: 1px solid var(--wd-border);
+            border-radius: 15px;
+            background: linear-gradient(145deg, #12243a, #0c1929);
+            transition: 0.25s;
+        }
+
+        .wd-step:hover {
+            transform: translateY(-5px);
+            border-color: var(--wd-cyan);
+        }
+
+        .wd-step-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .wd-step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 43px;
+            height: 43px;
+            border-radius: 12px;
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--wd-cyan);
+            font-weight: bold;
+        }
+
+        .wd-step-top i {
+            font-size: 23px;
+            color: var(--wd-cyan);
+        }
+
+        .wd-step h3 {
+            margin-bottom: 10px;
+        }
+
+        .wd-step p {
+            color: var(--wd-muted);
+            line-height: 1.7;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .wd-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-bottom: 20px;
+        }
+
+        .wd-tag {
+            padding: 6px 10px;
+            border-radius: 20px;
+            background: rgba(0, 212, 255, 0.08);
+            color: var(--wd-cyan);
+            font-size: 12px;
+        }
+
+        .wd-step-action {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--wd-cyan);
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .wd-step-action input {
+            accent-color: var(--wd-cyan);
+            width: 17px;
+            height: 17px;
+            cursor: pointer;
+        }
+
+        .wd-progress-box {
+            max-width: 700px;
+            margin: 0 auto 35px;
+            padding: 22px;
+            border: 1px solid var(--wd-border);
+            border-radius: 14px;
+            background: var(--wd-card);
+        }
+
+        .wd-progress-text {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 13px;
+            font-size: 14px;
+        }
+
+        .wd-progress-text span:last-child {
+            color: var(--wd-cyan);
+        }
+
+        .wd-progress-track {
+            height: 9px;
+            overflow: hidden;
+            border-radius: 10px;
+            background: #26374b;
+        }
+
+        .wd-progress-fill {
+            width: 0;
+            height: 100%;
+            border-radius: 10px;
+            background: var(--wd-cyan);
+            transition: width 0.35s ease;
+        }
+
+        /* TUTORIALS */
+
+        .wd-search {
+            position: relative;
+            max-width: 540px;
+            margin: 0 auto 30px;
+        }
+
+        .wd-search i {
+            position: absolute;
+            top: 50%;
+            left: 16px;
+            transform: translateY(-50%);
+            color: var(--wd-cyan);
+        }
+
+        .wd-search input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 14px 15px 14px 45px;
+            border: 1px solid var(--wd-border);
+            border-radius: 10px;
+            background: var(--wd-card);
+            color: white;
+            font-size: 15px;
+        }
+
+        .wd-search input:focus {
+            outline: 1px solid var(--wd-cyan);
+        }
+
+        .wd-tutorial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .wd-tutorial {
+            overflow: hidden;
+            border: 1px solid var(--wd-border);
+            border-radius: 16px;
+            background: var(--wd-card);
+            transition: 0.25s;
+        }
+
+        .wd-tutorial:hover {
+            transform: translateY(-5px);
+            border-color: var(--wd-cyan);
+        }
+
+        .wd-tutorial-cover {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 145px;
+            background: linear-gradient(135deg, #10344b, #12243a);
+        }
+
+        .wd-tutorial-cover i {
+            color: var(--wd-cyan);
+            font-size: 54px;
+        }
+
+        .wd-tutorial-content {
+            padding: 22px;
+        }
+
+        .wd-tutorial-content h3 {
+            margin-bottom: 10px;
+        }
+
+        .wd-tutorial-content p {
+            min-height: 68px;
+            color: var(--wd-muted);
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .wd-youtube {
+            background: #ff3434;
+            color: white;
+        }
+
+        .wd-youtube:hover {
+            background: #d91f1f;
+        }
+
+        .wd-empty {
+            display: none;
+            text-align: center;
+            color: var(--wd-muted);
+            padding: 25px;
+        }
+
+        /* PROJECTS */
+
+        .wd-project-section {
+            background: linear-gradient(120deg, #0c2032, #0a1727);
+            border-top: 1px solid var(--wd-border);
+            border-bottom: 1px solid var(--wd-border);
+        }
+
+        .wd-project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .wd-project {
+            padding: 24px;
+            border: 1px solid var(--wd-border);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.025);
+        }
+
+        .wd-project > i {
+            color: var(--wd-cyan);
+            font-size: 25px;
+            margin-bottom: 17px;
+        }
+
+        .wd-project h3 {
+            margin-bottom: 10px;
+        }
+
+        .wd-project p {
+            color: var(--wd-muted);
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .wd-level {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 20px;
+            background: rgba(0, 212, 255, 0.08);
+            color: var(--wd-cyan);
+            font-size: 12px;
+        }
+
+        .wd-tips {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .wd-tip {
+            display: flex;
+            gap: 13px;
+            padding: 20px;
+            border: 1px solid var(--wd-border);
+            border-radius: 12px;
+            background: var(--wd-card);
+        }
+
+        .wd-tip i {
+            color: var(--wd-cyan);
+            font-size: 20px;
+        }
+
+        .wd-tip p {
+            color: var(--wd-muted);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .wd-cta {
+            padding: 40px 25px;
+            text-align: center;
+            border: 1px solid var(--wd-border);
+            border-radius: 20px;
+            background:
+                radial-gradient(ellipse at top, #163b54, transparent 75%),
+                var(--wd-card);
+        }
+
+        .wd-cta h2 {
+            font-size: clamp(25px, 4vw, 34px);
+            margin-bottom: 14px;
+        }
+
+        .wd-cta p {
+            max-width: 650px;
+            margin: 0 auto 23px;
+            color: var(--wd-muted);
+            line-height: 1.8;
+        }
+
+        .wd-footer {
+            padding: 25px 15px;
+            text-align: center;
+            border-top: 1px solid var(--wd-border);
+            color: var(--wd-muted);
+        }
+
+        .wd-footer a {
+            color: var(--wd-cyan);
+            text-decoration: none;
+        }
+
+        @media (max-width: 900px) {
+            .wd-roadmap,
+            .wd-tutorial-grid,
+            .wd-project-grid,
+            .wd-tips {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .wd-hero {
+                padding: 60px 18px 45px;
+            }
+
+            .wd-section {
+                padding: 40px 16px;
+            }
+
+            .wd-roadmap,
+            .wd-tutorial-grid,
+            .wd-project-grid,
+            .wd-tips {
+                grid-template-columns: 1fr;
+            }
+
+            .wd-tutorial-content p {
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">
+            <i class="fa-solid fa-laptop-code"></i>
+            EmpowerTech
+        </div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#learning">Learning Hub</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header class="wd-hero">
+        <div class="wd-badge">
+            <i class="fa-solid fa-code"></i>
+            Your Web Development Journey
+        </div>
+
+        <h1>Become a <span>Web Developer.</span></h1>
+
+        <p>
+            Start with HTML and CSS, master JavaScript, build real projects,
+            and gradually explore frontend and backend development.
+            Follow the roadmap at your own pace.
+        </p>
+    </header>
+
+    <main>
+
+        <!-- ROADMAP -->
+        <section class="wd-section">
+            <div class="wd-heading">
+                <h2>Your Learning Roadmap</h2>
+                <p>Follow these steps in order and track your progress as you learn.</p>
+            </div>
+
+            <div class="wd-progress-box">
+                <div class="wd-progress-text">
+                    <span><i class="fa-solid fa-chart-line"></i> Roadmap Progress</span>
+                    <span id="wdProgressText">0 of 6 completed (0%)</span>
+                </div>
+
+                <div
+                    class="wd-progress-track"
+                    role="progressbar"
+                    aria-label="Learning roadmap progress"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0"
+                    id="wdProgressBar">
+                    <div class="wd-progress-fill" id="wdProgressFill"></div>
+                </div>
+            </div>
+
+            <div class="wd-roadmap">
+
+                <article class="wd-step">
+                    <div class="wd-step-top">
+                        <span class="wd-step-number">01</span>
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <h3>HTML5</h3>
+                    <p>Learn page structure, semantic elements, links, forms, and images.</p>
+                    <div class="wd-topics">
+                        <span class="wd-tag">Structure</span>
+                        <span class="wd-tag">Forms</span>
+                    </div>
+                    <label class="wd-step-action">
+                        <input type="checkbox" class="wd-check" data-step="html">
+                        Mark as completed
+                    </label>
+                </article>
+
+                <article class="wd-step">
+                    <div class="wd-step-top">
+                        <span class="wd-step-number">02</span>
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS3</h3>
+                    <p>Learn colors, layouts, Flexbox, Grid, animations, and responsive design.</p>
+                    <div class="wd-topics">
+                        <span class="wd-tag">Flexbox</span>
+                        <span class="wd-tag">Responsive UI</span>
+                    </div>
+                    <label class="wd-step-action">
+                        <input type="checkbox" class="wd-check" data-step="css">
+                        Mark as completed
+                    </label>
+                </article>
+
+                <article class="wd-step">
+                    <div class="wd-step-top">
+                        <span class="wd-step-number">03</span>
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Understand variables, functions, arrays, events, DOM manipulation, and APIs.</p>
+                    <div class="wd-topics">
+                        <span class="wd-tag">DOM</span>
+                        <span class="wd-tag">Functions</span>
+                    </div>
+                    <label class="wd-step-action">
+                        <input type="checkbox" class="wd-check" data-step="javascript">
+                        Mark as completed
+                    </label>
+                </article>
+
+                <article class="wd-step">
+                    <div class="wd-step-top">
+                        <span class="wd-step-number">04</span>
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <h3>Git & GitHub</h3>
+                    <p>Learn version control, repositories, commits, branches, and collaboration.</p>
+                    <div class="wd-topics">
+                        <span class="wd-tag">Git</span>
+                        <span class="wd-tag">Repositories</span>
+                    </div>
+                    <label class="wd-step-action">
+                        <input type="checkbox" class="wd-check" data-step="git">
+                        Mark as completed
+                    </label>
+                </article>
+
+                <article class="wd-step">
+                    <div class="wd-step-top">
+                        <span class="wd-step-number">05</span>
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <h3>React</h3>
+                    <p>Build reusable UI components and learn props, state, hooks, and routing.</p>
+                    <div class="wd-topics">
+                        <span class="wd-tag">Components</span>
+                        <span class="wd-tag">Hooks</span>
+                    </div>
+                    <label class="wd-step-action">
+                        <input type="checkbox" class="wd-check" data-step="react">
+                        Mark as completed
+                    </label>
+                </article>
+
+                <article class="wd-step">
+                    <div class="wd-step-top">
+                        <span class="wd-step-number">06</span>
+                        <i class="fa-brands fa-node-js"></i>
+                    </div>
+                    <h3>Backend Development</h3>
+                    <p>Explore server-side programming, REST APIs, databases, authentication, and deployment.</p>
+                    <div class="wd-topics">
+                        <span class="wd-tag">Node.js</span>
+                        <span class="wd-tag">APIs</span>
+                    </div>
+                    <label class="wd-step-action">
+                        <input type="checkbox" class="wd-check" data-step="backend">
+                        Mark as completed
+                    </label>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- TUTORIALS -->
+        <section class="wd-section">
+            <div class="wd-heading">
+                <h2><i class="fa-brands fa-youtube"></i> Free Learning Resources</h2>
+                <p>Explore free tutorials and choose the next topic you want to learn.</p>
+            </div>
+
+            <div class="wd-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                    type="search"
+                    id="wdSearch"
+                    placeholder="Search HTML, JavaScript, React..."
+                    aria-label="Search web development tutorials">
+            </div>
+
+            <div class="wd-tutorial-grid" id="wdTutorialGrid">
+
+                <article class="wd-tutorial" data-search="html css beginner frontend">
+                    <div class="wd-tutorial-cover">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <div class="wd-tutorial-content">
+                        <h3>HTML & CSS</h3>
+                        <p>Learn to structure, style, and create responsive web pages from scratch.</p>
+                        <a class="wd-button wd-youtube"
+                           href="https://www.youtube.com/results?search_query=HTML+CSS+full+course+beginners"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-youtube"></i> Find Tutorials
+                        </a>
+                    </div>
+                </article>
+
+                <article class="wd-tutorial" data-search="javascript programming dom events">
+                    <div class="wd-tutorial-cover">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                    <div class="wd-tutorial-content">
+                        <h3>JavaScript</h3>
+                        <p>Make websites interactive with functions, events, and browser APIs.</p>
+                        <a class="wd-button wd-youtube"
+                           href="https://www.youtube.com/results?search_query=JavaScript+full+course+beginners"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-youtube"></i> Find Tutorials
+                        </a>
+                    </div>
+                </article>
+
+                <article class="wd-tutorial" data-search="git github version control">
+                    <div class="wd-tutorial-cover">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <div class="wd-tutorial-content">
+                        <h3>Git & GitHub</h3>
+                        <p>Track changes, manage projects, and share your code with others.</p>
+                        <a class="wd-button wd-youtube"
+                           href="https://www.youtube.com/results?search_query=Git+and+GitHub+beginner+tutorial"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-youtube"></i> Find Tutorials
+                        </a>
+                    </div>
+                </article>
+
+                <article class="wd-tutorial" data-search="react frontend components hooks">
+                    <div class="wd-tutorial-cover">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <div class="wd-tutorial-content">
+                        <h3>React.js</h3>
+                        <p>Build reusable components and dynamic interfaces for modern applications.</p>
+                        <a class="wd-button wd-youtube"
+                           href="https://www.youtube.com/results?search_query=React+JS+full+course+beginners"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-youtube"></i> Find Tutorials
+                        </a>
+                    </div>
+                </article>
+
+                <article class="wd-tutorial" data-search="node js backend server api">
+                    <div class="wd-tutorial-cover">
+                        <i class="fa-brands fa-node-js"></i>
+                    </div>
+                    <div class="wd-tutorial-content">
+                        <h3>Node.js & APIs</h3>
+                        <p>Learn server-side JavaScript and understand how web APIs work.</p>
+                        <a class="wd-button wd-youtube"
+                           href="https://www.youtube.com/results?search_query=Node.js+backend+full+course"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-youtube"></i> Find Tutorials
+                        </a>
+                    </div>
+                </article>
+
+                <article class="wd-tutorial" data-search="full stack web development project">
+                    <div class="wd-tutorial-cover">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <div class="wd-tutorial-content">
+                        <h3>Full-Stack Development</h3>
+                        <p>Combine frontend, backend, and database skills to build complete applications.</p>
+                        <a class="wd-button wd-youtube"
+                           href="https://www.youtube.com/results?search_query=full+stack+web+development+project+course"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-youtube"></i> Find Tutorials
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="wd-empty" id="wdNoResults">
+                No matching tutorials found. Try another keyword.
+            </p>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="wd-project-section">
+            <div class="wd-section">
+                <div class="wd-heading">
+                    <h2>Projects to Build</h2>
+                    <p>Turn your knowledge into practical experience, one project at a time.</p>
+                </div>
+
+                <div class="wd-project-grid">
+
+                    <article class="wd-project">
+                        <i class="fa-solid fa-id-card"></i>
+                        <h3>Personal Portfolio</h3>
+                        <p>Create a website showcasing your skills, projects, and contact details.</p>
+                        <span class="wd-level">Beginner</span>
+                    </article>
+
+                    <article class="wd-project">
+                        <i class="fa-solid fa-list-check"></i>
+                        <h3>To-Do App</h3>
+                        <p>Practice JavaScript by adding, completing, and deleting tasks.</p>
+                        <span class="wd-level">Beginner</span>
+                    </article>
+
+                    <article class="wd-project">
+                        <i class="fa-solid fa-utensils"></i>
+                        <h3>Recipe Website</h3>
+                        <p>Display recipes with categories, search, and detailed instructions.</p>
+                        <span class="wd-level">Beginner</span>
+                    </article>
+
+                    <article class="wd-project">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                        <h3>Weather App</h3>
+                        <p>Use a weather API to display current conditions and forecasts.</p>
+                        <span class="wd-level">Intermediate</span>
+                    </article>
+
+                    <article class="wd-project">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <h3>E-Commerce Website</h3>
+                        <p>Build product listings, a shopping cart, and basic user authentication.</p>
+                        <span class="wd-level">Intermediate</span>
+                    </article>
+
+                    <article class="wd-project">
+                        <i class="fa-solid fa-users"></i>
+                        <h3>Student Management System</h3>
+                        <p>Manage student records using forms, a backend, and a database.</p>
+                        <span class="wd-level">Intermediate</span>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TIPS -->
+        <section class="wd-section">
+            <div class="wd-heading">
+                <h2>Tips for Learning Effectively</h2>
+                <p>Build strong fundamentals before moving to advanced frameworks.</p>
+            </div>
+
+            <div class="wd-tips">
+                <div class="wd-tip">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <p>Write code yourself instead of only watching tutorials.</p>
+                </div>
+
+                <div class="wd-tip">
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                    <p>Practice one concept at a time and understand your errors.</p>
+                </div>
+
+                <div class="wd-tip">
+                    <i class="fa-solid fa-code-branch"></i>
+                    <p>Upload your projects to GitHub to build a portfolio.</p>
+                </div>
+
+                <div class="wd-tip">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <p>Test your websites on mobile, tablet, and desktop screens.</p>
+                </div>
+
+                <div class="wd-tip">
+                    <i class="fa-solid fa-book-open"></i>
+                    <p>Use official documentation alongside video tutorials.</p>
+                </div>
+
+                <div class="wd-tip">
+                    <i class="fa-solid fa-rotate"></i>
+                    <p>Improve old projects as your skills and understanding grow.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <section class="wd-section">
+            <div class="wd-cta">
+                <h2>Ready to Start Building?</h2>
+                <p>
+                    Choose your first topic, write your first lines of code,
+                    and keep building. Every project brings you closer to your goal.
+                </p>
+                <a class="wd-button" href="index.html#learning">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Explore Learning Hub
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="wd-footer">
+        <p>&copy; 2026 EmpowerTech. All Rights Reserved.</p>
+        <p style="margin-top: 10px;">Learn. Build. Grow.</p>
+        <p style="margin-top: 10px;">
+            <a href="index.html">Back to Home</a>
+        </p>
+    </footer>
+
+    <!-- PAGE JAVASCRIPT -->
+    <script>
+        // ROADMAP PROGRESS
+        const wdChecks = document.querySelectorAll(".wd-check");
+        const wdProgressFill = document.getElementById("wdProgressFill");
+        const wdProgressText = document.getElementById("wdProgressText");
+        const wdProgressBar = document.getElementById("wdProgressBar");
+
+        const wdStorageKey = "empowertech_webdev_completed";
+
+        // Restore saved progress
+        let wdCompleted = [];
+
+        try {
+            const saved = JSON.parse(localStorage.getItem(wdStorageKey) || "[]");
+
+            if (Array.isArray(saved)) {
+                wdCompleted = saved;
+            }
+        } catch (error) {
+            wdCompleted = [];
+        }
+
+        wdChecks.forEach(function (checkbox) {
+            checkbox.checked = wdCompleted.includes(checkbox.dataset.step);
+
+            checkbox.addEventListener("change", updateWdProgress);
+        });
+
+        function updateWdProgress() {
+            const total = wdChecks.length;
+            let completed = 0;
+            const completedSteps = [];
+
+            wdChecks.forEach(function (checkbox) {
+                if (checkbox.checked) {
+                    completed++;
+                    completedSteps.push(checkbox.dataset.step);
+                }
+            });
+
+            const percentage = Math.round((completed / total) * 100);
+
+            wdProgressFill.style.width = percentage + "%";
+            wdProgressText.textContent =
+                completed + " of " + total + " completed (" + percentage + "%)";
+
+            wdProgressBar.setAttribute("aria-valuenow", percentage);
+
+            try {
+                localStorage.setItem(
+                    wdStorageKey,
+                    JSON.stringify(completedSteps)
+                );
+            } catch (error) {
+                // Progress still works for the current page session.
+            }
+        }
+
+        updateWdProgress();
+
+        // TUTORIAL SEARCH
+        const wdSearch = document.getElementById("wdSearch");
+        const wdTutorials = document.querySelectorAll(".wd-tutorial");
+        const wdNoResults = document.getElementById("wdNoResults");
+
+        wdSearch.addEventListener("input", function () {
+            const query = wdSearch.value.toLowerCase().trim();
+            let visible = 0;
+
+            wdTutorials.forEach(function (card) {
+                const content = (
+                    card.innerText + " " + card.dataset.search
+                ).toLowerCase();
+
+                if (content.includes(query)) {
+                    card.style.display = "";
+                    visible++;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            wdNoResults.style.display = visible === 0 ? "block" : "none";
+        });
+    </script>
+
+</body>
+</html>
